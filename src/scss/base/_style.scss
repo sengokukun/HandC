@@ -1,17 +1,47 @@
 .top-hero {
+  width: 100vw;
   height: 100vh;
-  text-align: center;
+  // background-image:linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.2)), url("../../img/bg_hero.jpg");
+  // background-size: cover;
+  // background-position: center center;
 }
 
 .top-bgv-wrap {
   height: 100vh;
   overflow: hidden;
   position: relative;
+  top: -100px;
+  overflow: hidden;
+  background-image:linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.2)), url("../../img/bg_hero.jpg");
+  background-size: cover;
+  background-position: center center;
 
   &:before {
     // ここに薄暗くする背景を入れる
     content: ' ';
     height: 100%;
+  }
+}
+
+.hero-logo{
+  width: 100%;
+  height: 100vh;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  img{
+    width: 200px;
+    height: 200px;
   }
 }
 
@@ -33,4 +63,27 @@
   right: 0;
   bottom: 0;
   z-index: -2;
+}
+
+.loading {
+  display: none;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: #fff;
+  z-index: 1;
+
+  &__gif {
+    display: none;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    bottom: auto;
+    right: auto;
+    z-index: 9999;
+    transform: translateX(-50%) translateY(-50%);
+    z-index: 2;
+  }
 }

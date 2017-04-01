@@ -78,3 +78,89 @@ ul {
 li {
   list-style-type: none;
 }
+
+.wrap {
+  display: flex;
+  /* 要素をflexboxに対応させる */
+  align-items: center;
+  /* 縦方向の中央揃え */
+  justify-content: center;
+  /* 横方向の中央揃え */
+  flex-direction: column;
+  /* 子要素の並びを上から下にする（要素の改行に対応） */
+}
+
+.containr {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.gloval-contents {
+  width: 100%;
+  margin-top: -100px;
+}
+
+.header {
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 60px;
+  background-color: #fff;
+
+  .contents {
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .lists {
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: flex;
+  }
+
+  .header-logo {
+    a {
+      img {
+        width: 30px;
+        height: 30px;
+      }
+    }
+  }
+
+  .header-item {
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: flex;
+    align-items: center;
+
+    &__list {}
+  }
+}
+
+.footer {
+  width: 100%;
+  height: 40px;
+  background-color: #fff;
+  text-align: center;
+  border-top: 1px solid #999;
+
+  &__copyright {
+    line-height: 40px;
+    color: #999;
+  }
+}
