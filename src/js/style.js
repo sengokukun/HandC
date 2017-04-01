@@ -54,3 +54,16 @@ function stopload(){
   $('.loading').delay(2000).fadeOut(700);
   $('.loading__gif').delay(2000).fadeOut(300);
 }
+
+$(function(){
+  $('.sp-menu--open').click(function(){
+    $('.sp-header .contents').fadeIn();
+    $(this).hide();
+    $('.sp-menu--close').show();
+  });
+  $('.sp-menu--close').click(function(){
+    $('.sp-header .contents').fadeOut();
+    $(this).hide();
+    $('.sp-menu--open').show();
+  });
+});

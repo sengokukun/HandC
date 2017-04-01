@@ -6,16 +6,32 @@
   // background-position: center center;
 }
 
+.sp-top-hero {
+  @include media ($sp) {
+    display: block;
+    background-image: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.2)), url("../../img/bg_hero.jpg");
+    background-size: cover;
+    background-position: center center;
+    z-index: -4;
+  }
+  @include media ($pc) {
+    display: none;
+  }
+}
+
 .top-bgv-wrap {
   height: 100vh;
   overflow: hidden;
   position: relative;
   top: -100px;
   overflow: hidden;
-  background-image:linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.2)), url("../../img/bg_hero.jpg");
+  background-image: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.2)), url("../../img/bg_hero.jpg");
   background-size: cover;
   background-position: center center;
   z-index: -4;
+  @include media ($sp) {
+    display: none;
+  }
 
   &:before {
     // ここに薄暗くする背景を入れる
@@ -24,26 +40,26 @@
   }
 }
 
-.hero-logo{
-  width: 100%;
-  height: 100vh;
-  display: -webkit-flex;
-  display: -moz-flex;
-  display: -ms-flex;
-  display: -o-flex;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  color: #fff;
+.hero-logo {
   position: absolute;
-  top: 0;
-  bottom: 0;
-  right: 0;
-  left: 0;
+  left: 50%;
+  top: 50%;
+  bottom: auto;
+  right: auto;
+  z-index: 9999;
+  transform: translateX(-50%) translateY(-50%);
   z-index: -3;
-  img{
+  @include media ($sp) {
+    top: 40%;
+  }
+
+  img {
     width: 200px;
     height: 200px;
+    @include media ($sp) {
+      height: 150px;
+      width: 150px;
+    }
   }
 }
 
