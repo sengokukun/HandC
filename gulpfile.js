@@ -59,7 +59,7 @@ gulp.task("uglify", function() {
 
 // img圧縮
 gulp.task('imagemin', function() {
-  return gulp.src('src/img/*.{png,jpg,svg,webp,ico}')
+  return gulp.src('src/img/*.{png,jpg,svg,webp,ico,gif}')
     .pipe(imagemin({
       progressive: true,
       svgoPlugins: [{removeViewBox: false}],

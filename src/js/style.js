@@ -31,3 +31,26 @@ function onPlayerReady(event) {
 }
 function onPlayerStateChange(event) {
 }
+
+$(function() {
+  // var h = $(window).height();
+
+  $('.top-hero').css('display','none');
+  $('.loading ,.loading__gif').css('display','block');
+});
+
+$(window).load(function () {
+  $('.loading').delay(2000).fadeOut(700);
+  $('.loading__gif').delay(2000).fadeOut(300);
+  $('.top-hero').css('display', 'block');
+});
+
+$(function(){
+  setTimeout('stopload()',40000);
+});
+
+function stopload(){
+  $('.top-hero').css('display','block');
+  $('.loading').delay(2000).fadeOut(700);
+  $('.loading__gif').delay(2000).fadeOut(300);
+}
