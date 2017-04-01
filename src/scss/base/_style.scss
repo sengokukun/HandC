@@ -15,6 +15,7 @@
   background-image:linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.2)), url("../../img/bg_hero.jpg");
   background-size: cover;
   background-position: center center;
+  z-index: -4;
 
   &:before {
     // ここに薄暗くする背景を入れる
