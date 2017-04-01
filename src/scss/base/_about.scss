@@ -1,0 +1,89 @@
+.about {
+
+  &__title {
+    text-align: left;
+    font-weight: normal;
+    font-size: 4.2rem;
+    color: $incblue;
+
+    span {
+      font-size: 3.2rem;
+    }
+    @include media ($sp) {
+      font-size: 3rem;
+
+      span {
+        font-size: 2.2rem;
+      }
+    }
+  }
+
+  &__desc {
+    text-align: left;
+    font-size: 1.6rem;
+    line-height: 2em;
+    @include media ($sp) {
+      font-size: 1.4rem;
+    }
+  }
+
+  .container {
+    max-width: 800px;
+  }
+
+  img {
+    max-width: none;
+  }
+  @include media ($sp) {
+    padding: 0 20px;
+    margin-top: 0;
+  }
+}
+
+#before-after {
+  position: relative;
+  width: 100%;
+  min-height: 300px;
+  border: 2px solid #eee;
+  box-sizing: border-box;
+  margin: 30px auto 0;
+}
+
+.view {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  // background-position: center center;
+  background-repeat: no-repeat;
+
+  &--before {
+    z-index: 100;
+    background-image: url("../../img/bofore.png");
+    @include media ($sp) {
+      background-image: url("../../img/bofore_sp.png");
+    }
+  }
+
+  &--after {
+    z-index: 200;
+    background-image: url("../../img/after.png");
+    @include media ($sp) {
+      background-image: url("../../img/after_sp.png");
+    }
+  }
+}
+
+.dragme {
+  position: absolute;
+  width: 5px;
+  height: 100%;
+  top: 0;
+  left: 0;
+  box-sizing: border-box;
+  background-color: #fff;
+  cursor: pointer;
+  z-index: 300;
+}

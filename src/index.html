@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,user-scalable=1,initial-scale=1,maximum-scale=1">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="description" content="1日1青。をテーマに、1日に1個だけ「何か」を青に変化させてSNS上で公開しています。">
+  <link rel="shortcut icon" href="img/favicon.ico">
+  <meta name="keywords" content="aoiiro,青,1日1青,あお">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.css">
+  <link rel="stylesheet" href="/css/style.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
+  <script type="text/javascript" src="/js/min/jquery-3.1.1.min.js"></script>
+  <script type="text/javascript" src="/js/min/TweenMax.min.js"></script>
+  <!--[if lt IE 9]>
+  <script type="text/javascript" src="js/ie8/html5shiv.min.js"></script>
+  <script type="text/javascript" src="js/ie8/selectivizr-min.js"></script>
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+  <![endif]-->
+  <!--[if gte IE 9]><!-->
+  <title>青色 / aoiiro</title>
+</head>
+
+<body>
+  <div class="wrap">
+    <div class="container">
+      <header class="header">
+        <h1 class="header__logo"><a href="./index.html" class="header__logo--link"><img src="/img/oaiiro.svg" alt="aoiiro"></a></h1>
+        <div class="header__navi">
+          <a class="header-toggle">
+            <span class="toggle-lines">
+              <span class="toggle-lines__line"></span>
+            <span class="toggle-lines__line"></span>
+            <span class="toggle-lines__line"></span>
+            </span>
+          </a>
+          <!-- メニュー部分 -->
+          <div class="layer"></div>
+          <ul class="master-navi">
+            <li class="master-navi__item">
+              <a class="master-navi__link" href="./index">HOME</a>
+            </li>
+            <li class="master-navi__item">
+              <a class="master-navi__link" href="./about">ABOUT</a>
+            </li>
+            <li class="master-navi__item">
+              <a class="master-navi__link" href="./color">COLORS</a>
+            </li>
+            <li class="master-navi__item">
+              <a class="master-navi__link" href="https://twitter.com/aoiiro_ao" target="_blank">TWITTER</a>
+            </li>
+            <li class="master-navi__item">
+              <a class="master-navi__link" href="https://www.instagram.com/aoiiro_ao/" target="_blank">INSTAGRAM</a>
+            </li>
+            <li class="master-navi__item">
+              <a class="master-navi__link" href="https://www.facebook.com/aoiirocom-1815145258809000/" target="_blank">FACEBOOK</a>
+            </li>
+          </ul>
+        </div>
+      </header>
+    </div>
+    <div class="hero">
+      <div class="container">
+        <div class="logo-wrap">
+          <img src="/img/1_a.png" alt="" class="logo-wrap__text logo-wrap__text--a">
+          <img src="/img/2_o.png" alt="" class="logo-wrap__text logo-wrap__text--b">
+          <img src="/img/3_i.png" alt="" class="logo-wrap__text logo-wrap__text--c">
+          <img src="/img/4_i.png" alt="" class="logo-wrap__text logo-wrap__text--d">
+          <img src="/img/5_r.png" alt="" class="logo-wrap__text logo-wrap__text--e">
+          <img src="/img/6_o.png" alt="" class="logo-wrap__text logo-wrap__text--f">
+        </div>
+        <div class="title-wrap">
+          <h2 class="title-wrap__title">1にち1あお</h2>
+          <h3 class="title-wrap__subtitle">1にち1こ「<span>あお</span>」にするよ。</h3>
+        </div>
+        <p class="day-count">
+          <script language="JavaScript" src="http://www.nannichime.net/s.php?d=2017/3/3&f=y"></script>
+        </p>
+      </div>
+    </div>
+
+    <main class="top-main">
+      <div class="photo-contents">
+        <h2 class="photo-contents__title">1にち1あお</h2>
+        <div class="photos"></div>
+      </div>
+      <a href="https://www.instagram.com/aoiiro_ao/" class="button button--instagram button--m" target="_blank">インスタでもっと見る</a>
+    </main>
+
+    <div class="sns-timeline">
+      <div class="timelines">
+        <div class="timelines__fb" data-href="https://www.facebook.com/aoiirocom-1815145258809000/" data-tabs="timeline" data-width="500" data-height="400" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true" style="border:none;overflow:scroll;"></div>
+        <div id="fb-root"></div>
+        <div class="timelines__tw">
+          <a href="https://twitter.com/aoiiro_ao" width="500" height="400" class="twitter-timeline">Tweets</a>
+        </div>
+      </div>
+    </div>
+
+  <footer class="footer">
+    <!-- <div class="footer__sns">
+        <a class="twitter-share-button" href="https://twitter.com/share" data-dnt="true">Tweet</a>
+        <div id="fb-root"></div>
+        <div class="fb-like" data-href="https://www.facebook.com/aoiirocom-1815145258809000/" data-layout="button_count" data-action="like" data-show-faces="true" data-share="false"></div>
+      </div> -->
+    <p class="footer__copyright"><small>Copyright &copy; 2017 aoiiro.comAll Rights Reserved.</small></p>
+  </footer>
+  </div>
+  <script type="text/javascript" src="/js/instagram.js"></script>
+  <script type="text/javascript" src="/js/style.js"></script>
+  <script type="text/javascript" src="/js/jquery-harmony.js"></script>
+  <script type="text/javascript" src="/js/dollar.js"></script>
+</body>
+
+</html>

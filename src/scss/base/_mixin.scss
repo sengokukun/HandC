@@ -1,0 +1,65 @@
+/* ====================================================
+// mixin
+==================================================== */
+/* ====================================================
+// メディアクエリ
+==================================================== */
+$sp: 480;
+$pc: 481;
+$iphone5: 320;
+$bigpc: 1000;
+@mixin media($size) {
+   @if $size == $sp{
+    @media all and (max-width: $sp + 'px') {
+       @content;
+    }
+  }
+  @if $size == $pc {
+     @media all and (min-width: $pc + 'px'){
+      @content;
+    }
+  }
+  @if $size == $iphone5 {
+     @media all and (max-width: $iphone5 + 'px'){
+      @content;
+    }
+  }
+  @if $size == $bigpc {
+     @media all and (min-width: $bigpc + 'px'){
+      @content;
+    }
+  }
+}
+/* ====================================================
+// opacity
+==================================================== */
+@mixin opacity($opacity) {
+  opacity: $opacity;
+  filter: alpha(opacity=($opacity * 100));
+}
+/* ====================================================
+// flexbox
+==================================================== */
+@mixin flex {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+}
+@mixin fd($direction) {
+   @if $direction == column{
+    -webkit-flex-direction: vertical;
+    -moz-flex-direction: vertical;
+    -ms-flex-direction: column;
+    -webkit-flex-direction: column;
+    flex-direction: column;
+  }
+  @else {
+    -webkit-flex-direction: horizontal;
+    -moz-flex-direction: horizontal;
+    -ms-flex-direction: row;
+    -webkit-flex-direction: row;
+    flex-direction: row;
+  }
+}
