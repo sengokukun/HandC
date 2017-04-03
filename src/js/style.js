@@ -55,6 +55,8 @@ function stopload(){
   $('.loading__gif').delay(2000).fadeOut(300);
 }
 
+var windowW = $(window).width();//画面の横幅を取得
+
 $(function(){
   $('.sp-menu--open').click(function(){
     $('.sp-header .contents').fadeIn();
@@ -66,4 +68,11 @@ $(function(){
     $(this).hide();
     $('.sp-menu--open').show();
   });
+  if( windowW > 481 ){
+    $('.header-item__list--works').hover(function(){
+      $('.aaa').addClass('open');
+    },function(){
+      $('.aaa').removeClass('open');
+    });
+  }
 });
