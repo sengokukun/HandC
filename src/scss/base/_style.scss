@@ -14,74 +14,47 @@
 .top-hero {
   width: 100vw;
   height: 100vh;
-  // background-image:linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.2)), url("../../img/bg_hero.jpg");
-  // background-size: cover;
-  // background-position: center center;
-}
-
-.sp-top-hero {
-  @include media ($sp) {
-    display: block;
-    background-image: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.2)), url("../../img/bg_hero.jpg");
-    background-size: cover;
-    background-position: center center;
-    z-index: -4;
-  }
   @include media ($pc) {
-    display: none;
+    .top-bgv-wrap {
+      height: 100vh;
+      overflow: hidden;
+      position: relative;
+      top: -100px;
+      overflow: hidden;
+      background-image: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.2)), url("../../img/bg_hero.jpg");
+      background-size: cover;
+      background-position: center center;
+      @include media ($sp) {
+        display: none;
+      }
+
+      &:before {
+        // ここに薄暗くする背景を入れる
+        content: ' ';
+        height: 100%;
+      }
+    }
+
+    #player {
+      position: absolute;
+      top: 0;
+      left: -15%;
+      bottom: 0;
+      margin: auto;
+      overflow: hidden;
+      height: 130%;
+      width: 130%;
+      pointer-events: none;
+    }
+
+    .video-wrap {
+      width: 100%;
+      position: absolute;
+      right: 0;
+      bottom: 0;
+      z-index: -2;
+    }
   }
-
-  .video-play {
-    position: absolute;
-    left: 50%;
-    top: 60%;
-    bottom: auto;
-    right: auto;
-    z-index: 9999;
-    transform: translateX(-50%) translateY(-50%);
-    z-index: 2;
-  }
-}
-
-.top-bgv-wrap {
-  height: 100vh;
-  overflow: hidden;
-  position: relative;
-  top: -100px;
-  overflow: hidden;
-  background-image: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.2)), url("../../img/bg_hero.jpg");
-  background-size: cover;
-  background-position: center center;
-  z-index: -4;
-  @include media ($sp) {
-    display: none;
-  }
-
-  &:before {
-    // ここに薄暗くする背景を入れる
-    content: ' ';
-    height: 100%;
-  }
-}
-
-#player {
-  position: absolute;
-  top: 0;
-  left: -15%;
-  bottom: 0;
-  margin: auto;
-  overflow: hidden;
-  height: 130%;
-  width: 130%;
-  pointer-events: none;
-}
-
-.video-wrap {
-  width: 100%;
-  position: absolute;
-  right: 0;
-  bottom: 0;
-  z-index: -2;
 }
 
 .hero-logo {
@@ -92,9 +65,10 @@
   right: auto;
   z-index: 9999;
   transform: translateX(-50%) translateY(-50%);
-  z-index: -3;
+  z-index: 1;
   @include media ($sp) {
     top: 40%;
+    z-index: 0;
   }
 
   img {
@@ -105,4 +79,36 @@
       width: 150px;
     }
   }
+}
+
+.sp-top-hero {
+  @include media ($sp) {
+    display: block;
+    background-image: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.2)), url("../../img/bg_hero.jpg");
+    background-size: cover;
+    background-position: center center;
+    .video-play {
+      width: 200px;
+      height: 60px;
+      line-height: 60px;
+      border: 1px solid #fff;
+      border-radius: 50px;
+      text-align: center;
+      font-family: $eigo_font;
+      letter-spacing: 1px;
+      position: absolute;
+      left: 50%;
+      top: 68%;
+      bottom: auto;
+      right: auto;
+      transform: translateX(-50%) translateY(-50%);
+      font-weight: bold;
+      font-size: 2rem;
+      color: #fff;
+    }
+  }
+  @include media ($pc) {
+    display: none;
+  }
+
 }
