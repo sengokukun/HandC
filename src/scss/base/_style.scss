@@ -1,3 +1,16 @@
+.top {
+  .header {
+    @include media ($sp) {
+      background-color: inherit;
+    }
+    .header-logo{
+      @include media ($sp) {
+        display: none;
+      }
+    }
+  }
+}
+
 .top-hero {
   width: 100vw;
   height: 100vh;
@@ -16,6 +29,17 @@
   }
   @include media ($pc) {
     display: none;
+  }
+
+  .video-play {
+    position: absolute;
+    left: 50%;
+    top: 60%;
+    bottom: auto;
+    right: auto;
+    z-index: 9999;
+    transform: translateX(-50%) translateY(-50%);
+    z-index: 2;
   }
 }
 
@@ -40,29 +64,6 @@
   }
 }
 
-.hero-logo {
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  bottom: auto;
-  right: auto;
-  z-index: 9999;
-  transform: translateX(-50%) translateY(-50%);
-  z-index: -3;
-  @include media ($sp) {
-    top: 40%;
-  }
-
-  img {
-    width: 200px;
-    height: 200px;
-    @include media ($sp) {
-      height: 150px;
-      width: 150px;
-    }
-  }
-}
-
 #player {
   position: absolute;
   top: 0;
@@ -83,25 +84,25 @@
   z-index: -2;
 }
 
-.loading {
-  display: none;
-  position: fixed;
-  width: 100%;
-  height: 100%;
-  top: 0;
-  left: 0;
-  background: #fff;
-  z-index: 1;
+.hero-logo {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  bottom: auto;
+  right: auto;
+  z-index: 9999;
+  transform: translateX(-50%) translateY(-50%);
+  z-index: -3;
+  @include media ($sp) {
+    top: 40%;
+  }
 
-  &__gif {
-    display: none;
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    bottom: auto;
-    right: auto;
-    z-index: 9999;
-    transform: translateX(-50%) translateY(-50%);
-    z-index: 2;
+  img {
+    width: 200px;
+    height: 200px;
+    @include media ($sp) {
+      height: 150px;
+      width: 150px;
+    }
   }
 }
