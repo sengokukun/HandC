@@ -1,17 +1,3 @@
-.top {
-  .header {
-    @include media ($sp) {
-      background-color: inherit;
-    }
-
-    .header-logo {
-      @include media ($sp) {
-        display: none;
-      }
-    }
-  }
-}
-
 .top-hero {
   width: 100vw;
   height: 100vh;
@@ -30,9 +16,6 @@
       // ここに薄暗くする背景を入れる
       content: ' ';
       height: 100%;
-    }
-    @include media ($sp) {
-      display: none;
     }
   }
 
@@ -81,9 +64,6 @@
     font-weight: bold;
     font-size: 2rem;
     color: #fff;
-    @include media ($sp) {
-      display: block;
-    }
   }
 }
 

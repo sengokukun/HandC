@@ -1,3 +1,17 @@
+.top {
+  .header {
+    @include media ($sp) {
+      background-color: inherit;
+    }
+
+    .header-logo {
+      @include media ($sp) {
+        display: none;
+      }
+    }
+  }
+}
+
 .header {
   @include media ($sp) {
     background-color: #fff;

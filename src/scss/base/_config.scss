@@ -41,3 +41,21 @@ $eigo_font: 'Roboto', sans-serif;
     display: none;
   }
 }
+
+.pc{
+  @include media ($pc) {
+    display: block;
+  }
+  @include media ($sp) {
+    display: none;
+  }
+}
+
+.sp{
+  @include media ($sp) {
+    display: block;
+  }
+  @include media ($pc) {
+    display: none;
+  }
+}
