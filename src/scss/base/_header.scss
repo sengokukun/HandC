@@ -10,6 +10,7 @@
 
   .header-logo {
     display: inline-block;
+
     a {
       img {
         width: 40px;
@@ -193,31 +194,80 @@
       display: flex;
       align-items: center;
 
-      .sp-menu {
-        position: absolute;
-        top: 10px;
-        right: 20px;
-        color: #fff;
-        font-size: 2.6rem;
-        display: none;
+      .header-toggle {
+        border: 0;
+        outline: none;
+        background-color: #fff;
+        height: 100%;
+        box-sizing: border-box;
         cursor: pointer;
-        z-index: 4;
-        @include media ($sp) {
-          display: block;
+        appearance: none;
+        background: transparent;
+        z-index: 100;
+        position: absolute;
+        top: 20px;
+        right: 20px;
+
+        .toggle-lines {
+          display: inline-block;
+          transition: all 0.4s;
+          box-sizing: border-box;
+          border: none;
+          position: relative;
+          width: 24px;
+          height: 24px;
+          z-index: 999999;
+
+          &__line {
+            transition: all 0.4s;
+            display: inline-block;
+            box-sizing: border-box;
+            border: none;
+            position: absolute;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            border-radius: 2px;
+            background-color: #fff;
+
+            &:nth-of-type(1) {
+              top: 0;
+            }
+
+            &:nth-of-type(2) {
+              top: 9px;
+            }
+
+            &:nth-of-type(3) {
+              bottom: 4px;
+            }
+          }
+
+          .bg_black {
+            background-color: #000;
+          }
         }
 
-        &--close {
-          display: none;
-        }
+        .active {
+          span:nth-of-type(1) {
+            -webkit-transform: translateY(20px) rotate(-45deg);
+            transform: translateY(8px) rotate(-45deg);
+          }
 
-        &--white {
-          color: #fff;
-        }
+          span:nth-of-type(2) {
+            opacity: 0;
+          }
 
-        &--black {
-          color: #000;
+          span:nth-of-type(3) {
+            -webkit-transform: translateY(-20px) rotate(45deg);
+            transform: translateY(-10px) rotate(45deg);
+          }
         }
       }
+    }
+
+    .open {
+      position: fixed;
     }
 
     .contents {
@@ -247,6 +297,9 @@
           display: block;
           color: #000;
           font-size: 2rem;
+          font-family: $eigo_font;
+          font-weight: 600;
+          letter-spacing: 1px;
         }
       }
 

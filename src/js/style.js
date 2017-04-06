@@ -58,16 +58,21 @@ function stopload(){
 var windowW = $(window).width();//画面の横幅を取得
 
 $(function(){
-  $('.sp-menu--open').click(function(){
-    $('.sp-header .contents').fadeIn();
-    $(this).hide();
-    $('.sp-menu--close').show();
-  });
-  $('.sp-menu--close').click(function(){
-    $('.sp-header .contents').fadeOut();
-    $(this).hide();
-    $('.sp-menu--open').show();
-  });
+  var triggers = $('.toggle-lines'),
+      toggleBtn = $('.header-toggle'),
+      body = $(document.body)
+      toggleBtn.on('click', function(){
+      body.toggleClass('open');
+        if(body.hasClass('open')){
+          $(triggers).addClass('active');
+          $('.sp-header .contents').fadeIn(150);
+          $('.toggle-lines__line').addClass('bg_black');
+        } else {
+          $(triggers).removeClass('active');
+          $('.sp-header .contents').fadeOut(150);
+          $('.toggle-lines__line').removeClass('bg_black');
+        }
+      });  
   if( windowW > 481 ){
     $('.header-item__list--works').hover(function(){
       $('.aaa').addClass('open');
