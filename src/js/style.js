@@ -72,12 +72,12 @@ $(function(){
           $('.sp-header .contents').fadeOut(150);
           $('.toggle-lines__line').removeClass('bg_black');
         }
-      });  
+      });
   if( windowW > 481 ){
     $('.header-item__list--works').hover(function(){
-      $('.aaa').addClass('open');
+      $('.pc-workskinds').addClass('open');
     },function(){
-      $('.aaa').removeClass('open');
+      $('.pc-workskinds').removeClass('open');
     });
   }
 });

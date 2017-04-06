@@ -10,7 +10,6 @@
 
   .header-logo {
     display: inline-block;
-
     a {
       img {
         width: 40px;
@@ -134,7 +133,7 @@
       justify-content: space-between;
       align-items: center;
 
-      .aaa {
+      .pc-workskinds {
         display: none;
         position: absolute;
         width: 100%;
@@ -242,8 +241,7 @@
               bottom: 4px;
             }
           }
-
-          .bg_black {
+          .bg_black{
             background-color: #000;
           }
         }
@@ -265,7 +263,6 @@
         }
       }
     }
-
     .open {
       position: fixed;
     }
