@@ -32,6 +32,8 @@ function onPlayerReady(event) {
 function onPlayerStateChange(event) {
 }
 
+//loading
+
 $(function() {
   // var h = $(window).height();
 
@@ -56,6 +58,8 @@ function stopload(){
 }
 
 var windowW = $(window).width();//画面の横幅を取得
+
+//jquery
 
 $(function(){
   var triggers = $('.toggle-lines'),
