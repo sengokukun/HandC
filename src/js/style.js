@@ -54,3 +54,30 @@ function stopload(){
   $('.loading').delay(2000).fadeOut(700);
   $('.loading__gif').delay(2000).fadeOut(300);
 }
+
+var windowW = $(window).width();//画面の横幅を取得
+
+$(function(){
+  var triggers = $('.toggle-lines'),
+      toggleBtn = $('.header-toggle'),
+      body = $(document.body)
+      toggleBtn.on('click', function(){
+      body.toggleClass('open');
+        if(body.hasClass('open')){
+          $(triggers).addClass('active');
+          $('.sp-header .contents').fadeIn(150);
+          $('.toggle-lines__line').addClass('bg_black');
+        } else {
+          $(triggers).removeClass('active');
+          $('.sp-header .contents').fadeOut(150);
+          $('.toggle-lines__line').removeClass('bg_black');
+        }
+      });
+  if( windowW > 481 ){
+    $('.header-item__list--works').hover(function(){
+      $('.pc-workskinds').addClass('open');
+    },function(){
+      $('.pc-workskinds').removeClass('open');
+    });
+  }
+});

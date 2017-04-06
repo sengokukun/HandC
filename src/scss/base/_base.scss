@@ -27,7 +27,7 @@ body {
   margin: 0;
   padding: 0;
   position: relative;
-  font-family: Avenir , "Open Sans" , "Helvetica Neue" , Helvetica , Arial , Verdana , Roboto , "游ゴシック" , "Yu Gothic" , "游ゴシック体" , "YuGothic" , "ヒラギノ角ゴ Pro W3" , "Hiragino Kaku Gothic Pro" , "Meiryo UI" , "メイリオ" , Meiryo , "ＭＳ Ｐゴシック" , "MS PGothic" , sans-serif;
+  font-family: $base_font;
   -moz-user-select: none;
   -webkit-user-select: none;
   -ms-user-select: none;
@@ -99,87 +99,32 @@ li {
 .gloval-contents {
   width: 100%;
   margin-top: -100px;
-}
-
-.header {
-  display: -webkit-flex;
-  display: -moz-flex;
-  display: -ms-flex;
-  display: -o-flex;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  height: 60px;
-  background-color: #fff;
-
-  .contents {
-    display: -webkit-flex;
-    display: -moz-flex;
-    display: -ms-flex;
-    display: -o-flex;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-
-  .lists {
-    display: -webkit-flex;
-    display: -moz-flex;
-    display: -ms-flex;
-    display: -o-flex;
-    display: flex;
-  }
-
-  .header-logo {
-    a {
-      img {
-        width: 40px;
-        height: 40px;
-      }
-    }
-  }
-
-  .header-item {
-    display: -webkit-flex;
-    display: -moz-flex;
-    display: -ms-flex;
-    display: -o-flex;
-    display: flex;
-    align-items: center;
-
-    &__list {
-      font-size: 1.6rem;
-      padding-right: 50px;
-      &:first-child{
-        padding-left: 50px;
-      }
-      &:last-child{
-        padding-right: 0;
-      }
-    }
-
-    &__link {
-      color: #333;
-      &--tw{
-        font-size: 2.6rem;
-      }
-      &--fb{
-        font-size: 2.6rem;
-      }
-    }
+  position: relative;
+  @include media ($sp) {
+    position: static;
+    margin-top: 0;
   }
 }
 
-.footer {
+.loading {
+  display: none;
+  position: fixed;
   width: 100%;
-  height: 40px;
-  background-color: #fff;
-  text-align: center;
-  border-top: 1px solid #999;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: #fff;
+  z-index: 2;
 
-  &__copyright {
-    line-height: 40px;
-    color: #999;
+  &__gif {
+    display: none;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    bottom: auto;
+    right: auto;
+    z-index: 9999;
+    transform: translateX(-50%) translateY(-50%);
+    z-index: 2;
   }
 }

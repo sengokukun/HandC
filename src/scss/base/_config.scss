@@ -1,31 +1,26 @@
 /* ====================================================
 // color変数
 ==================================================== */
-
 $turquoise: #0086a2;
 $darkturquoise: #00A5BF;
 $aiiro: #105889;
 $blue: #00a5bf;
 $incblue: #4576A1;
 $main-bg: #f5f0eb;
-
 /* ====================================================
 // ページ全体の横幅
 ==================================================== */
 $base_width: 960px;
 $base_maxwidth: 1366px;
-
 /* ====================================================
 // 余白設定
 ==================================================== */
 $base_p: 0 20px;
-
 /* ====================================================
 // font設定
 ==================================================== */
-$base_font: "游ゴシック", YuGothic, "ヒラギノ角ゴ Pro", "Hiragino Kaku Gothic Pro", "メイリオ", "Meiryo", sans-serif;
-
-
+$base_font: "Open Sans" , "Helvetica Neue" , Helvetica , Arial , Verdana , Roboto , "游ゴシック" , "Yu Gothic" , "游ゴシック体" , "YuGothic" , "ヒラギノ角ゴ Pro W3" , "Hiragino Kaku Gothic Pro" , "Meiryo UI" , "メイリオ" , Meiryo , "ＭＳ Ｐゴシック" , "MS PGothic" , sans-serif;
+$eigo_font: 'Roboto', sans-serif;
 /* ====================================================
 // br設定
 ==================================================== */
@@ -45,55 +40,4 @@ $base_font: "游ゴシック", YuGothic, "ヒラギノ角ゴ Pro", "Hiragino Kak
   @include media ($sp) {
     display: none;
   }
-}
-
-/* ====================================================
-// keyframe
-==================================================== */
-
-@-webkit-keyframes example {
-  100% {
-    @include opacity(1);
-  }
-}
-@keyframes textfadeIn {
-  100% {
-    @include opacity(1);
-  }
-}
-
-@-webkit-keyframes bgscroll {
- 0% {background-position: 0 0;}
- 100% {background-position: 0 -500px;}
-}
-
-@keyframes bgscroll {
- 0% {background-position: 0 0;}
- 100% {background-position: 0 -500px;}
-}
-
-$time : .5s;
-$ease : cubic-bezier(0.25, 0.46, 0.45, 0.94);
-
-#pjaxContent{
-    position: relative;
-
-    &.fadeIn{
-        animation: fadeIn $time $ease;
-    }
-    &.fadeOut{
-        animation: fadeOut $time $ease;
-    }
-    &.fadeOutDelay{
-        animation: fadeOut $time .4s $ease;
-    }
-}
-
-@keyframes fadeIn{
-    0%{left: 100%;}
-    100%{left: 0;}
-}
-@keyframes fadeOut{
-    0%{left: 0;}
-    100%{left: -100%;}
 }
