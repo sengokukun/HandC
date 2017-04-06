@@ -1,0 +1,13 @@
+.sp-sns-menu {
+  @include media ($sp) {
+    @include flex();
+
+    &__list {}
+
+    &__link {
+      &--black {
+        color: #000;
+      }
+    }
+  }
+}

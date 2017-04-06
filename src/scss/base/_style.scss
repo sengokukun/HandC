@@ -3,7 +3,8 @@
     @include media ($sp) {
       background-color: inherit;
     }
-    .header-logo{
+
+    .header-logo {
       @include media ($sp) {
         display: none;
       }
@@ -14,45 +15,74 @@
 .top-hero {
   width: 100vw;
   height: 100vh;
-  @include media ($pc) {
-    .top-bgv-wrap {
-      height: 100vh;
-      overflow: hidden;
-      position: relative;
-      top: -100px;
-      overflow: hidden;
-      background-image: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.2)), url("../../img/bg_hero.jpg");
-      background-size: cover;
-      background-position: center center;
-      @include media ($sp) {
-        display: none;
-      }
 
-      &:before {
-        // ここに薄暗くする背景を入れる
-        content: ' ';
-        height: 100%;
-      }
+  .top-bgv-wrap {
+    height: 100vh;
+    overflow: hidden;
+    position: relative;
+    top: -100px;
+    overflow: hidden;
+    background-image: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.2)), url("../../img/bg_hero.jpg");
+    background-size: cover;
+    background-position: center center;
+
+    &:before {
+      // ここに薄暗くする背景を入れる
+      content: ' ';
+      height: 100%;
     }
-
-    #player {
-      position: absolute;
-      top: 0;
-      left: -15%;
-      bottom: 0;
-      margin: auto;
-      overflow: hidden;
-      height: 130%;
-      width: 130%;
-      pointer-events: none;
+    @include media ($sp) {
+      display: none;
     }
+  }
 
-    .video-wrap {
-      width: 100%;
-      position: absolute;
-      right: 0;
-      bottom: 0;
-      z-index: -2;
+  #player {
+    position: absolute;
+    top: 0;
+    left: -15%;
+    bottom: 0;
+    margin: auto;
+    overflow: hidden;
+    height: 130%;
+    width: 130%;
+    pointer-events: none;
+  }
+
+  .video-wrap {
+    width: 100%;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    z-index: -2;
+  }
+  @include media ($sp) {
+    display: block;
+    background-image: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.2)), url("../../img/bg_hero.jpg");
+    background-size: cover;
+    background-position: center center;
+  }
+
+  .video-play {
+    display: none;
+    width: 200px;
+    height: 60px;
+    line-height: 60px;
+    border: 1px solid #fff;
+    border-radius: 50px;
+    text-align: center;
+    font-family: $eigo_font;
+    letter-spacing: 1px;
+    position: absolute;
+    left: 50%;
+    top: 68%;
+    bottom: auto;
+    right: auto;
+    transform: translateX(-50%) translateY(-50%);
+    font-weight: bold;
+    font-size: 2rem;
+    color: #fff;
+    @include media ($sp) {
+      display: block;
     }
   }
 }
@@ -79,36 +109,4 @@
       width: 150px;
     }
   }
-}
-
-.sp-top-hero {
-  @include media ($sp) {
-    display: block;
-    background-image: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.2)), url("../../img/bg_hero.jpg");
-    background-size: cover;
-    background-position: center center;
-    .video-play {
-      width: 200px;
-      height: 60px;
-      line-height: 60px;
-      border: 1px solid #fff;
-      border-radius: 50px;
-      text-align: center;
-      font-family: $eigo_font;
-      letter-spacing: 1px;
-      position: absolute;
-      left: 50%;
-      top: 68%;
-      bottom: auto;
-      right: auto;
-      transform: translateX(-50%) translateY(-50%);
-      font-weight: bold;
-      font-size: 2rem;
-      color: #fff;
-    }
-  }
-  @include media ($pc) {
-    display: none;
-  }
-
 }
