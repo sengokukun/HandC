@@ -1,0 +1,26 @@
+.bread{
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex;
+  &__list{
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: flex;
+    align-items: center;
+    margin-right: 6px;
+    &::after{
+      display: block;
+      content: ">";
+      margin-top: -2px;
+      margin-left: 6px;
+    }
+  }
+  &__link{
+    font-size: 1.4rem;
+    color: #000;
+  }
+}
