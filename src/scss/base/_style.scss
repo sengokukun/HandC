@@ -1,6 +1,9 @@
 .top-hero {
   width: 100vw;
   height: 100vh;
+  @include media ($pc) {
+    margin-bottom: -100px;
+  }
 
   .top-bgv-wrap {
     height: 100vh;

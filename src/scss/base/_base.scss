@@ -93,12 +93,12 @@ li {
 .containr {
   width: 100%;
   max-width: 1200px;
+  width: 860px;
   margin: 0 auto;
 }
 
 .gloval-contents {
   width: 100%;
-  margin-top: -100px;
   position: relative;
   @include media ($sp) {
     position: static;
@@ -127,4 +127,9 @@ li {
     transform: translateX(-50%) translateY(-50%);
     z-index: 2;
   }
+}
+
+.b-line{
+  box-sizing: border-box;
+  border-bottom: 3px solid #000;
 }
