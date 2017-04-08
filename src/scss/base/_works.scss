@@ -10,11 +10,7 @@
       margin-top: 30px;
     }
     .works-items{
-      display: -webkit-flex;
-      display: -moz-flex;
-      display: -ms-flex;
-      display: -o-flex;
-      display: flex;
+      @include flex();
       justify-content: space-between;
       flex-wrap: wrap;
       .article{
@@ -30,12 +26,8 @@
             overflow: hidden;
           }
           &__text{
-            display: -webkit-flex;
-            display: -moz-flex;
-            display: -ms-flex;
-            display: -o-flex;
-            display: flex;
-            flex-direction: column;
+            @include flex();
+            @include fd(column);
             box-sizing: border-box;
             padding-top: 20px;
             &--title{

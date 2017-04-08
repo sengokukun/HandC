@@ -55,7 +55,7 @@
     align-items: center;
     @include media ($sp) {
       overflow-y: scroll;
-      flex-direction: column;
+      @include fd(column);
       padding-top: 60px;
     }
 
@@ -64,7 +64,7 @@
       align-items: center;
       @include media ($sp) {
         width: 100%;
-        flex-direction: column;
+        @include fd(column);
         text-align: center;
       }
 

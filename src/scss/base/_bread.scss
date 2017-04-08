@@ -1,15 +1,7 @@
 .bread{
-  display: -webkit-flex;
-  display: -moz-flex;
-  display: -ms-flex;
-  display: -o-flex;
-  display: flex;
+  @include flex();
   &__list{
-    display: -webkit-flex;
-    display: -moz-flex;
-    display: -ms-flex;
-    display: -o-flex;
-    display: flex;
+    @include flex();
     align-items: center;
     margin-right: 6px;
     &::after{

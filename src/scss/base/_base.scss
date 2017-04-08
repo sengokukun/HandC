@@ -80,20 +80,16 @@ li {
 }
 
 .wrap {
-  display: flex;
-  /* 要素をflexboxに対応させる */
+  @include flex();
+  @include fd(column);
   align-items: center;
-  /* 縦方向の中央揃え */
   justify-content: center;
-  /* 横方向の中央揃え */
-  flex-direction: column;
-  /* 子要素の並びを上から下にする（要素の改行に対応） */
 }
 
 .containr {
   width: 100%;
-  max-width: 1200px;
-  width: 860px;
+  max-width: $base_maxwidth;
+  width: $base_width;
   margin: 0 auto;
 }
 
