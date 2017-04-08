@@ -2,13 +2,6 @@
   width: 100%;
   margin-top: 60px;
   .works{
-    &__title{
-      font-size: 3rem;
-      text-align: center;
-      font-family: $eigo_font;
-      font-weight: 600;
-      margin-top: 30px;
-    }
     .works-items{
       @include flex();
       justify-content: space-between;
