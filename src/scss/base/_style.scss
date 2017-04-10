@@ -68,28 +68,19 @@
     font-size: 2rem;
     color: #fff;
   }
-}
-
-.hero-logo {
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  bottom: auto;
-  right: auto;
-  z-index: 9999;
-  transform: translateX(-50%) translateY(-50%);
-  z-index: 1;
-  @include media ($sp) {
-    top: 40%;
-    z-index: 0;
-  }
-
-  img {
-    width: 200px;
-    height: 200px;
+  .hero-logo {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    bottom: auto;
+    right: auto;
+    z-index: 9999;
+    transform: translateX(-50%) translateY(-50%);
+    z-index: 1;
     @include media ($sp) {
-      height: 150px;
-      width: 150px;
+      top: 40%;
+      z-index: 0;
     }
   }
+
 }
