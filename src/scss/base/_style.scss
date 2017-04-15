@@ -1,11 +1,11 @@
-.top-hero {
+.TopHero {
   width: 100vw;
   height: 100vh;
   @include media ($pc) {
     margin-bottom: -100px;
   }
 
-  .top-bgv-wrap {
+  .TopbgvWrapper {
     height: 100vh;
     overflow: hidden;
     position: relative;
@@ -68,7 +68,8 @@
     font-size: 2rem;
     color: #fff;
   }
-  .hero-logo {
+
+  .HeroLogo {
     position: absolute;
     left: 50%;
     top: 50%;
@@ -82,5 +83,4 @@
       z-index: 0;
     }
   }
-
 }

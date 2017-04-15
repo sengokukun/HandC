@@ -79,21 +79,21 @@ li {
   list-style-type: none;
 }
 
-.wrap {
+.Wrapper {
   @include flex();
   @include fd(column);
   align-items: center;
   justify-content: center;
 }
 
-.containr {
+.Containr {
   width: 100%;
   max-width: $base_maxwidth;
   width: $base_width;
   margin: 0 auto;
 }
 
-.gloval-contents {
+.Gloval {
   width: 100%;
   position: relative;
   @include media ($sp) {
@@ -102,7 +102,7 @@ li {
   }
 }
 
-.loading {
+.Loading {
   display: none;
   position: fixed;
   width: 100%;
@@ -112,7 +112,7 @@ li {
   background: #fff;
   z-index: 2;
 
-  &__gif {
+  &__Gif {
     display: none;
     position: absolute;
     left: 50%;
@@ -138,7 +138,7 @@ li {
   margin-top: 30px;
 }
 
-.hero-logo{
+.HeroLogo{
   text-align: center;
   img {
     width: 200px;

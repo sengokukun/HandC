@@ -1,5 +1,5 @@
-.top{
-  .footer{
+.Top{
+  .MasterFoot{
     .sp-sns-menu{
       position: absolute;
       left: 50%;
@@ -25,7 +25,7 @@
   }
 }
 
-.footer {
+.MasterFoot {
   width: 100%;
   height: 40px;
   background-color: #fff;
@@ -38,7 +38,7 @@
     border-top: 0;
   }
 
-  &__copyright {
+  &__Copyright {
     line-height: 40px;
     color: #999;
     font-size: 10px;
