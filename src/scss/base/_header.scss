@@ -101,6 +101,7 @@
         height: 60px;
         line-height: 60px;
         display: block;
+        font-size: 2rem;
         @include media ($sp) {
           height: 100%;
           width: 100%;

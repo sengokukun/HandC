@@ -7,7 +7,8 @@ var browser = require("browser-sync"); // ブラウザ更新
 var autoprefixer = require("gulp-autoprefixer"); // ベンダープレフィックス
 var plumber = require("gulp-plumber"); // エラーで止めない
 var sass = require("gulp-sass"); // sass
-var cmq = require('gulp-combine-media-queries'); //メディアクエリ
+var combineMq = require('gulp-combine-mq');
+// var cmq = require('gulp-combine-media-queries'); //メディアクエリ
 var uglify = require("gulp-uglify"); //js
 var imagemin = require("gulp-imagemin"); //img
 var imageminPngquant = require('imagemin-pngquant');
@@ -41,10 +42,18 @@ gulp.task("sass", ['server'], function() {
 });
 
 // メディアクエリ
-gulp.task('cmq', function () {
-  gulp.src('css/**/*css')
-  .pipe(cmq({log: true}))
-  .pipe(gulp.dest('./dist/css'));
+// gulp.task('cmq', function () {
+//   gulp.src('css/**/*css')
+//   .pipe(cmq({log: true}))
+//   .pipe(gulp.dest('./dist/css'));
+// });
+
+gulp.task('combineMq', function () {
+    return gulp.src('./dist/css/style.css')
+    .pipe(combineMq({
+        beautify: false
+    }))
+    .pipe(gulp.dest('./dist/css'));
 });
 
 // js圧縮
@@ -82,7 +91,8 @@ gulp.task('htmlmin', function() {
 gulp.task("default", ["server"], function() {
   gulp.watch(['./src/scss/**/*.scss'], ['sass']);
   gulp.watch(['./src/js/**/*.js', '!./src/js/min/**/*.js'], ['uglify']);
-  gulp.watch('./dist/css/**/*css',['cmq']);
+  // gulp.watch('./dist/css/**/*css',['cmq']);
+  gulp.watch('./dist/css/**/*css',['combineMq']);
   gulp.watch('./src/*.html', ['htmlmin']);
   gulp.watch('./src/img/*',['imagemin']);
 });
