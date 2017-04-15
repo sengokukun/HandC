@@ -61,6 +61,7 @@
     align-items: center;
     @include media ($sp) {
       width: 100%;
+      padding-top: 60px;
       @include fd(column);
       text-align: center;
     }
@@ -154,6 +155,10 @@
       left: 0;
     }
 
+    .open {
+      display: block;
+    }
+
     .Workskinds {
       height: 40px;
       background-color: #000;
@@ -177,9 +182,6 @@
           }
         }
       }
-    }
-    .open {
-      display: block;
     }
   }
 

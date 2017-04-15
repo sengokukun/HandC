@@ -44,8 +44,8 @@ $(function() {
 });
 
 $(window).load(function() {
-    $('.Loading').delay(2000).fadeOut(700);
-    $('.Loading__Gif').delay(2000).fadeOut(300);
+    $('.Loading').delay(1000).fadeOut(750);
+    $('.Loading__Gif').delay(1000).fadeOut(300);
     $('.TopHero').css('display', 'block');
 });
 
@@ -55,8 +55,8 @@ $(function() {
 
 function stopload() {
     $('.TopHero').css('display', 'block');
-    $('.Loading').delay(2000).fadeOut(700);
-    $('.Loading__Gif').delay(2000).fadeOut(300);
+    $('.Loading').delay(1000).fadeOut(700);
+    $('.Loading__Gif').delay(1000).fadeOut(300);
 }
 
 var windowW = $(window).width(); //画面の横幅を取得
