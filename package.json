@@ -15,6 +15,7 @@
     "gulp": "^3.9.1",
     "gulp-autoprefixer": "^3.1.0",
     "gulp-combine-media-queries": "^0.2.0",
+    "gulp-combine-mq": "^0.4.0",
     "gulp-htmlmin": "^3.0.0",
     "gulp-imagemin": "^3.1.1",
     "gulp-plumber": "^1.1.0",

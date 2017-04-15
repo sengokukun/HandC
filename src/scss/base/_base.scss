@@ -137,3 +137,15 @@ li {
   font-weight: 600;
   margin-top: 30px;
 }
+
+.hero-logo{
+  text-align: center;
+  img {
+    width: 200px;
+    height: 200px;
+    @include media ($sp) {
+      height: 150px;
+      width: 150px;
+    }
+  }
+}
