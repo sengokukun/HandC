@@ -1,11 +1,11 @@
-.top-hero {
+.TopHero {
   width: 100vw;
   height: 100vh;
   @include media ($pc) {
     margin-bottom: -100px;
   }
 
-  .top-bgv-wrap {
+  .TopbgvWrapper {
     height: 100vh;
     overflow: hidden;
     position: relative;
@@ -48,7 +48,7 @@
     background-position: center center;
   }
 
-  .video-play {
+  .VideoPlay {
     display: none;
     width: 200px;
     height: 60px;
@@ -67,8 +67,12 @@
     font-weight: bold;
     font-size: 2rem;
     color: #fff;
+    @include media ($sp) {
+      display: block;
+    }
   }
-  .hero-logo {
+
+  .HeroLogo {
     position: absolute;
     left: 50%;
     top: 50%;
@@ -82,5 +86,4 @@
       z-index: 0;
     }
   }
-
 }

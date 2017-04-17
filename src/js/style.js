@@ -39,14 +39,14 @@ function onPlayerStateChange(event) {}
 $(function() {
     // var h = $(window).height();
 
-    $('.top-hero').css('display', 'none');
-    $('.loading ,.loading__gif').css('display', 'block');
+    $('.TopHero').css('display', 'none');
+    $('.Loading ,.Loading__Gif').css('display', 'block');
 });
 
 $(window).load(function() {
-    $('.loading').delay(2000).fadeOut(700);
-    $('.loading__gif').delay(2000).fadeOut(300);
-    $('.top-hero').css('display', 'block');
+    $('.Loading').delay(1000).fadeOut(750);
+    $('.Loading__Gif').delay(1000).fadeOut(300);
+    $('.TopHero').css('display', 'block');
 });
 
 $(function() {
@@ -54,9 +54,9 @@ $(function() {
 });
 
 function stopload() {
-    $('.top-hero').css('display', 'block');
-    $('.loading').delay(2000).fadeOut(700);
-    $('.loading__gif').delay(2000).fadeOut(300);
+    $('.TopHero').css('display', 'block');
+    $('.Loading').delay(1000).fadeOut(700);
+    $('.Loading__Gif').delay(1000).fadeOut(300);
 }
 
 var windowW = $(window).width(); //画面の横幅を取得
@@ -64,30 +64,30 @@ var windowW = $(window).width(); //画面の横幅を取得
 //jquery
 
 $(function() {
-    var triggers = $('.toggle-lines'),
-        toggleBtn = $('.header-toggle'),
+    var triggers = $('.Toggle__Lines'),
+        toggleBtn = $('.Toggle'),
         body = $(document.body)
     toggleBtn.on('click', function() {
         body.toggleClass('open');
         if (body.hasClass('open')) {
             $(triggers).addClass('active');
-            $('.sp-header .contents').fadeIn(150);
-            $('.toggle-lines__line').addClass('bg_black');
+            $('.SpHeader .Contents').fadeIn(150);
+            $('.Toggle__Line').addClass('bg_black');
         } else {
             $(triggers).removeClass('active');
-            $('.sp-header .contents').fadeOut(150);
-            $('.toggle-lines__line').removeClass('bg_black');
+            $('.SpHeader .Contents').fadeOut(150);
+            $('.Toggle__Line').removeClass('bg_black');
         }
     });
     if (windowW > 481) {
-      $('.header-item__list--works').hover(function() {
-          $('.pc-workskinds').addClass('open');
+      $('.MasterHead__List--works').hover(function() {
+          $('.PcWorkskinds').addClass('open');
       }, function() {
-          $('.pc-workskinds').removeClass('open');
+          $('.PcWorkskinds').removeClass('open');
       });
-      $('.members').on('inview', function() {
-          $('.modal').on('inview', function(event, isInView) {
-            $(this).stop().addClass('modalSlide');
+      $('.Members').on('inview', function() {
+          $('.Modal').on('inview', function(event, isInView) {
+            $(this).stop().addClass('ModalSlide');
           });
       });
     }
