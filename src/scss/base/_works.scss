@@ -1,37 +1,35 @@
-.works-wrap{
+.WorksWrapper{
   width: 100%;
   margin-top: 60px;
-  .works{
-    .works-items{
+  .Works{
+    &__Block{
       @include flex();
       justify-content: space-between;
       flex-wrap: wrap;
-      .article{
-        width: 420px;
-        margin-top: 60px;
-        box-sizing: border-box;
-        &:last-child{
-          margin-bottom: 60px;
-        }
-        .works-link{
-          &__photo{
-            height: 210px;
-            overflow: hidden;
-          }
-          &__text{
-            @include flex();
-            @include fd(column);
-            box-sizing: border-box;
-            padding-top: 20px;
-            &--title{
-              font-size: 2rem;
-            }
-            &--desc{
-              font-size: 1.4rem;
-            }
-          }
-        }
+    }
+    &__Item{
+      width: 420px;
+      margin-top: 60px;
+      box-sizing: border-box;
+      &:last-child{
+        margin-bottom: 60px;
       }
+    }
+    &__Photo{
+      height: 210px;
+      overflow: hidden;
+    }
+    &__Descriptions{
+      @include flex();
+      @include fd(column);
+      box-sizing: border-box;
+      padding-top: 20px;
+    }
+    &__Title{
+      font-size: 2rem;
+    }
+    &__Infomation{
+      font-size: 1.4rem;
     }
   }
 }

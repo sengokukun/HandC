@@ -1,6 +1,6 @@
-.bread{
+.Bread{
   @include flex();
-  &__list{
+  &__List{
     @include flex();
     align-items: center;
     margin-right: 6px;
@@ -11,7 +11,7 @@
       margin-left: 6px;
     }
   }
-  &__link{
+  &__Link{
     font-size: 1.4rem;
     color: #000;
   }

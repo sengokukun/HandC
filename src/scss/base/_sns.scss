@@ -12,16 +12,16 @@
   }
 }
 
-.snses{
+.Snses{
   @include flex();
   justify-content: flex-end;
-  &__list{
+  &__List{
     padding-right: 20px;
     &:last-child{
       padding-right: 0;
     }
   }
-  &__link{
+  &__Link{
     color: #000;
     font-size: 2.2rem;
   }

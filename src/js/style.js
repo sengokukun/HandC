@@ -85,9 +85,9 @@ $(function() {
       }, function() {
           $('.PcWorkskinds').removeClass('open');
       });
-      $('.members').on('inview', function() {
-          $('.modal').on('inview', function(event, isInView) {
-            $(this).stop().addClass('modalSlide');
+      $('.Members').on('inview', function() {
+          $('.Modal').on('inview', function(event, isInView) {
+            $(this).stop().addClass('ModalSlide');
           });
       });
     }
