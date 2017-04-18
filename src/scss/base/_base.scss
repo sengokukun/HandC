@@ -87,10 +87,14 @@ li {
 }
 
 .Containr {
-  width: 100%;
   max-width: $base_maxwidth;
   width: $base_width;
   margin: 0 auto;
+  @include media ($sp) {
+    width: 100%;
+    padding: 0 10px;
+    box-sizing: border-box;
+  }
 }
 
 .Gloval {
@@ -136,6 +140,9 @@ li {
   font-family: $eigo_font;
   font-weight: 600;
   margin-top: 30px;
+  @include media ($sp) {
+    font-size: 2rem;
+  }
 }
 
 .HeroLogo{

@@ -4,12 +4,22 @@
   .Abouts {
     .HeroLogo {
       margin: 90px 0 50px;
+      @include media ($sp) {
+        margin-top: 50px;
+        margin-bottom: 35px;
+      }
     }
 
     &__Text {
       text-align: center;
       font-size: 1.6rem;
       padding-bottom: 90px;
+      @include media ($sp) {
+        font-size: 1.2rem;
+        text-align: justify;
+        line-height: 1.8em;
+        padding-bottom: 0;
+      }
     }
   }
 
@@ -19,13 +29,23 @@
       @include flex();
       flex-wrap: wrap;
       margin-top: 80px;
+      @include media ($sp) {
+        justify-content: space-around;
+      }
     }
     &__List {
       position: relative;
       margin-bottom: 292px;
+      @include media ($sp) {
+        margin-bottom: 255px;
+      }
       &:first-child {
         padding-right: 137px;
+        @include media ($sp) {
+          padding-right: 0;
+        }
       }
+
     }
     &__Image {
       display: block;
@@ -53,6 +73,9 @@
     padding: 0 20px;
     background-color: rgba(255,255,255,0.5);
     animation-name: modalSlide;
+    @include media ($sp) {
+      top: 200px;
+    }
     &__Name {
       padding: 20px 0 12px;
       font-size: 1.8rem;
@@ -78,13 +101,23 @@
 .GoForm{
   .CapTitle{
     margin-top: 60px;
+    @include media ($sp) {
+      margin-top: 35px;
+    }
   }
   &__Description{
     text-align: center;
     font-size: 1.4rem;
     margin: 15px 0 45px;
+    @include media ($sp) {
+      font-size: 1.0rem;
+      margin-bottom: 35px;
+    }
   }
   .Button{
     margin-bottom: 60px;
+    @include media ($sp) {
+      margin-bottom: 45px;
+    }
   }
 }

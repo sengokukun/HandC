@@ -15,4 +15,7 @@
     font-size: 1.4rem;
     color: #000;
   }
+  @include media ($sp) {
+    display: none;
+  }
 }

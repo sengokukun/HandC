@@ -1,10 +1,18 @@
 .sp-sns-menu {
   @include media ($sp) {
+    margin-top: 17px;
     @include flex();
-
-    &__list {}
+    justify-content: center;
+    &__list {
+      margin-right: 46px;
+      &:last-child{
+        margin-right: 0;
+      }
+    }
 
     &__link {
+      font-size: 2.8rem;
+      color: #111;
       &--black {
         color: #000;
       }
