@@ -1,0 +1,13 @@
+.Button{
+  color: #111;
+  text-align: center;
+  width: 170px;
+  height: 40px;
+  line-height: 40px;
+  margin: 0 auto;
+  display: block;
+  font-size: 1.6rem;
+  &--contact{
+    border: 1px solid  #111;
+  }
+}
