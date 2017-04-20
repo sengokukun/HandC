@@ -1,6 +1,5 @@
 .sp-sns-menu {
   @include media ($sp) {
-    margin-top: 17px;
     @include flex();
     justify-content: center;
     &__list {
