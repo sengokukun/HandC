@@ -105,14 +105,8 @@
       margin-top: 35px;
     }
   }
-  &__Description{
-    text-align: center;
-    font-size: 1.4rem;
+  .Contact__Description{
     margin: 15px 0 45px;
-    @include media ($sp) {
-      font-size: 1.0rem;
-      margin-bottom: 35px;
-    }
   }
   .Button{
     margin-bottom: 60px;
