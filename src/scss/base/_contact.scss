@@ -5,13 +5,15 @@
 .Contact  {
   width: 650px;
   margin: 0 auto;
+  @include media ($sp) {
+    width: 100%;
+  }
   &__Description{
     text-align: center;
     font-size: 1.4rem;
     margin-top: 30px;
     @include media ($sp) {
-      font-size: 1.0rem;
-      margin-bottom: 35px;
+      font-size: 1.2rem;
     }
   }
   .Button{
@@ -29,13 +31,23 @@
     &:last-child{
       margin-bottom: 40px;
     }
+    @include media ($sp) {
+      flex-direction: column;
+    }
   }
   &__Name{
     width: 20%;
     font-size: 1.6rem;
+    @include media ($sp) {
+      width: 100%;
+      margin-bottom: 15px;
+    }
   }
   &__Data{
     width: 480px;
+    @include media ($sp) {
+      width: 100%;
+    }
   }
   &__Input{
     width: 100%;

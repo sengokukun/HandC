@@ -10,4 +10,9 @@
   &--contact{
     border: 1px solid  #111;
   }
+  &--spLong{
+    @include media ($sp) {
+      width: 100%;
+    }
+  }
 }
