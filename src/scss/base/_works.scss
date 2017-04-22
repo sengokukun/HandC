@@ -51,6 +51,9 @@
 
 .DetailWrapper{
   margin-top: 60px;
+  @include media ($sp) {
+    margin-top: 90px;
+  }
 }
 
 .Detail{
@@ -58,6 +61,11 @@
     width: 870px;
     height: 435px;
     margin:  20px auto 0;
+    @include media ($sp) {
+      width: 100%;
+      height: auto;
+      margin: 0;
+    }
   }
   &__Data{
     font-size: 1.4rem;
@@ -67,20 +75,33 @@
     padding-bottom: 10px;
     border-bottom: 1px solid #eee;
     color: #111;
+    @include media ($sp) {
+      margin-top: 35px;
+    }
   }
   &__Block{
-    margin-top: 60px;
-    margin-bottom: 60px;
+    margin: 60px 0;
     padding-bottom: 60px;
     border-bottom: 1px solid #eee;
     &--credit{
       font-size: 1.6rem;
+      @include media ($sp) {
+        font-size: 1.2rem;
+      }
+    }
+    @include media ($sp) {
+      margin: 35px 0;
+      padding-bottom: 35px;
     }
   }
   &__Title{
     font-size: 2.4rem;
     font-weight: normal;
     margin-bottom: 50px;
+    @include media ($sp) {
+      margin-bottom: 25px;
+      font-size: 1.4rem;
+    }
   }
   &__Description{
     font-size: 1.6rem;
@@ -88,11 +109,17 @@
     &:last-child{
       margin-bottom: 0;
     }
+    @include media ($sp) {
+      font-size: 1.2rem;
+    }
   }
   &__CreditDescription{
     margin-bottom: 25px;
     &:last-child{
       margin-bottom: 0;
+    }
+    @include media ($sp) {
+      margin-bottom: 20px;
     }
   }
   &__CreditLink{
