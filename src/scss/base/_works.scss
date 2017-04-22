@@ -2,6 +2,7 @@
   width: 100%;
   margin-top: 60px;
   .Works{
+    border-bottom: 1px solid  #eee;
     &__Block{
       @include flex();
       justify-content: space-between;
@@ -16,8 +17,21 @@
       }
     }
     &__Photo{
+      position: relative;
       height: 210px;
       overflow: hidden;
+    }
+    &__Tag{
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      font-size: 1.4rem;
+      color: #111;
+      width: 60px;
+      height: 25px;
+      line-height: 25px;
+      text-align: center;
+      background-color: rgba(255,255,255,0.7);
     }
     &__Descriptions{
       @include flex();
