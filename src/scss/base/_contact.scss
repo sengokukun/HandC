@@ -1,5 +1,8 @@
 .ContactWrapper{
   margin-top: 60px;
+  @include media ($sp) {
+    margin-top: 110px;
+  }
 }
 
 .Contact  {

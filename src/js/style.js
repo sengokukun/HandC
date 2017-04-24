@@ -71,11 +71,11 @@ $(function() {
         body.toggleClass('open');
         if (body.hasClass('open')) {
             $(triggers).addClass('active');
-            $('.SpHeader .Contents').fadeIn(150);
+            $('.SpHeader .MasterHead__Navigation').fadeIn(150);
             $('.Toggle__Line').addClass('bg_black');
         } else {
             $(triggers).removeClass('active');
-            $('.SpHeader .Contents').fadeOut(150);
+            $('.SpHeader .MasterHead__Navigation').fadeOut(150);
             $('.Toggle__Line').removeClass('bg_black');
         }
     });

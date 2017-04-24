@@ -1,5 +1,6 @@
 .Top{
   .MasterFoot{
+    padding-top: 0;
     @include media ($sp) {
       border-top: none;
       height: 0;

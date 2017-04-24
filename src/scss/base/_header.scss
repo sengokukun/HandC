@@ -2,6 +2,7 @@
   .MasterHead {
     @include media ($sp) {
       background-color: inherit;
+      box-shadow: none;
     }
 
     &__Logo {
@@ -21,17 +22,22 @@
 }
 
 .MasterHead {
+  position: relative;
   @include media ($sp) {
     background-color: #fff;
     width: 100%;
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
+    z-index: 99;
     height: 60px;
+    box-shadow: 1px 1px 1px #ddd;
   }
 
   &__Logo {
-    display: inline-block;
+    position: absolute;
+    top: 12px;
+    left: 15px;
 
     a {
       img {
@@ -39,22 +45,22 @@
         height: 40px;
       }
     }
-    @include media ($sp) {
-      height: 40px;
-      width: 40px;
-      padding-left: 20px;
-    }
+    // @include media ($sp) {
+    //   height: 40px;
+    //   width: 40px;
+    //   padding-left: 20px;
+    // }
   }
 
-  &__Lists {
-    @include flex();
-    align-items: center;
-    @include media ($sp) {
-      overflow-y: scroll;
-      @include fd(column);
-      padding-top: 60px;
-    }
-  }
+  // &__Lists {
+  //   @include flex();
+  //   align-items: center;
+  //   @include media ($sp) {
+  //     overflow-y: scroll;
+  //     @include fd(column);
+  //     padding-top: 60px;
+  //   }
+  // }
 
   &__Block {
     @include flex();
@@ -132,11 +138,13 @@
     width: 100%;
     height: 60px;
     background-color: #fff;
+    @include flex();
+    align-items: center;
     @include media ($sp) {
       display: none;
     }
 
-    .Contents {
+    .MasterHead__Navigation {
       width: 100%;
       height: 60px;
       @include flex();
@@ -196,17 +204,17 @@
       align-items: center;
     }
 
-    .Contents {
+    .MasterHead__Navigation {
       width: 100%;
       height: 100vh;
-      position: absolute;
+      position: fixed;
       top: 0;
       bottom: 0;
       left: 0;
       right: 0;
       background-color: #fff;
       display: none;
-      z-index: 10;
+      z-index: 99;
     }
     .Workskinds {
       padding-bottom: 20px;
