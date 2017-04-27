@@ -10,7 +10,7 @@ srcをgulpで監視してdistに吐き出す。
 1. gulp-combine-mq
 1. gulp-uglify
 1. gulp-imagemin
-1. imagemin-pngquant
+1. gulp-imagemin-pngquant
 1. gulp-htmlmin
 
 
