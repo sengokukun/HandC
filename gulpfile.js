@@ -51,6 +51,7 @@ gulp.task('combineMq', function () {
 // js圧縮
 gulp.task("uglify", function() {
   gulp.src(["./src/js/**/*.js","!./src/js/min/**/*.js","./src/js/ie8/**/*.js"])
+  .pipe(plumber())
   .pipe(uglify())
   .pipe(gulp.dest("./dist/js"))
   .pipe(browser.reload({
