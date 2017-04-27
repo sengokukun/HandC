@@ -43,7 +43,7 @@ $(function() {
   $('.Loading ,.Loading__Gif').css('display', 'block');
 });
 
-$(window).load(function() {
+$(window).on('load', function() {
   $('.Loading').delay(1300).fadeOut(550);
   $('.Loading__Gif').delay(1000).fadeOut(300);
   $('.TopHero').css('display', 'block');
@@ -95,22 +95,29 @@ $(function() {
 
 //works json
 $(function() {
+  var idName = $(".CapTitle").attr("id");
+  var dataName = idName;
+  var url = "./js/json/" + dataName + ".json";
   $.ajax({
-    url: "./js/json/video.json",
+    type: 'GET',
+    url: url,
+    dataType: 'json',
     data: {
       name: 'Video'
     },
-    dataType: "json",
     success: function(data) {
-      console.log("a");
-      var datavideo = data.Video;
+      console.log("おけ");
+      var dataLengh = data.length;
       var $tag = $(".Works__Tag");
       var $title = $(".Works__Title");
       var $info = $(".Works__Infomation");
-      $.each(datavideo, function(i) {
-        $tag.text(datavideo[i].id);
-      });
+      for (var i = 0; i < dataLengh; i++) {
+        $('.Works__Block').prepend('<article class="Works__Item"><a href="#" class="Works__Link"><p class="Works__Photo"><img src="/img/'+ data[i].Img +'.jpg" alt=""><span class="Works__Tag">' + data[i].Id + '</span></p><div class="Works__Descriptions"><h2 class="Works__Title">' + data[i].Title + '</h2><p class="Works__Infomation">' + data[i].Description + '</p></div></a></article>');
+      }
 
+    },
+    error: function() {
+      console.log("だめ");
     }
   });
 });
