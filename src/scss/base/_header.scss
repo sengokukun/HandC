@@ -22,7 +22,11 @@
 }
 
 .MasterHead {
+  @include flex();
+  align-items: center;
   position: relative;
+  padding: 0 30px;
+  box-sizing: border-box;
   @include media ($sp) {
     background-color: #fff;
     width: 100%;
@@ -32,10 +36,10 @@
     z-index: 99;
     height: 60px;
     box-shadow: 1px 1px 1px #ddd;
+    padding: 0 20px;
   }
 
   &__Logo {
-
     a {
       img {
         width: 40px;
