@@ -85,17 +85,17 @@
       }
 
     }
-    @include media ($pc) {
-      padding-right: 50px;
-
-      &:first-child {
-        padding-left: 50px;
-      }
-
-      &:last-child {
-        padding-right: 0;
-      }
-    }
+    // @include media ($pc) {
+    //   padding-right: 50px;
+    //
+    //   &:first-child {
+    //     padding-left: 50px;
+    //   }
+    //
+    //   &:last-child {
+    //     padding-right: 0;
+    //   }
+    // }
   }
 
   &__Link {
@@ -120,6 +120,7 @@
       }
     }
     @include media ($pc) {
+      padding: 0 30px;
       &:hover {
         box-sizing: border-box;
         border-bottom: 3px solid #000;
