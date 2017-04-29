@@ -25,9 +25,11 @@
   @include flex();
   align-items: center;
   position: relative;
-  padding: 0 30px;
   box-sizing: border-box;
+  justify-content: center;
+  padding: 0 30px 0 60px;
   @include media ($sp) {
+    padding: 0;
     background-color: #fff;
     width: 100%;
     position: fixed;
@@ -37,35 +39,45 @@
     height: 60px;
     box-shadow: 1px 1px 1px #ddd;
     padding: 0 20px;
+    justify-content: space-between;
   }
 
   &__Logo {
-    a {
-      img {
-        width: 40px;
-        height: 40px;
-      }
+    img {
+      width: 40px;
+      height: 40px;
     }
-    // @include media ($sp) {
-    //   height: 40px;
-    //   width: 40px;
-    //   padding-left: 20px;
-    // }
   }
 
-  // &__Lists {
-  //   @include flex();
-  //   align-items: center;
-  //   @include media ($sp) {
-  //     overflow-y: scroll;
-  //     @include fd(column);
-  //     padding-top: 60px;
-  //   }
-  // }
+  &__Navigation{
+    width: 100%;
+    height: 60px;
+    @include flex();
+    justify-content: space-between;
+    align-items: center;
+    @include media ($sp) {
+      width: 100%;
+      height: 100vh;
+      position: fixed;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background-color: #fff;
+      display: none;
+      z-index: 99;
+    }
+  }
 
   &__Block {
     @include flex();
     align-items: center;
+    &:first-child{
+      padding-left: 30px;
+      @include media ($sp) {
+        padding-left: 0;
+      }
+    }
     @include media ($sp) {
       width: 100%;
       padding-top: 60px;
@@ -83,19 +95,7 @@
       &:first-child {
         border-top: 1px solid #eee;
       }
-
     }
-    // @include media ($pc) {
-    //   padding-right: 50px;
-    //
-    //   &:first-child {
-    //     padding-left: 50px;
-    //   }
-    //
-    //   &:last-child {
-    //     padding-right: 0;
-    //   }
-    // }
   }
 
   &__Link {
@@ -121,10 +121,9 @@
     }
     @include media ($pc) {
       padding: 0 30px;
-      transition: all .3s;
+      transition: all 0.3s;
+
       &:hover {
-        // box-sizing: border-box;
-        // border-bottom: 3px solid #000;
         background-color: #111;
         color: #fff;
       }
@@ -141,6 +140,7 @@
 
   .PcHeader {
     width: 100%;
+    max-width: 1200px;
     height: 60px;
     background-color: #fff;
     @include flex();
@@ -149,13 +149,13 @@
       display: none;
     }
 
-    .MasterHead__Navigation {
-      width: 100%;
-      height: 60px;
-      @include flex();
-      justify-content: space-between;
-      align-items: center;
-    }
+    // .MasterHead__Navigation {
+    //   width: 100%;
+    //   height: 60px;
+    //   @include flex();
+    //   justify-content: space-between;
+    //   align-items: center;
+    // }
 
     .PcWorkskinds {
       display: none;
@@ -209,18 +209,19 @@
       align-items: center;
     }
 
-    .MasterHead__Navigation {
-      width: 100%;
-      height: 100vh;
-      position: fixed;
-      top: 0;
-      bottom: 0;
-      left: 0;
-      right: 0;
-      background-color: #fff;
-      display: none;
-      z-index: 99;
-    }
+    // .MasterHead__Navigation {
+    //   width: 100%;
+    //   height: 100vh;
+    //   position: fixed;
+    //   top: 0;
+    //   bottom: 0;
+    //   left: 0;
+    //   right: 0;
+    //   background-color: #fff;
+    //   display: none;
+    //   z-index: 99;
+    // }
+
     .Workskinds {
       padding-bottom: 20px;
 
@@ -242,6 +243,7 @@
         letter-spacing: 1px;
       }
     }
+
     .sp-sns-menu {
       padding: 30px 0;
 
@@ -257,9 +259,11 @@
         font-size: 2.6rem;
       }
     }
+
     .open {
       position: fixed;
     }
+
     .Toggle {
       border: 0;
       outline: none;
