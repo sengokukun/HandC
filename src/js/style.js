@@ -97,7 +97,7 @@ $(function() {
 $(function() {
   var idName = $(".CapTitle").attr("id");
   var dataName = idName;
-  var url = "./js/json/" + dataName + ".json";
+  var url = "./js/all.json";
   $.ajax({
     type: 'GET',
     url: url,
@@ -106,15 +106,22 @@ $(function() {
       name: 'Video'
     },
     success: function(data) {
+
       console.log("おけ");
       var dataLengh = data.length;
       var $tag = $(".Works__Tag");
       var $title = $(".Works__Title");
       var $info = $(".Works__Infomation");
       for (var i = 0; i < dataLengh; i++) {
-        $('.Works__Block').prepend('<article class="Works__Item"><a href="#" class="Works__Link"><p class="Works__Photo"><img src="/img/'+ data[i].Img +'.jpg" alt=""><span class="Works__Tag">' + data[i].Id + '</span></p><div class="Works__Descriptions"><h2 class="Works__Title">' + data[i].Title + '</h2><p class="Works__Infomation">' + data[i].Description + '</p></div></a></article>');
+        $('.Works__Block').prepend('<article class="Works__Item ' + data[i].Id + '"><a href="#" class="Works__Link"><p class="Works__Photo"><img src="/img/' + data[i].Img + '.jpg" alt=""><span class="Works__Tag">' + data[i].Id + '</span></p><div class="Works__Descriptions"><h2 class="Works__Title">' + data[i].Title + '</h2><p class="Works__Infomation">' + data[i].Description + '</p></div></a></article>');
+        if (idName == "VIDEO") {
+          $(".DESIGN, .PHOTO").remove();
+        } else if (idName == "PHOTO") {
+          $(".DESIGN, .VIDEO").remove();
+        } else if (idName == "DESIGN") {
+          $(".PHOTO, .VIDEO").remove();
+        }
       }
-
     },
     error: function() {
       console.log("だめ");
