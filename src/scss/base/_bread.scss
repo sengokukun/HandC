@@ -4,6 +4,7 @@
     @include flex();
     align-items: center;
     margin-right: 6px;
+    color: #111;
     &::after{
       display: block;
       content: ">";
@@ -13,7 +14,7 @@
   }
   &__Link{
     font-size: 1.4rem;
-    color: #000;
+    color: #111;
   }
   @include media ($sp) {
     display: none;
