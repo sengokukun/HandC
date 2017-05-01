@@ -127,7 +127,7 @@
     }
     @include media ($pc) {
       padding: 0 30px;
-      transition: all 0.3s;
+      transition: all 0.35s;
 
       &:hover {
         background-color: #111;
@@ -171,19 +171,12 @@
       left: 0;
     }
 
-    .open {
-      display: block;
-    }
-
     .Workskinds {
       height: 40px;
       background-color: #111;
       @include flex();
       padding-left: 360px;
 
-      &__List {
-        padding-right: 50px;
-      }
 
       &__Link {
         display: block;
@@ -191,10 +184,15 @@
         color: #fff;
         font-size: 1.4rem;
         height: 40px;
+        padding: 0 25px;
+        box-shadow: 0px 1px 2px rgba(0,0,0,0.2);
+        transition: all 0.35s;
         @include media ($pc) {
           &:hover {
+            transition: all 0.35s;
             box-sizing: border-box;
-            border-bottom: 3px solid #fff;
+            background-color: #fff;
+            color: #111;
           }
         }
       }
@@ -264,10 +262,6 @@
       &__link {
         font-size: 2.6rem;
       }
-    }
-
-    .open {
-      position: fixed;
     }
 
     .Toggle {
