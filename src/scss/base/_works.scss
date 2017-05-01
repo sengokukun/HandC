@@ -108,12 +108,25 @@
   }
   &__Description{
     font-size: 1.6rem;
-    margin-bottom: 20px;
+    margin-bottom: 40px;
     &:last-child{
       margin-bottom: 0;
     }
     @include media ($sp) {
       font-size: 1.2rem;
+    }
+    &--photo{
+      width: 100%;
+      @include flex();
+    }
+  }
+
+  &__DescriptionPhoto{
+    height: 210px;
+    overflow: hidden;
+    box-sizing: border-box;
+    &:last-child{
+      padding-left: 30px;
     }
   }
   &__CreditDescription{
