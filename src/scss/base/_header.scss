@@ -1,5 +1,6 @@
 .Top {
   .MasterHead {
+    position: static;
     @include media ($sp) {
       background-color: inherit;
       box-shadow: none;
@@ -24,10 +25,15 @@
 .MasterHead {
   @include flex();
   align-items: center;
-  position: relative;
+  position: fixed;
+  top: 0;
+  left: 0;
   box-sizing: border-box;
   justify-content: center;
   padding: 0 30px 0 60px;
+  width: 100%;
+  z-index: 99;
+  box-shadow: 0px 1px 2px rgba(0,0,0,0.2);
   @include media ($sp) {
     padding: 0;
     background-color: #fff;
@@ -161,7 +167,7 @@
       display: none;
       position: absolute;
       width: 100%;
-      background: #000;
+      background: #111;
       left: 0;
     }
 
@@ -171,9 +177,9 @@
 
     .Workskinds {
       height: 40px;
-      background-color: #000;
+      background-color: #111;
       @include flex();
-      padding-left: 235px;
+      padding-left: 360px;
 
       &__List {
         padding-right: 50px;
@@ -236,7 +242,7 @@
       &__Link {
         width: 100%;
         display: block;
-        color: #000;
+        color: #111;
         font-size: 2rem;
         font-family: $eigo_font;
         font-weight: 600;
@@ -306,7 +312,7 @@
       }
 
       .bg_black {
-        background-color: #000;
+        background-color: #111;
       }
 
       &__Line {
@@ -319,7 +325,7 @@
         width: 100%;
         height: 2px;
         border-radius: 2px;
-        background-color: #000;
+        background-color: #111;
 
         &:nth-of-type(1) {
           top: 0;
