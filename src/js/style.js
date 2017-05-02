@@ -81,9 +81,9 @@ $(function() {
   });
   if (windowW > 481) {
     $('.MasterHead__List--works').hover(function() {
-      $('.PcWorkskinds').addClass('open');
+      $('.PcWorkskinds').fadeIn("fast");
     }, function() {
-      $('.PcWorkskinds').removeClass('open');
+      $('.PcWorkskinds').fadeOut("fast");
     });
     $('.Members').on('inview', function() {
       $('.Modal').on('inview', function(event, isInView) {
