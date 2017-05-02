@@ -5,7 +5,8 @@
 // メディアクエリ
 ==================================================== */
 $sp: 480;
-$pc: 481;
+$pad: 840;
+$pc: 841;
 $iphone5: 320;
 $bigpc: 1000;
 @mixin media($size) {
@@ -14,6 +15,11 @@ $bigpc: 1000;
        @content;
     }
   }
+  @if $size == $pad{
+   @media all and (max-width: $pad + 'px') {
+      @content;
+   }
+ }
   @if $size == $pc {
      @media all and (min-width: $pc + 'px'){
       @content;

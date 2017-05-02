@@ -1,13 +1,13 @@
 .Top{
   .MasterFoot{
     padding-top: 0;
-    @include media ($sp) {
+    @include media ($pad) {
       border-top: none;
       height: 0;
       margin-top: -40px;
     }
     &__Copyright{
-      @include media ($sp) {
+      @include media ($pad) {
         color: #fff;
       }
     }
@@ -44,7 +44,7 @@
   text-align: center;
   border-top: 1px solid #999;
   box-sizing: border-box;
-  @include media ($sp) {
+  @include media ($pad) {
     height: 70px;
     border-top: 1px solid #ccc;
     background-color: inherit;
