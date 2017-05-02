@@ -128,3 +128,29 @@ $(function() {
     }
   });
 });
+
+$(function() {
+  $('.underBar, .underBar--top').css({
+    width: $('.current').outerWidth() - 60,
+    left: $('.current').position().left + 30
+  });
+
+  $('.MasterHead__Link').mouseover(function() {
+    $('.underBar')
+      .stop()
+      .animate({
+        width: $(this).outerWidth() - 60,
+        left: $(this).position().left + 30
+      }, 'fast');
+  });
+
+  $('.MasterHead__Link').mouseout(function() {
+    $('.underBar')
+      .stop()
+      .animate({
+        width: $('.current').outerWidth() - 60,
+        left: $('.current').position().left + 30
+      }, 'fast');
+
+  });
+});

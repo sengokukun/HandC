@@ -1,5 +1,5 @@
 .sp-sns-menu {
-  @include media ($sp) {
+  @include media ($pad) {
     @include flex();
     justify-content: center;
     &__list {

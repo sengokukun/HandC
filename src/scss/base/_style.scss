@@ -41,7 +41,7 @@
     bottom: 0;
     z-index: -2;
   }
-  @include media ($sp) {
+  @include media ($pad) {
     display: block;
     background-image: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.2)), url("../../img/bg_hero.jpg");
     background-size: cover;
@@ -67,7 +67,7 @@
     font-weight: bold;
     font-size: 2rem;
     color: #fff;
-    @include media ($sp) {
+    @include media ($pad) {
       display: block;
     }
   }
@@ -81,7 +81,7 @@
     z-index: 9999;
     transform: translateX(-50%) translateY(-50%);
     z-index: 1;
-    @include media ($sp) {
+    @include media ($pad) {
       top: 40%;
       z-index: 0;
     }

@@ -1,13 +1,14 @@
 .Top {
   .MasterHead {
     position: static;
-    @include media ($sp) {
+    @include media ($pad) {
       background-color: inherit;
       box-shadow: none;
+      position: absolute;
     }
 
     &__Logo {
-      @include media ($sp) {
+      @include media ($pad) {
         display: none;
       }
     }
@@ -34,7 +35,7 @@
   width: 100%;
   z-index: 99;
   box-shadow: 0px 1px 2px rgba(0,0,0,0.2);
-  @include media ($sp) {
+  @include media ($pad) {
     padding: 0;
     background-color: #fff;
     width: 100%;
@@ -61,7 +62,7 @@
     @include flex();
     justify-content: space-between;
     align-items: center;
-    @include media ($sp) {
+    @include media ($pad) {
       width: 100%;
       height: 100vh;
       position: fixed;
@@ -76,15 +77,18 @@
   }
 
   &__Block {
+    position: relative;
+    display: flex;
+    width: 100%;
     @include flex();
     align-items: center;
     &:first-child{
-      padding-left: 30px;
-      @include media ($sp) {
-        padding-left: 0;
+      margin-left: 30px;
+      @include media ($pad) {
+        margin-left: 0;
       }
     }
-    @include media ($sp) {
+    @include media ($pad) {
       width: 100%;
       padding-top: 60px;
       @include fd(column);
@@ -92,15 +96,32 @@
     }
   }
 
+  .underBar {
+    background:#111;
+  	height: 3px;
+  	display:block;
+  	position: absolute;
+  	width:64px;
+  	left:30px;
+    bottom: 0;
+  	margin-top: 5px;
+  }
+
   &__List {
     font-size: 1.6rem;
-    @include media ($sp) {
+    @include media ($pad) {
       width: 100%;
       border-bottom: 1px solid #eee;
 
       &:first-child {
         border-top: 1px solid #eee;
       }
+    }
+    &--right {
+      width: 100%;
+      display: flex;
+      flex-direction: row-reverse;
+      align-self: flex-end;
     }
   }
 
@@ -111,7 +132,7 @@
     line-height: 60px;
     display: block;
     font-size: 2rem;
-    @include media ($sp) {
+    @include media ($pad) {
       height: 100%;
       width: 100%;
       line-height: 1em;
@@ -128,11 +149,6 @@
     @include media ($pc) {
       padding: 0 30px;
       transition: all 0.35s;
-
-      &:hover {
-        background-color: #111;
-        color: #fff;
-      }
     }
 
     &--tw {
@@ -151,7 +167,7 @@
     background-color: #fff;
     @include flex();
     align-items: center;
-    @include media ($sp) {
+    @include media ($pad) {
       display: none;
     }
 
@@ -163,40 +179,41 @@
     //   align-items: center;
     // }
 
-    .PcWorkskinds {
-      display: none;
-      position: absolute;
-      width: 100%;
-      background: #111;
-      left: 0;
-    }
-
-    .Workskinds {
-      height: 40px;
-      background-color: #111;
-      @include flex();
-      padding-left: 20%;
-
-
-      &__Link {
-        display: block;
-        line-height: 40px;
-        color: #fff;
-        font-size: 1.4rem;
-        height: 40px;
-        padding: 0 25px;
-        box-shadow: 0px 1px 2px rgba(0,0,0,0.2);
-        transition: all 0.35s;
-        @include media ($pc) {
-          &:hover {
-            transition: all 0.35s;
-            box-sizing: border-box;
-            background-color: #fff;
-            color: #111;
-          }
-        }
-      }
-    }
+    // .PcWorkskinds {
+    //   display: none;
+    //   position: absolute;
+    //   width: 100vw;
+    //   background: #111;
+    //   left: 0;
+    // }
+    //
+    // .Workskinds {
+    //   width: 100%;
+    //   height: 40px;
+    //   background-color: #111;
+    //   @include flex();
+    //   padding-left: 20%;
+    //
+    //
+    //   &__Link {
+    //     display: block;
+    //     line-height: 40px;
+    //     color: #fff;
+    //     font-size: 1.4rem;
+    //     height: 40px;
+    //     padding: 0 25px;
+    //     box-shadow: 0px 1px 2px rgba(0,0,0,0.2);
+    //     transition: all 0.35s;
+    //     @include media ($pc) {
+    //       &:hover {
+    //         transition: all 0.35s;
+    //         box-sizing: border-box;
+    //         background-color: #fff;
+    //         color: #111;
+    //       }
+    //     }
+    //   }
+    // }
   }
 
   .SpHeader {
@@ -268,7 +285,6 @@
       border: 0;
       outline: none;
       background-color: #fff;
-      height: 100%;
       box-sizing: border-box;
       cursor: pointer;
       appearance: none;

@@ -100,7 +100,7 @@ li {
 .Gloval {
   width: 100%;
   position: relative;
-  @include media ($sp) {
+  @include media ($pad) {
     position: static;
     margin-top: 0;
   }
