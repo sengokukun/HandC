@@ -1,11 +1,12 @@
 .ContactWrapper{
-  margin-top: 120px;
+  margin-top: 100px;
   @include media ($sp) {
     margin-top: 110px;
   }
 }
 
 .Contact  {
+  padding-top: 30px;
   width: 650px;
   margin: 0 auto;
   @include media ($sp) {
