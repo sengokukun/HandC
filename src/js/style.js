@@ -107,7 +107,6 @@ $(function() {
     },
     success: function(data) {
 
-      console.log("おけ");
       var dataLengh = data.length;
       var $tag = $(".Works__Tag");
       var $title = $(".Works__Title");
@@ -129,28 +128,56 @@ $(function() {
   });
 });
 
-$(function() {
-  $('.underBar, .underBar--top').css({
-    width: $('.current').outerWidth() - 60,
-    left: $('.current').position().left + 30
-  });
+$(window).on("load", function() {
+  if (document.URL.match("/index")) {
+    console.log("おけ");
+    $('.underBar').css({
+      width: $('.current').outerWidth() - 44,
+      left: $('.current').position().left + 22,
+      display:"none"
+    });
 
-  $('.MasterHead__Link').mouseover(function() {
-    $('.underBar')
-      .stop()
-      .animate({
-        width: $(this).outerWidth() - 60,
-        left: $(this).position().left + 30
-      }, 'fast');
-  });
+    $('.MasterHead__Link').mouseover(function() {
+      $('.underBar')
+        .stop()
+        .animate({
+          width: $(this).outerWidth() - 44,
+          left: $(this).position().left + 22,
+          opacity: 'show'
+        }, 'fast');
+    });
 
-  $('.MasterHead__Link').mouseout(function() {
-    $('.underBar')
-      .stop()
-      .animate({
-        width: $('.current').outerWidth() - 60,
-        left: $('.current').position().left + 30
-      }, 'fast');
+    $('.MasterHead__Link').mouseout(function() {
+      $('.underBar')
+        .stop()
+        .animate({
+          width: $('.current').outerWidth() - 44,
+          left: $('.current').position().left + 22,
+          opacity: 'hide'
+        }, 'fast');
+    });
+  } else {
+    $('.underBar, .underBar--top').css({
+      width: $('.current').outerWidth() - 44,
+      left: $('.current').position().left + 22
+    });
 
-  });
+    $('.MasterHead__Link').mouseover(function() {
+      $('.underBar')
+        .stop()
+        .animate({
+          width: $(this).outerWidth() - 44,
+          left: $(this).position().left + 22
+        }, 'fast');
+    });
+
+    $('.MasterHead__Link').mouseout(function() {
+      $('.underBar')
+        .stop()
+        .animate({
+          width: $('.current').outerWidth() - 44,
+          left: $('.current').position().left + 22
+        }, 'fast');
+    });
+  }
 });
