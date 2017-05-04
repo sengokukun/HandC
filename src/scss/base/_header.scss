@@ -24,6 +24,7 @@
 }
 
 .MasterHead {
+  background-color: #fff;
   @include flex();
   align-items: center;
   position: fixed;
@@ -61,7 +62,7 @@
     height: 60px;
     @include flex();
     justify-content: space-between;
-    align-items: center;
+     align-items: baseline;
     @include media ($pad) {
       width: 100%;
       height: 100vh;
@@ -123,6 +124,15 @@
       flex-direction: row-reverse;
       align-self: flex-end;
     }
+    &--description {
+      display: block;
+      height: 15px;
+      border-left: 2px solid #ccc;
+      a {
+        display: block;
+        line-height: 1;
+      }
+    }
   }
 
   &__Link {
@@ -131,32 +141,32 @@
     height: 60px;
     line-height: 60px;
     display: block;
-    font-size: 1.8rem;
+    font-size: 1.5rem;
     @include media ($pad) {
       height: 100%;
       width: 100%;
       line-height: 1em;
-      padding: 30px 0;
-      font-size: 2.4rem;
+      padding: 24px 0;
+      font-size: 2rem;
       letter-spacing: 1px;
       font-weight: bold;
 
       span {
-        font-size: 1.4rem;
+        font-size: 1.2rem;
         font-weight: bold;
       }
     }
     @include media ($pc) {
-      padding: 0 30px;
+      padding: 0 22px;
       transition: all 0.35s;
     }
 
     &--tw {
-      font-size: 2.6rem;
+      font-size: 2.3rem;
     }
 
     &--fb {
-      font-size: 2.6rem;
+      font-size: 2.3rem;
     }
   }
 
@@ -247,7 +257,7 @@
       padding-bottom: 20px;
 
       &__List {
-        padding: 10px 0;
+        padding: 12px 0;
 
         &:first-child {
           padding-top: 0;
@@ -258,7 +268,7 @@
         width: 100%;
         display: block;
         color: #111;
-        font-size: 2rem;
+        font-size: rem;
         font-family: $eigo_font;
         font-weight: 600;
         letter-spacing: 1px;
@@ -266,7 +276,8 @@
     }
 
     .sp-sns-menu {
-      padding: 30px 0;
+      padding: 24px 0;
+      width: 100%;
 
       &__list {
         padding-right: 50px;
