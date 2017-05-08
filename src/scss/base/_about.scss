@@ -25,6 +25,9 @@
         padding-bottom: 0;
       }
     }
+    @include media ($sp) {
+      padding-top: 0;
+    }
   }
 
   .Members {
