@@ -58,6 +58,9 @@
     font-size: 1.3rem;
     color: #888;
   }
+  @include media ($sp) {
+    padding-top: 0;
+  }
 }
 
 .DetailWrapper{

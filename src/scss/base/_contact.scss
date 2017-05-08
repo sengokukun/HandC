@@ -23,6 +23,9 @@
   .Button{
     margin-bottom: 30px;
   }
+  @include media ($sp) {
+    padding-top: 0;
+  }
 }
 
 .Forms{
