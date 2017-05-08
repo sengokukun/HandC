@@ -1,13 +1,14 @@
 .Top {
   .MasterHead {
     position: static;
-    @include media ($sp) {
+    @include media ($pad) {
       background-color: inherit;
       box-shadow: none;
+      position: absolute;
     }
 
     &__Logo {
-      @include media ($sp) {
+      @include media ($pad) {
         display: none;
       }
     }
@@ -23,6 +24,7 @@
 }
 
 .MasterHead {
+  background-color: #fff;
   @include flex();
   align-items: center;
   position: fixed;
@@ -34,7 +36,7 @@
   width: 100%;
   z-index: 99;
   box-shadow: 0px 1px 2px rgba(0,0,0,0.2);
-  @include media ($sp) {
+  @include media ($pad) {
     padding: 0;
     background-color: #fff;
     width: 100%;
@@ -42,7 +44,7 @@
     top: 0;
     left: 0;
     z-index: 99;
-    height: 60px;
+    height: 60px;giy
     box-shadow: 1px 1px 1px #ddd;
     padding: 0 20px;
     justify-content: space-between;
@@ -60,8 +62,8 @@
     height: 60px;
     @include flex();
     justify-content: space-between;
-    align-items: center;
-    @include media ($sp) {
+     align-items: baseline;
+    @include media ($pad) {
       width: 100%;
       height: 100vh;
       position: fixed;
@@ -76,15 +78,18 @@
   }
 
   &__Block {
+    position: relative;
+    display: flex;
+    width: 100%;
     @include flex();
     align-items: center;
     &:first-child{
-      padding-left: 30px;
-      @include media ($sp) {
-        padding-left: 0;
+      margin-left: 30px;
+      @include media ($pad) {
+        margin-left: 0;
       }
     }
-    @include media ($sp) {
+    @include media ($pad) {
       width: 100%;
       padding-top: 60px;
       @include fd(column);
@@ -92,14 +97,40 @@
     }
   }
 
+  .underBar {
+    background:#111;
+  	height: 3px;
+  	display:block;
+  	position: absolute;
+  	width:64px;
+  	left:30px;
+    bottom: 0;
+  	margin-top: 5px;
+  }
+
   &__List {
     font-size: 1.6rem;
-    @include media ($sp) {
+    @include media ($pad) {
       width: 100%;
       border-bottom: 1px solid #eee;
 
       &:first-child {
         border-top: 1px solid #eee;
+      }
+    }
+    &--right {
+      width: 100%;
+      display: flex;
+      flex-direction: row-reverse;
+      align-self: flex-end;
+    }
+    &--description {
+      display: block;
+      height: 15px;
+      border-left: 2px solid #ccc;
+      a {
+        display: block;
+        line-height: 1;
       }
     }
   }
@@ -110,37 +141,32 @@
     height: 60px;
     line-height: 60px;
     display: block;
-    font-size: 2rem;
-    @include media ($sp) {
+    font-size: 1.5rem;
+    @include media ($pad) {
       height: 100%;
       width: 100%;
       line-height: 1em;
-      padding: 30px 0;
-      font-size: 2.4rem;
+      padding: 24px 0;
+      font-size: 2rem;
       letter-spacing: 1px;
       font-weight: bold;
 
       span {
-        font-size: 1.4rem;
+        font-size: 1.2rem;
         font-weight: bold;
       }
     }
     @include media ($pc) {
-      padding: 0 30px;
+      padding: 0 22px;
       transition: all 0.35s;
-
-      &:hover {
-        background-color: #111;
-        color: #fff;
-      }
     }
 
     &--tw {
-      font-size: 2.6rem;
+      font-size: 2.3rem;
     }
 
     &--fb {
-      font-size: 2.6rem;
+      font-size: 2.3rem;
     }
   }
 
@@ -151,7 +177,7 @@
     background-color: #fff;
     @include flex();
     align-items: center;
-    @include media ($sp) {
+    @include media ($pad) {
       display: none;
     }
 
@@ -163,40 +189,41 @@
     //   align-items: center;
     // }
 
-    .PcWorkskinds {
-      display: none;
-      position: absolute;
-      width: 100%;
-      background: #111;
-      left: 0;
-    }
-
-    .Workskinds {
-      height: 40px;
-      background-color: #111;
-      @include flex();
-      padding-left: 20%;
-
-
-      &__Link {
-        display: block;
-        line-height: 40px;
-        color: #fff;
-        font-size: 1.4rem;
-        height: 40px;
-        padding: 0 25px;
-        box-shadow: 0px 1px 2px rgba(0,0,0,0.2);
-        transition: all 0.35s;
-        @include media ($pc) {
-          &:hover {
-            transition: all 0.35s;
-            box-sizing: border-box;
-            background-color: #fff;
-            color: #111;
-          }
-        }
-      }
-    }
+    // .PcWorkskinds {
+    //   display: none;
+    //   position: absolute;
+    //   width: 100vw;
+    //   background: #111;
+    //   left: 0;
+    // }
+    //
+    // .Workskinds {
+    //   width: 100%;
+    //   height: 40px;
+    //   background-color: #111;
+    //   @include flex();
+    //   padding-left: 20%;
+    //
+    //
+    //   &__Link {
+    //     display: block;
+    //     line-height: 40px;
+    //     color: #fff;
+    //     font-size: 1.4rem;
+    //     height: 40px;
+    //     padding: 0 25px;
+    //     box-shadow: 0px 1px 2px rgba(0,0,0,0.2);
+    //     transition: all 0.35s;
+    //     @include media ($pc) {
+    //       &:hover {
+    //         transition: all 0.35s;
+    //         box-sizing: border-box;
+    //         background-color: #fff;
+    //         color: #111;
+    //       }
+    //     }
+    //   }
+    // }
   }
 
   .SpHeader {
@@ -230,7 +257,7 @@
       padding-bottom: 20px;
 
       &__List {
-        padding: 10px 0;
+        padding: 12px 0;
 
         &:first-child {
           padding-top: 0;
@@ -241,7 +268,7 @@
         width: 100%;
         display: block;
         color: #111;
-        font-size: 2rem;
+        font-size: rem;
         font-family: $eigo_font;
         font-weight: 600;
         letter-spacing: 1px;
@@ -249,7 +276,8 @@
     }
 
     .sp-sns-menu {
-      padding: 30px 0;
+      padding: 24px 0;
+      width: 100%;
 
       &__list {
         padding-right: 50px;
@@ -268,7 +296,6 @@
       border: 0;
       outline: none;
       background-color: #fff;
-      height: 100%;
       box-sizing: border-box;
       cursor: pointer;
       appearance: none;
