@@ -100,7 +100,7 @@ li {
 .Gloval {
   width: 100%;
   position: relative;
-  @include media ($sp) {
+  @include media ($pad) {
     position: static;
     margin-top: 0;
   }
@@ -135,7 +135,8 @@ li {
 }
 
 .CapTitle{
-  font-size: 3rem;
+  font-size: 2.3rem;
+  line-height: 1;
   text-align: center;
   font-family: $eigo_font;
   font-weight: 600;
