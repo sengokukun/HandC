@@ -11,7 +11,7 @@
     position: relative;
     top: -100px;
     overflow: hidden;
-    background-image: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.2)), url("../../img/bg_hero.jpg");
+    // background-image: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.2)), url("../../img/bg_hero.jpg");
     background-size: cover;
     background-position: center center;
 
@@ -19,6 +19,22 @@
       // ここに薄暗くする背景を入れる
       content: ' ';
       height: 100%;
+    }
+    @include media ($pad){
+      display: block;
+      background-image: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.2)), url("../../img/bg_hero.jpg");
+      background-size: cover;
+      background-position: center center;
+      top: 0;
+    }
+  }
+
+  .yt-video{
+    height: 100vh;
+    overflow: hidden;
+    position: relative;
+    @include media ($pad){
+      display: none;
     }
   }
 
@@ -31,6 +47,7 @@
     overflow: hidden;
     height: 130%;
     width: 130%;
+    min-width: calc(100vh * 16 / 9);
     pointer-events: none;
   }
 
@@ -40,13 +57,16 @@
     right: 0;
     bottom: 0;
     z-index: -2;
+    @include media ($pad){
+      display: none;
+    }
   }
-  @include media ($pad) {
-    display: block;
-    background-image: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.2)), url("../../img/bg_hero.jpg");
-    background-size: cover;
-    background-position: center center;
-  }
+  // @include media ($pad) {
+  //   display: block;
+  //   background-image: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.2)), url("../../img/bg_hero.jpg");
+  //   background-size: cover;
+  //   background-position: center center;
+  // }
 
   .VideoPlay {
     display: none;
@@ -83,7 +103,7 @@
     z-index: 1;
     @include media ($pad) {
       top: 40%;
-      z-index: 0;
+      z-index: 1;
     }
   }
 }
