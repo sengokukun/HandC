@@ -78,7 +78,7 @@ session_destroy();  // セッションを破棄
   <div class="Thanks">
     <p class="Thanks__Title">送信完了しました</p>
     <p class="Thanks__Description">お問い合わせありがとうございました。<br>内容を確認のうえ、回答させて頂きます。<br>しばらくお待ちください。</p>
-    <a href="input.php" class="mA Button Button--spLong">お問い合わせに戻る</a>
+    <a href="input.php" class="mA lH40 Button Button--spLong">お問い合わせに戻る</a>
   </div>
 </body>
 </html>

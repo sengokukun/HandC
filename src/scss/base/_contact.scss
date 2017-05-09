@@ -93,6 +93,8 @@ background-color:#FFE2F3;
 }
 
 .Thanks{
+  width: 100%;
+  height: 100vh;
   @include flex();
   @include fd(column);
   align-items: center;

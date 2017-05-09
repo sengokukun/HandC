@@ -159,8 +159,8 @@ $_SESSION = $_POST;
                   </dd>
                 </dl>
 								<div class="RowColumn">
-									<input type="button" value="内容を修正する" onclick="history.back(-1)" class="Button Button--spLong lHn">
-	 		           	<button type="submit" class="Button Button--spLong">送信</button>
+									<input type="button" value="内容を修正する" onclick="history.back(-1)" class="Button Button--spLong lHn mR20">
+	 		           	<button type="submit" class="Button Button--spLong">送信する</button>
 								</div>
               </form>
               <!-- <a href="#" class="Button Button--contact Button--spLong">確認画面へ</a> -->
