@@ -58,7 +58,7 @@ session_destroy();  // セッションを破棄
   <meta name="description" content="テスト">
   <meta name="keywords" content="HC">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.css">
-  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
   <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
@@ -78,7 +78,7 @@ session_destroy();  // セッションを破棄
   <div class="Thanks">
     <p class="Thanks__Title">送信完了しました</p>
     <p class="Thanks__Description">お問い合わせありがとうございました。<br>内容を確認のうえ、回答させて頂きます。<br>しばらくお待ちください。</p>
-    <a href="input.php" class="Button">お問い合わせに戻る</a>
+    <a href="input.php" class="mA lH40 Button Button--spLong">お問い合わせに戻る</a>
   </div>
 </body>
 </html>

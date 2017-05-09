@@ -36,7 +36,7 @@ $_SESSION = $_POST;
   <meta name="description" content="テスト">
   <meta name="keywords" content="HC">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.css">
-  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
   <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
@@ -159,8 +159,8 @@ $_SESSION = $_POST;
                   </dd>
                 </dl>
 								<div class="RowColumn">
-									<input type="button" value="内容を修正する" onclick="history.back(-1)">
-	 		           	<button type="submit" class="Button Button--contact Button--spLong">送信</button>
+									<input type="button" value="内容を修正する" onclick="history.back(-1)" class="Button Button--spLong lHn mR20">
+	 		           	<button type="submit" class="Button Button--spLong">送信する</button>
 								</div>
               </form>
               <!-- <a href="#" class="Button Button--contact Button--spLong">確認画面へ</a> -->
@@ -182,6 +182,6 @@ $_SESSION = $_POST;
 
   </div>
 </body>
-<script src="/js/style.js"></script>
+<script src="js/style.js"></script>
 
 </html>
