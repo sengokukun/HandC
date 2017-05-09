@@ -69,3 +69,12 @@ $bigpc: 1000;
     flex-direction: row;
   }
 }
+
+@mixin fd($direction) {
+   @if $direction == row{
+     flex-direction: row;
+  }
+  @else {
+    flex-direction: column;
+  }
+}

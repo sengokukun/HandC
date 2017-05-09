@@ -13,9 +13,10 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
   <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
-  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
   <!-- <script type="text/javascript" src="/js/min/jquery-3.1.1.min.js"></script> -->
-  <script src="/js/min/jquery.inview.min.js"></script>
+  <script src="js/min/validation.js"></script>
+  <script src="js/min/reserve.js"></script>
   <!--[if lt IE 9]>
   <script type="text/javascript" src="js/ie8/html5shiv.min.js"></script>
   <script type="text/javascript" src="js/ie8/selectivizr-min.js"></script>
@@ -23,6 +24,7 @@
   <![endif]-->
   <!--[if gte IE 9]><!-->
   <title>H&amp;C / contact</title>
+
 </head>
 
 <body>
@@ -118,30 +120,30 @@
             <main class="Contact">
               <h2 class="CapTitle">CONTACT</h2>
               <p class="Contact__Description">映像制作や撮影、デザインなどのご依頼、ご相談など<br class="sp-br">気軽にお問い合わせください。</p>
-              <form action="confirm.php" method="post" name="form" onsubmit="return validate()" class="Forms">
+              <form action="confirm.php" method="post" class="Forms" id="contact-form">
                 <dl class="Forms__List">
                   <dt class="Forms__Name">お名前</dt>
                   <dd class="Forms__Data">
-                    <input type="text" class="Forms__Input" name="form[name]" value="" placeholder="例）伊藤 聖也">
-                    <label class="error" for="form[name]" generated="true"></label>
+                    <input type="text" class="required Forms__Input" name="name" value="" placeholder="例）伊藤 聖也">
+                    <!-- <label class="error" for="name" generated="true">名前を入力してください</label> -->
                   </dd>
                 </dl>
                 <dl class="Forms__List">
                   <dt class="Forms__Name">メールアドレス</dt>
                   <dd class="Forms__Data">
-                    <p><input type="text" class="Forms__Input" name="form[email]" value="" placeholder="例）info@HandC.com"></p>
-                    <label class="error" for="form[email]" generated="true"></label>
+                    <p><input type="text" class="required email Forms__Input" name="e_mail" value="" placeholder="例）info@HandC.com"></p>
+                    <!-- <label class="error" for="email" generated="true"></label> -->
                   </dd>
                 </dl>
                 <dl class="Forms__List">
                   <dt class="Forms__Name">お問い合わせ内容</dt>
                   <dd class="Forms__Data">
-                    <textarea cols="50" rows="7" class="Forms__Textarea" name="form[content]" placeholder="ご自由にご記入ください"></textarea>
-                    <label class="error" for="form[content]" generated="true"></label>
+                    <textarea cols="50" rows="7" class="required Forms__Textarea" name="content" placeholder="ご自由にご記入ください"></textarea>
+                    <!-- <label class="error" for="content" generated="true"></label> -->
                   </dd>
                 </dl>
+		           <button type="submit" class="Button Button--spLong">確認画面へ</button>
               </form>
-		           <button type="submit" class="Button Button--contact Button--spLong">確認画面へ</button>
               <!-- <a href="#" class="Button Button--contact Button--spLong">確認画面へ</a> -->
             </main>
           </div>
