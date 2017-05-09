@@ -3,12 +3,13 @@
   text-align: center;
   width: 170px;
   height: 40px;
-  // line-height: 40px;
+  line-height: 40px;
   display: block;
   font-size: 1.6rem;
   cursor: pointer;
   border: none;
   background-color: inherit;
+  border: 1px solid  #111;
   &--spLong{
     @include media ($sp) {
       width: 100%;
