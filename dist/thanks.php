@@ -48,16 +48,37 @@ mb_send_mail('a15dc095@dhw.ac.jp',"お問い合わせがありました",$messag
 session_destroy();  // セッションを破棄
 ?>
 
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
+<!DOCTYPE html>
+<html lang="ja">
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>シンプルなメールフォーム</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,user-scalable=1,initial-scale=1,maximum-scale=1">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="description" content="テスト">
+  <meta name="keywords" content="HC">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.css">
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+  <!-- <script type="text/javascript" src="/js/min/jquery-3.1.1.min.js"></script> -->
+  <!--[if lt IE 9]>
+  <script type="text/javascript" src="js/ie8/html5shiv.min.js"></script>
+  <script type="text/javascript" src="js/ie8/selectivizr-min.js"></script>
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+  <![endif]-->
+  <!--[if gte IE 9]><!-->
+  <title>H&amp;C / contact</title>
+
 </head>
 
 <body>
-  <a href="input.php">
-    <button type="button">お問い合わせに戻る</button>
-  </a>
+  <div class="Thanks">
+    <p class="Thanks__Title">送信完了しました</p>
+    <p class="Thanks__Description">お問い合わせありがとうございました。<br>内容を確認のうえ、回答させて頂きます。<br>しばらくお待ちください。</p>
+    <a href="input.php" class="Button">お問い合わせに戻る</a>
+  </div>
 </body>
 </html>

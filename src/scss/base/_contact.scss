@@ -52,6 +52,7 @@
   }
   &__Data{
     width: 480px;
+    font-size: 1.6rem;
     @include media ($sp) {
       width: 100%;
     }
@@ -80,13 +81,27 @@
 
 
 input.myError {
-background-color:#CCFFFF;
+background-color:#FFE2F3;
 }
 
 label.myError {
-color:#FF0000;
+color:#FFE2F3;
 }
 
 textarea.myError {
-background-color:#CCFFFF;
+background-color:#FFE2F3;
+}
+
+.Thanks{
+  @include flex();
+  @include fd(column);
+  align-items: center;
+  justify-content: center;
+  &__Title{
+    font-size: 1.8rem;
+    font-weight: bold;
+  }
+  &__Description{
+    font-size: 1.6rem;
+  }
 }

@@ -16,9 +16,9 @@ $_SESSION = $_POST;
 
 //無事Sessionに保存できているかチェックする
 
-echo '<pre>';//HTMLのpreタグを使うと、配列が見やすくなる
-print_r($_SESSION);//print_rとは、配列を出力する関数
-echo '</pre>';
+// echo '<pre>';//HTMLのpreタグを使うと、配列が見やすくなる
+// print_r($_SESSION);//print_rとは、配列を出力する関数
+// echo '</pre>';
 
 
 
@@ -36,13 +36,12 @@ echo '</pre>';
   <meta name="description" content="テスト">
   <meta name="keywords" content="HC">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.css">
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="/css/style.css">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
   <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
   <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
   <!-- <script type="text/javascript" src="/js/min/jquery-3.1.1.min.js"></script> -->
-  <script src="/js/min/jquery.inview.min.js"></script>
   <!--[if lt IE 9]>
   <script type="text/javascript" src="js/ie8/html5shiv.min.js"></script>
   <script type="text/javascript" src="js/ie8/selectivizr-min.js"></script>
@@ -159,8 +158,10 @@ echo '</pre>';
 										<?php echo htmlspecialchars($_POST['content']);?>
                   </dd>
                 </dl>
-							 <input type="button" value="内容を修正する" onclick="history.back(-1)">
-		           <button type="submit" class="Button Button--contact Button--spLong">送信</button>
+								<div class="RowColumn">
+									<input type="button" value="内容を修正する" onclick="history.back(-1)">
+	 		           	<button type="submit" class="Button Button--contact Button--spLong">送信</button>
+								</div>
               </form>
               <!-- <a href="#" class="Button Button--contact Button--spLong">確認画面へ</a> -->
             </main>
@@ -181,6 +182,6 @@ echo '</pre>';
 
   </div>
 </body>
-<script src="js/style.js"></script>
+<script src="/js/style.js"></script>
 
 </html>
