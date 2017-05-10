@@ -64,9 +64,13 @@ var windowW = $(window).width(); //画面の横幅を取得
 //jquery
 
 $(function() {
+
   var triggers = $('.Toggle__Lines'),
     toggleBtn = $('.Toggle'),
+    menu = $('.MasterHead__Navigation'),
     body = $(document.body)
+    var state = false;
+    var scrollpos;
   toggleBtn.on('click', function() {
     body.toggleClass('open');
     if (body.hasClass('open')) {
@@ -78,7 +82,21 @@ $(function() {
       $('.SpHeader .MasterHead__Navigation').fadeOut(150);
       $('.Toggle__Line').removeClass('bg_black');
     }
+
+    if(state == false) {
+      scrollpos = $(window).scrollTop();
+      $('body').addClass('fixed').css({'top': -scrollpos});
+      $(menu).addClass('open');
+      state = true;
+    } else {
+      $('body').removeClass('fixed').css({'top': 0});
+      window.scrollTo( 0 , scrollpos );
+      $(menu).removeClass('open');
+      state = false;
+    }
+
   });
+
   if (windowW > 481) {
     $('.MasterHead__List--works').hover(function() {
       $('.PcWorkskinds').fadeIn("fast");
@@ -91,6 +109,61 @@ $(function() {
       });
     });
   }
+
+  $(window).on("load", function() {
+    if (document.URL.match("/index")) {
+      console.log("おけ");
+      $('.underBar').css({
+        width: $('.current').outerWidth() - 44,
+        left: $('.current').position().left + 22,
+        display:"none"
+      });
+
+      $('.MasterHead__Link').mouseover(function() {
+        $('.underBar')
+          .stop()
+          .animate({
+            width: $(this).outerWidth() - 44,
+            left: $(this).position().left + 22,
+            opacity: 'show'
+          }, 'fast');
+      });
+
+      $('.MasterHead__Link').mouseout(function() {
+        $('.underBar')
+          .stop()
+          .animate({
+            width: $('.current').outerWidth() - 44,
+            left: $('.current').position().left + 22,
+            opacity: 'hide'
+          }, 'fast');
+      });
+    } else {
+      $('.underBar, .underBar--top').css({
+        width: $('.current').outerWidth() - 44,
+        left: $('.current').position().left + 22
+      });
+
+      $('.MasterHead__Link').mouseover(function() {
+        $('.underBar')
+          .stop()
+          .animate({
+            width: $(this).outerWidth() - 44,
+            left: $(this).position().left + 22
+          }, 'fast');
+      });
+
+      $('.MasterHead__Link').mouseout(function() {
+        $('.underBar')
+          .stop()
+          .animate({
+            width: $('.current').outerWidth() - 44,
+            left: $('.current').position().left + 22
+          }, 'fast');
+      });
+    }
+  });
+
 });
 
 //works json
@@ -128,59 +201,7 @@ $(function() {
   });
 });
 
-$(window).on("load", function() {
-  if (document.URL.match("/index")) {
-    console.log("おけ");
-    $('.underBar').css({
-      width: $('.current').outerWidth() - 44,
-      left: $('.current').position().left + 22,
-      display:"none"
-    });
-
-    $('.MasterHead__Link').mouseover(function() {
-      $('.underBar')
-        .stop()
-        .animate({
-          width: $(this).outerWidth() - 44,
-          left: $(this).position().left + 22,
-          opacity: 'show'
-        }, 'fast');
-    });
-
-    $('.MasterHead__Link').mouseout(function() {
-      $('.underBar')
-        .stop()
-        .animate({
-          width: $('.current').outerWidth() - 44,
-          left: $('.current').position().left + 22,
-          opacity: 'hide'
-        }, 'fast');
-    });
-  } else {
-    $('.underBar, .underBar--top').css({
-      width: $('.current').outerWidth() - 44,
-      left: $('.current').position().left + 22
-    });
-
-    $('.MasterHead__Link').mouseover(function() {
-      $('.underBar')
-        .stop()
-        .animate({
-          width: $(this).outerWidth() - 44,
-          left: $(this).position().left + 22
-        }, 'fast');
-    });
-
-    $('.MasterHead__Link').mouseout(function() {
-      $('.underBar')
-        .stop()
-        .animate({
-          width: $('.current').outerWidth() - 44,
-          left: $('.current').position().left + 22
-        }, 'fast');
-    });
-  }
-});
+//php
 
 $(document).ready(function(){
 $("#contact-form").validate({
