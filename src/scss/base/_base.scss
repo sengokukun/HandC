@@ -90,7 +90,7 @@ li {
   max-width: $base_maxwidth;
   width: $base_width;
   margin: 0 auto;
-  @include media ($sp) {
+  @include media ($pad) {
     width: 100%;
     padding: 0 10px;
     box-sizing: border-box;
