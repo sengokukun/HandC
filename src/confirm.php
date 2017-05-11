@@ -57,14 +57,6 @@ $_SESSION = $_POST;
       <div class="Sub">
         <div class="ContactWrapper">
           <div class="Containr">
-            <spna itemscope itemtype="http://data-vocabulary.org/Breadcrumb" class="Bread">
-              <a href="#" itemprop="url" class="Bread__List">
-                <span itemprop="title" class="Bread__Link">HOME</span>
-              </a>
-              <a href="#" itemprop="url" class="Bread__List">
-                <span itemprop="title" class="Bread__Link">CONTACT</span>
-              </a>
-            </spna>
             <main class="Contact">
               <h2 class="CapTitle">CONTACT</h2>
               <p class="Contact__Description">映像制作や撮影、デザインなどのご依頼、ご相談など<br class="sp-br">気軽にお問い合わせください。</p>
