@@ -58,19 +58,19 @@ $_SESSION = $_POST;
 				<form action="thanks.php" method="post" class="Forms">
 					<dl class="Forms__List">
 						<dt class="Forms__Name">お名前</dt>
-						<dd class="Forms__Data">
+						<dd class="Forms__Data pA10">
 							<?php echo htmlspecialchars($_POST['name']);?>
 						</dd>
 					</dl>
 					<dl class="Forms__List">
 						<dt class="Forms__Name">メールアドレス</dt>
-						<dd class="Forms__Data">
+						<dd class="Forms__Data pA10">
 							<?php echo htmlspecialchars($_POST['e_mail']);?>
 						</dd>
 					</dl>
 					<dl class="Forms__List">
-						<dt class="Forms__Name">お問い合わせ内容</dt>
-						<dd class="Forms__Data">
+						<dt class="Forms__Name aLs mT10">お問い合わせ内容</dt>
+						<dd class="Forms__Data pA10">
 							<?php echo htmlspecialchars($_POST['content']);?>
 						</dd>
 					</dl>
