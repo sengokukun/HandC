@@ -5,8 +5,8 @@
 /* ====================================================
 // ページ全体の横幅
 ==================================================== */
-$base_width: 870px;
-$base_maxwidth: 1200px;
+// $base_width: 870px;
+$base_maxwidth: 870px;
 
 /* ====================================================
 // font設定
@@ -54,14 +54,18 @@ $eigo_font: 'Roboto', sans-serif;
 
 /*margin*/
 .mA{margin: 0 auto;}
+.mT20{margin-top: 20px;}
+.mT50{margin-top: 50px;}
 .mR20{margin-right: 20px;}
-
+.mB40{margin-bottom: 40px;}
+.mTB60{margin: 60px 0;}
+/*padding*/
+.pL30{padding-left: 30px;}
+.pB10{padding-bottom: 10px;}
+.pB60{padding-bottom: 60px;}
 /*border*/
-.bDn{
-  border: none;
-}
+.bDn{border: none;}
 
 /*line-height*/
-.lH40{
-  line-height: 40px;
-}
+.lH0{line-height: 0;}
+.lH40{line-height: 40px;}
