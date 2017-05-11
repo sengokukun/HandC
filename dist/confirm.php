@@ -53,133 +53,35 @@ $_SESSION = $_POST;
 
 <body>
   <div class="Wrapper">
-    <div class="Gloval">
-      <div class="Sub">
-        <header class="MasterHead">
-          <h1 class="MasterHead__Logo"><a href="index.html"><img src="img/logo.svg" alt="hc"></a></h1>
-          <div class="PcHeader">
-            <nav class="MasterHead__Navigation">
-              <ul class="MasterHead__Block">
-                <li class="MasterHead__List">
-                  <a href="all.html" class="MasterHead__Link">ALL</a>
-                </li>
-                <li class="MasterHead__List">
-                  <a href="video.html" class="MasterHead__Link">VIDEO</a>
-                </li>
-                <li class="MasterHead__List">
-                  <a href="photo.html" class="MasterHead__Link">PHOTO</a>
-                </li>
-                <li class="MasterHead__List">
-                  <a href="design.html" class="MasterHead__Link">DESIGN</a>
-                </li>
-                <li class="MasterHead__List MasterHead__List--description">
-                  <a href="about.html" class="MasterHead__Link">ABOUT</a>
-                </li>
-                <li class="MasterHead__List">
-                  <a href="contact.html" class="MasterHead__Link current">CONTACT</a>
-                </li>
-                <li class="MasterHead__List MasterHead__List--right">
-                  <a href="#" class="MasterHead__Link MasterHead__Link--tw"><i class="fa fa-twitter" aria-hidden="true"></i></a>
-                </li>
-                <li class="MasterHead__List MasterHead__List">
-                  <a href="#" class="MasterHead__Link MasterHead__Link--fb"><i class="fa fa-facebook" aria-hidden="true"></i></a>
-                </li>
-                <span class="underBar"></span>
-            </ul>
-            </nav>
-          </div>
-          <div class="SpHeader">
-            <div class="SpHeader__Icons">
-              <!-- <h2 class="MasterHead__Logo"><a href="#"><img src="img/logo.svg" alt="hc"></a></h2> -->
-              <a class="Toggle">
-                <span class="Toggle__Lines">
-                  <span class="Toggle__Line"></span>
-                <span class="Toggle__Line"></span>
-                <span class="Toggle__Line"></span>
-                </span>
-              </a>
-            </div>
-            <nav class="MasterHead__Navigation">
-              <ul class="MasterHead__Block">
-                <li class="MasterHead__List">
-                  <a href="about.html" class="MasterHead__Link">ABOUT</a>
-                </li>
-                <li class="MasterHead__List">
-                  <a href="all.html" class="MasterHead__Link">WORKS</a>
-                  <ul class="Workskinds">
-                    <li class="Workskinds__List"><a href="all.html" class="Workskinds__Link">ALL</a></li>
-                    <li class="Workskinds__List"><a href="video.html" class="Workskinds__Link">VIDEO</a></li>
-                    <li class="Workskinds__List"><a href="photo.html" class="Workskinds__Link">PHOTO</a></li>
-                    <li class="Workskinds__List"><a href="design.html" class="Workskinds__Link">DESIGN</a></li>
-                  </ul>
-                </li>
-                <li class="MasterHead__List">
-                  <a href="contact.html" class="MasterHead__Link">CONTACT<br></a>
-                </li>
-              </ul>
-              <ul class="sp-sns-menu">
-                <li class="sp-sns-menu__list"><a href="#" class="sp-sns-menu__link sp-sns-menu__link--black"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
-                <li class="sp-sns-menu__list"><a href="#" class="sp-sns-menu__link sp-sns-menu__link--black"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
-              </ul>
-
-            </nav>
-          </div>
-        </header>
-
-        <div class="ContactWrapper">
-          <div class="Containr">
-            <spna itemscope itemtype="http://data-vocabulary.org/Breadcrumb" class="Bread">
-              <a href="#" itemprop="url" class="Bread__List">
-                <span itemprop="title" class="Bread__Link">HOME</span>
-              </a>
-              <a href="#" itemprop="url" class="Bread__List">
-                <span itemprop="title" class="Bread__Link">CONTACT</span>
-              </a>
-            </spna>
-            <main class="Contact">
-              <h2 class="CapTitle">CONTACT</h2>
-              <p class="Contact__Description">映像制作や撮影、デザインなどのご依頼、ご相談など<br class="sp-br">気軽にお問い合わせください。</p>
-              <form action="thanks.php" method="post" class="Forms">
-                <dl class="Forms__List">
-                  <dt class="Forms__Name">お名前</dt>
-                  <dd class="Forms__Data">
-										<?php echo htmlspecialchars($_POST['name']);?>
-                  </dd>
-                </dl>
-                <dl class="Forms__List">
-                  <dt class="Forms__Name">メールアドレス</dt>
-                  <dd class="Forms__Data">
-										<?php echo htmlspecialchars($_POST['e_mail']);?>
-                  </dd>
-                </dl>
-                <dl class="Forms__List">
-                  <dt class="Forms__Name">お問い合わせ内容</dt>
-                  <dd class="Forms__Data">
-										<?php echo htmlspecialchars($_POST['content']);?>
-                  </dd>
-                </dl>
-								<div class="RowColumn">
-									<input type="button" value="内容を修正する" onclick="history.back(-1)" class="Button Button--spLong lHn mR20">
-	 		           	<button type="submit" class="Button Button--spLong">送信する</button>
-								</div>
-              </form>
-              <!-- <a href="#" class="Button Button--contact Button--spLong">確認画面へ</a> -->
-            </main>
-          </div>
-        </div>
-
-        <footer class="MasterFoot">
-          <div class="Container">
-            <ul class="sp-sns-menu">
-              <li class="sp-sns-menu__list"><a href="#" class="sp-sns-menu__link sp-sns-menu__link--white"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
-              <li class="sp-sns-menu__list"><a href="#" class="sp-sns-menu__link sp-sns-menu__link--white"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
-            </ul>
-            <p class="MasterFoot__Copyright"><small>Copyright&copy;2017 H&amp;C FILMS All Rights Reserved</small></p>
-          </div>
-        </footer>
-      </div>
-    </div>
-
+		<div class="Containr">
+			<div class="Confirm Center">
+				<form action="thanks.php" method="post" class="Forms">
+					<dl class="Forms__List">
+						<dt class="Forms__Name">お名前</dt>
+						<dd class="Forms__Data">
+							<?php echo htmlspecialchars($_POST['name']);?>
+						</dd>
+					</dl>
+					<dl class="Forms__List">
+						<dt class="Forms__Name">メールアドレス</dt>
+						<dd class="Forms__Data">
+							<?php echo htmlspecialchars($_POST['e_mail']);?>
+						</dd>
+					</dl>
+					<dl class="Forms__List">
+						<dt class="Forms__Name">お問い合わせ内容</dt>
+						<dd class="Forms__Data">
+							<?php echo htmlspecialchars($_POST['content']);?>
+						</dd>
+					</dl>
+					<div class="RowColumn">
+						<input type="button" value="内容を修正する" onclick="history.back(-1)" class="Button Button--spLong lHn mR20">
+						<button type="submit" class="Button Button--spLong spmT20">送信する</button>
+					</div>
+				</form>
+			</div>
+		</div>
+			<!-- <a href="#" class="Button Button--contact Button--spLong">確認画面へ</a> -->
   </div>
 </body>
 <script src="js/style.js"></script>
