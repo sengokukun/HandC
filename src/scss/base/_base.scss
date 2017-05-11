@@ -176,7 +176,7 @@ li {
   @include flex();
   @include fd(row);
   justify-content: center;
-  @include media ($pad) {
+  @include media ($sp) {
      @include fd(column);
   }
 }
