@@ -50,6 +50,10 @@
     background-color: inherit;
     box-sizing: border-box;
   }
+  @include media ($pc) {
+    position: absolute;
+    bottom: 0;
+  }
 
   &__Copyright {
     line-height: 40px;
