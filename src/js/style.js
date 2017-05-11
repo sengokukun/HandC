@@ -64,13 +64,12 @@ var windowW = $(window).width(); //画面の横幅を取得
 //jquery
 
 $(function() {
-
+  var state = false;
+  var scrollpos;
   var triggers = $('.Toggle__Lines'),
     toggleBtn = $('.Toggle'),
     menu = $('.MasterHead__Navigation'),
     body = $(document.body)
-    var state = false;
-    var scrollpos;
   toggleBtn.on('click', function() {
     body.toggleClass('open');
     if (body.hasClass('open')) {
