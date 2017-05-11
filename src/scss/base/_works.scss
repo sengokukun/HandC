@@ -21,12 +21,18 @@
     &:last-child{
       margin-bottom: 60px;
     }
+    @include media ($pad) {
+      width: 100%;
+    }
   }
   &__Photo{
     position: relative;
     width: 420px;
     height: 236px;
     overflow: hidden;
+    @include media ($pad) {
+      width: 100%;
+    }
   }
   &__Tag{
     position: absolute;
