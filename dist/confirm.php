@@ -58,8 +58,6 @@ $_SESSION = $_POST;
         <div class="ContactWrapper">
           <div class="Containr">
             <main class="Contact">
-              <h2 class="CapTitle">CONTACT</h2>
-              <p class="Contact__Description">映像制作や撮影、デザインなどのご依頼、ご相談など<br class="sp-br">気軽にお問い合わせください。</p>
               <form action="thanks.php" method="post" class="Forms">
                 <dl class="Forms__List">
                   <dt class="Forms__Name">お名前</dt>
