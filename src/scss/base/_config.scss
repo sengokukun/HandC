@@ -73,11 +73,3 @@ $eigo_font: 'Roboto', sans-serif;
 /*line-height*/
 .lH0{line-height: 0;}
 .lH40{line-height: 40px;}
-
-/*position*/
-.Center{
-  @include flex();
-  justify-content: center;
-  align-items: center;
-  align-content: center;
-}
