@@ -129,12 +129,12 @@ li {
   }
 }
 
-.b-line{
+.b-line {
   box-sizing: border-box;
   border-bottom: 3px solid #000;
 }
 
-.CapTitle{
+.CapTitle {
   font-size: 2.3rem;
   line-height: 1;
   text-align: center;
@@ -146,8 +146,9 @@ li {
   }
 }
 
-.HeroLogo{
+.HeroLogo {
   text-align: center;
+
   img {
     width: 200px;
     height: 200px;
@@ -164,11 +165,18 @@ li {
   width: 100%;
 }
 
-.RowColumn{
+.fixed {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  overflow: hidden;
+}
+
+.RowColumn {
   @include flex();
   @include fd(row);
   justify-content: center;
   @include media ($pad) {
-      @include fd(column);
+     @include fd(column);
   }
 }
