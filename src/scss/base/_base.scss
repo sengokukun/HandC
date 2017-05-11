@@ -88,7 +88,7 @@ li {
 
 .Containr {
   max-width: $base_maxwidth;
-  width: $base_width;
+  width: 100%;
   margin: 0 auto;
   @include media ($pad) {
     width: 100%;
