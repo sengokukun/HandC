@@ -53,42 +53,33 @@ $_SESSION = $_POST;
 
 <body>
   <div class="Wrapper">
-    <div class="Gloval">
-      <div class="Sub">
-        <div class="ContactWrapper">
-          <div class="Containr">
-            <main class="Contact">
-              <form action="thanks.php" method="post" class="Forms">
-                <dl class="Forms__List">
-                  <dt class="Forms__Name">お名前</dt>
-                  <dd class="Forms__Data">
-										<?php echo htmlspecialchars($_POST['name']);?>
-                  </dd>
-                </dl>
-                <dl class="Forms__List">
-                  <dt class="Forms__Name">メールアドレス</dt>
-                  <dd class="Forms__Data">
-										<?php echo htmlspecialchars($_POST['e_mail']);?>
-                  </dd>
-                </dl>
-                <dl class="Forms__List">
-                  <dt class="Forms__Name">お問い合わせ内容</dt>
-                  <dd class="Forms__Data">
-										<?php echo htmlspecialchars($_POST['content']);?>
-                  </dd>
-                </dl>
-								<div class="RowColumn">
-									<input type="button" value="内容を修正する" onclick="history.back(-1)" class="Button Button--spLong lHn mR20">
-	 		           	<button type="submit" class="Button Button--spLong">送信する</button>
-								</div>
-              </form>
-              <!-- <a href="#" class="Button Button--contact Button--spLong">確認画面へ</a> -->
-            </main>
-          </div>
-        </div>
-      </div>
-    </div>
-
+		<main class="Contact">
+			<form action="thanks.php" method="post" class="Forms">
+				<dl class="Forms__List">
+					<dt class="Forms__Name">お名前</dt>
+					<dd class="Forms__Data">
+						<?php echo htmlspecialchars($_POST['name']);?>
+					</dd>
+				</dl>
+				<dl class="Forms__List">
+					<dt class="Forms__Name">メールアドレス</dt>
+					<dd class="Forms__Data">
+						<?php echo htmlspecialchars($_POST['e_mail']);?>
+					</dd>
+				</dl>
+				<dl class="Forms__List">
+					<dt class="Forms__Name">お問い合わせ内容</dt>
+					<dd class="Forms__Data">
+						<?php echo htmlspecialchars($_POST['content']);?>
+					</dd>
+				</dl>
+				<div class="RowColumn">
+					<input type="button" value="内容を修正する" onclick="history.back(-1)" class="Button Button--spLong lHn mR20">
+					<button type="submit" class="Button Button--spLong">送信する</button>
+				</div>
+			</form>
+			<!-- <a href="#" class="Button Button--contact Button--spLong">確認画面へ</a> -->
+		</main>
   </div>
 </body>
 <script src="js/style.js"></script>
