@@ -22,7 +22,7 @@ $message =<<<HTML
 {$_SESSION['e_mail']}
 
 お問い合わせ内容
-{$_SESSION['comment']}
+{$_SESSION['content']}
 
 内容確認後、担当者より折り返しご連絡をさせて頂きます。
 今しばらくお待ちください。
@@ -75,10 +75,17 @@ session_destroy();  // セッションを破棄
 </head>
 
 <body>
-  <div class="Thanks">
-    <p class="Thanks__Title">送信完了しました</p>
-    <p class="Thanks__Description">お問い合わせありがとうございました。<br>内容を確認のうえ、回答させて頂きます。<br>しばらくお待ちください。</p>
-    <a href="input.php" class="mA lH40 Button Button--spLong">お問い合わせに戻る</a>
+  <div class="Wrapper">
+    <div class="Containr">
+      <div class="Thanks">
+        <h1 class="Thanks__Title">お問い合わせいただき、<br class="sp-br">ありがとうございました。</h1>
+        <p class="Thanks__Description">ただいま、お問い合わせの確認メールをご登録のメールアドレスにお送り致しました。</p>
+        <p class="Thanks__Description">万が一、ご確認メールが届かない場合は、お手数ですが下記のメールアドレスよりお問い合わせください。</p>
+        <p class="Thanks__Mail mT50 mB50">info@handc.com</p>
+        <span class="Thanks__Info">※万が一お手元に届かない場合は、迷惑メールフォルダに入ってる場合がございます。念のため迷惑メールフォルダもご確認ください</span>
+        <a href="/" class="mA lH40 Button Button--spLong">ホームへ戻る</a>
+      </div>
+    </div>
   </div>
 </body>
 </html>

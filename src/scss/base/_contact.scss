@@ -58,7 +58,7 @@
     box-sizing: border-box;
     border: none;
     background-color: #eee;
-    word-break: break-all;    
+    word-break: break-all;
     @include media ($sp) {
       width: 100%;
     }
@@ -113,11 +113,27 @@ background-color:#FFE2F3;
   @include fd(column);
   align-items: center;
   justify-content: center;
+  @include media ($pad) {
+    text-align: center;
+  }
   &__Title{
-    font-size: 1.8rem;
+    font-size: 2.4rem;
     font-weight: bold;
+    margin-bottom: 85px;
   }
   &__Description{
-    font-size: 1.6rem;
+    font-size: 1.4rem;
+  }
+  &__Mail{
+    font-weight: bold;
+    font-size: 1.4rem;
+  }
+  &__Info{
+    font-size: 1.2rem;
+    color: #999;
+    margin-bottom: 95px;
+    @include media ($pad) {
+      line-height: 1.6em;
+    }
   }
 }
