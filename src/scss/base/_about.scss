@@ -50,7 +50,9 @@
       position: relative;
       margin-bottom: 292px;
       @include media ($pad) {
-        margin-bottom: 255px;
+        // margin-bottom: 255px;
+        margin-bottom: 0;
+        width: 100%;
       }
       &:first-child {
         padding-right: 137px;
@@ -64,6 +66,11 @@
       display: block;
       width: 330px;
       height: 272px;
+      @include media ($pad) {
+        width: auto;
+        height: auto;
+        text-align: center;
+      }
     }
   }
 
@@ -87,7 +94,10 @@
     background-color: rgba(255,255,255,0.5);
     animation-name: modalSlide;
     @include media ($pad) {
-      top: 200px;
+      // top: 200px;
+      position: static;
+      margin: 0 auto;
+      transform: translateY(-100px);
     }
     &__Name {
       padding: 20px 0 12px;
