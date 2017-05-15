@@ -96,7 +96,7 @@ $(function() {
 
   });
 
-  if (windowW > 481) {
+  if (windowW > 840) {
     $('.MasterHead__List--works').hover(function() {
       $('.PcWorkskinds').fadeIn("fast");
     }, function() {
