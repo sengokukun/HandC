@@ -9,17 +9,18 @@ $pad: 840;
 $pc: 841;
 $iphone5: 320;
 $bigpc: 1000;
+
 @mixin media($size) {
    @if $size == $sp{
     @media all and (max-width: $sp + 'px') {
        @content;
     }
   }
-  @if $size == $pad{
-   @media all and (max-width: $pad + 'px') {
+  @if $size == $pad {
+     @media all and (max-width: $pad + 'px'){
       @content;
-   }
- }
+    }
+  }
   @if $size == $pc {
      @media all and (min-width: $pc + 'px'){
       @content;
@@ -69,10 +70,9 @@ $bigpc: 1000;
     flex-direction: row;
   }
 }
-
 @mixin fd($direction) {
    @if $direction == row{
-     flex-direction: row;
+    flex-direction: row;
   }
   @else {
     flex-direction: column;
