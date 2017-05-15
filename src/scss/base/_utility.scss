@@ -1,0 +1,74 @@
+/* ====================================================
+// br設定
+==================================================== */
+.sp-br {
+  @include media ($sp) {
+    display: block;
+  }
+  @include media ($pc) {
+    display: none;
+  }
+}
+
+.pc-br {
+  @include media ($pc) {
+    display: block;
+  }
+  @include media ($sp) {
+    display: none;
+  }
+}
+
+.pc{
+  @include media ($pc) {
+    display: block;
+  }
+  @include media ($sp) {
+    display: none;
+  }
+}
+
+.sp{
+  @include media ($sp) {
+    display: block;
+  }
+  @include media ($pc) {
+    display: none;
+  }
+}
+
+/*margin*/
+.mA{margin: 0 auto;}
+.mT10{margin-top: 10px;}
+.mT20{margin-top: 20px;}
+.mT50{margin-top: 50px;}
+.mR20{margin-right: 20px;}
+.mB40{margin-bottom: 40px;}
+.mB50{margin-bottom: 50px;}
+.mTB60{margin: 60px 0;}
+
+/*Spmargin*/
+.spmT20{@include media ($sp){margin-top: 20px;} @include media ($pc){margin-top: 0;}}
+
+/*padding*/
+.pA10{padding: 10px;}
+.pL30{padding-left: 30px;}
+.pB10{padding-bottom: 10px;}
+.pB60{padding-bottom: 60px;}
+/*border*/
+.bDn{border: none;}
+
+/*line-height*/
+.lH0{line-height: 0;}
+.lH40{line-height: 40px;}
+
+/*position*/
+.Center{
+  @include flex();
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+}
+
+/*aligan*/
+.aLs{align-self: flex-start;}
