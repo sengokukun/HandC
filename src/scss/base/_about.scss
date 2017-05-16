@@ -31,6 +31,7 @@
   }
 
   .Members {
+    position: relative;
     border-bottom: 1px solid #ccc;
     &__Block {
       @include flex();
@@ -137,4 +138,17 @@
       margin-bottom: 45px;
     }
   }
+}
+
+.ModalPoint{
+  position: absolute;
+  left: 50%;
+  top: 31%;
+  bottom: auto;
+  right: auto;
+  z-index: 9999;
+  transform: translateX(-50%) translateY(-50%);
+  z-index: 1;
+  display: block;
+  width: 100%;
 }

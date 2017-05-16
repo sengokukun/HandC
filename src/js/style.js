@@ -102,7 +102,7 @@ $(function() {
     }, function() {
       $('.PcWorkskinds').fadeOut("fast");
     });
-    $('.Members').on('inview', function() {
+    $('.ModalPoint').on('inview', function() {
       $('.Modal').on('inview', function(event, isInView) {
         $(this).stop().addClass('ModalSlide');
       });
