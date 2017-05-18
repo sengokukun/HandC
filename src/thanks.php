@@ -3,10 +3,10 @@
 //info@example.comを、あなたのメールアドレスにすることでこのメールフォームをそのまま使えます。
 session_start();//ページ移動したら再びsession_start
 
-$add_header="From:a15dc095@dhw.ac.jp\r\n";
-$add_header	.= "Reply-to: a15dc095@dhw.ac.jp\r\n";
+$add_header="From:info@handcfilms.com\r\n";
+$add_header	.= "Reply-to: info@handcfilms.com\r\n";
 $add_header	.= "X-Mailer: PHP/". phpversion();
-$opt = '-f'.'a15dc095@dhw.ac.jp'; //-fって何か意味あったんだけど忘れました　-fすると迷惑メールになりにくいとか、そんなことだったと思う。
+$opt = '-f'.'info@handcfilms.com'; //-fって何か意味あったんだけど忘れました　-fすると迷惑メールになりにくいとか、そんなことだったと思う。
 
 //以下ヒアドキュメント<<<●●　HTMLでも、文字列でも、何いれてもOK●●;
 //ヒアドキュメントは、メール送信とかの定型文を書いたりするとき、あとはSQLを書くときも使うかな。
@@ -43,7 +43,7 @@ mb_send_mail($_SESSION['e_mail'],"【お問い合わせ】確認メール",$mess
 
 
 //マスター管理者にも同じメールを送りつける！！
-mb_send_mail('a15dc095@dhw.ac.jp',"お問い合わせがありました",$message,$add_header,$opt);
+mb_send_mail('info@handcfilms.com',"お問い合わせがありました",$message,$add_header,$opt);
 
 session_destroy();  // セッションを破棄
 ?>
