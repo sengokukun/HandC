@@ -129,12 +129,11 @@ $(function() {
 });
 
 $(window).on("load", function() {
-  if (document.URL.match("/index")) {
+  if (document.URL.match("/")) {
     console.log("おけ");
     $('.underBar').css({
       width: $('.current').outerWidth() - 44,
       left: $('.current').position().left + 22,
-      display:"none"
     });
 
     $('.MasterHead__Link').mouseover(function() {
@@ -160,6 +159,7 @@ $(window).on("load", function() {
     $('.underBar, .underBar--top').css({
       width: $('.current').outerWidth() - 44,
       left: $('.current').position().left + 22
+      display:"block"
     });
 
     $('.MasterHead__Link').mouseover(function() {
