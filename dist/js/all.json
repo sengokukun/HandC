@@ -1,16 +1,18 @@
 [{
-    "Id": "DESIGN",
-    "Day": "2017/4/10",
-    "Title": "デザイン1デザイン1デザイン1デザイン1デザイン1",
-    "Img": "sample1",
-    "Description": "デザイン1デザイン1デザイン1デザイン1デザイン1デザイン1デザイン1デザイン1デザイン1"
+    "Id": "PHOTO",
+    "Day": "2017/3/11",
+    "Title": "Strangers  Artist Photograph",
+    "Img": "Works_img/170311/top",
+    "Link": "01",
+    "Description": "Strangers 「Air」MV Photo : Yohei Ohno"
   },
   {
-    "Id": "PHOTO",
-    "Day": "2017/4/11",
-    "Title": "フォト1フォト1フォト1フォト1フォト1フォト1",
-    "Img": "sample1",
-    "Description": "フォト1フォト1フォト1フォト1フォト1フォト1フォト1フォト1フォト1フォト1フォト1フォト1"
+    "Id": "DESIGN",
+    "Day": "2017/3/28",
+    "Title": "Strangers 「WILL WINGS」",
+    "Img": "Works_img/170328/top",
+    "Link": "02",
+    "Description": "Album 「WILL WINGS」ジャケット，歌詞カードのグラフィックデザインを担当しました。"
   },
   {
     "Id": "VIDEO",
