@@ -21,11 +21,18 @@
     &:last-child{
       margin-bottom: 60px;
     }
+    @include media ($pad) {
+      width: 100%;
+    }
   }
   &__Photo{
     position: relative;
-    height: 210px;
+    width: 420px;
+    height: 236px;
     overflow: hidden;
+    @include media ($pad) {
+      width: 100%;
+    }
   }
   &__Tag{
     position: absolute;
@@ -63,7 +70,7 @@
 }
 
 .DetailWrapper{
-  margin-top: 60px;
+  margin-top: 100px;
   @include media ($sp) {
     margin-top: 90px;
   }
@@ -71,9 +78,9 @@
 
 .Detail{
   &__Media{
-    width: 870px;
+    width: 100%;
     height: 435px;
-    margin:  20px auto 0;
+    // margin:  20px auto 0;
     @include media ($sp) {
       width: 100%;
       height: auto;
@@ -82,10 +89,8 @@
   }
   &__Data{
     font-size: 1.4rem;
-    margin-top: 50px;
     @include flex();
     justify-content: space-between;
-    padding-bottom: 10px;
     border-bottom: 1px solid #eee;
     color: #111;
     @include media ($sp) {
@@ -93,8 +98,6 @@
     }
   }
   &__Block{
-    margin: 60px 0;
-    padding-bottom: 60px;
     border-bottom: 1px solid #eee;
     &--credit{
       font-size: 1.6rem;
@@ -118,25 +121,33 @@
   }
   &__Description{
     font-size: 1.6rem;
-    margin-bottom: 40px;
-    &:last-child{
-      margin-bottom: 0;
-    }
     @include media ($sp) {
       font-size: 1.2rem;
     }
     &--photo{
       width: 100%;
       @include flex();
+      @include media ($pad) {
+        @include fd(column);
+      }
     }
   }
 
   &__DescriptionPhoto{
-    height: 210px;
     overflow: hidden;
     box-sizing: border-box;
     &:last-child{
-      padding-left: 30px;
+      @include media ($pad) {
+        padding-left: 0;
+        margin-top: 20px;
+      }
+    }
+    img {
+      width: 420px;
+      height: 210px;
+      @include media ($pad) {
+        width: 100%;
+      }
     }
   }
   &__CreditDescription{

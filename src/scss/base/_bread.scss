@@ -5,6 +5,11 @@
     align-items: center;
     margin-right: 6px;
     color: #111;
+    &:last-child{
+      &::after{
+        display: none;
+      }
+    }
     &::after{
       display: block;
       content: ">";

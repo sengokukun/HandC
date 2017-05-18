@@ -88,9 +88,9 @@ li {
 
 .Containr {
   max-width: $base_maxwidth;
-  width: $base_width;
+  width: 100%;
   margin: 0 auto;
-  @include media ($sp) {
+  @include media ($pad) {
     width: 100%;
     padding: 0 10px;
     box-sizing: border-box;
@@ -99,11 +99,15 @@ li {
 
 .Gloval {
   width: 100%;
-  position: relative;
+  // position: relative;
   @include media ($pad) {
     position: static;
     margin-top: 0;
   }
+}
+
+.Sub{
+  padding-bottom: 40px;
 }
 
 .Loading {
@@ -129,12 +133,12 @@ li {
   }
 }
 
-.b-line{
+.b-line {
   box-sizing: border-box;
   border-bottom: 3px solid #000;
 }
 
-.CapTitle{
+.CapTitle {
   font-size: 2.3rem;
   line-height: 1;
   text-align: center;
@@ -146,8 +150,9 @@ li {
   }
 }
 
-.HeroLogo{
+.HeroLogo {
   text-align: center;
+
   img {
     width: 200px;
     height: 200px;
@@ -160,4 +165,22 @@ li {
 
 .fix {
   position: fixed;
+  height: 100%;
+  width: 100%;
+}
+
+.fixed {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  overflow: hidden;
+}
+
+.RowColumn {
+  @include flex();
+  @include fd(row);
+  justify-content: center;
+  @include media ($sp) {
+     @include fd(column);
+  }
 }
