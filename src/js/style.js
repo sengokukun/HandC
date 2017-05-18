@@ -8,13 +8,13 @@ var player;
 
 function onYouTubeIframeAPIReady() {
   player = new YT.Player('player', {
-    videoId: 'EYIyfWcEt3w',
+    videoId: 'xeJ7Mp4Nrtg',
     wmode: 'transparent',
     loop: '1',
     playerVars: {
       'loop': '1',
       'rel': '0',
-      'playlist': 'EYIyfWcEt3w',
+      'playlist': 'xeJ7Mp4Nrtg',
       'showinfo': '0',
       'controls': '0',
       'modestbranding': '0',
@@ -64,8 +64,11 @@ var windowW = $(window).width(); //画面の横幅を取得
 //jquery
 
 $(function() {
+  var state = false;
+  var scrollpos;
   var triggers = $('.Toggle__Lines'),
     toggleBtn = $('.Toggle'),
+    menu = $('.MasterHead__Navigation'),
     body = $(document.body)
   toggleBtn.on('click', function() {
     body.toggleClass('open');
@@ -78,19 +81,88 @@ $(function() {
       $('.SpHeader .MasterHead__Navigation').fadeOut(150);
       $('.Toggle__Line').removeClass('bg_black');
     }
+
+    if(state == false) {
+      scrollpos = $(window).scrollTop();
+      $('body').addClass('fixed').css({'top': -scrollpos});
+      $(menu).addClass('open');
+      state = true;
+    } else {
+      $('body').removeClass('fixed').css({'top': 0});
+      window.scrollTo( 0 , scrollpos );
+      $(menu).removeClass('open');
+      state = false;
+    }
+
   });
-  if (windowW > 481) {
+
+  if (windowW > 840) {
     $('.MasterHead__List--works').hover(function() {
       $('.PcWorkskinds').fadeIn("fast");
     }, function() {
       $('.PcWorkskinds').fadeOut("fast");
     });
-    $('.Members').on('inview', function() {
+    $('.ModalPoint').on('inview', function() {
       $('.Modal').on('inview', function(event, isInView) {
         $(this).stop().addClass('ModalSlide');
       });
     });
   }
+
+  $(window).on("load", function() {
+    if ("http://localhost:3000/" == location.href) {
+      console.log("おけ");
+      $('.underBar').css({
+        width: $('.current').outerWidth() - 44,
+        left: $('.current').position().left + 22,
+        display:"none"
+      });
+
+      $('.MasterHead__Link').mouseover(function() {
+        $('.underBar')
+          .stop()
+          .animate({
+            width: $(this).outerWidth() - 44,
+            left: $(this).position().left + 22,
+            opacity: 'show'
+          }, 'fast');
+      });
+
+      $('.MasterHead__Link').mouseout(function() {
+        $('.underBar')
+          .stop()
+          .animate({
+            width: $('.current').outerWidth() - 44,
+            left: $('.current').position().left + 22,
+            opacity: 'hide'
+          }, 'fast');
+      });
+    } else {
+      $('.underBar, .underBar--top').css({
+        width: $('.current').outerWidth() - 44,
+        left: $('.current').position().left + 22
+      });
+
+      $('.MasterHead__Link').mouseover(function() {
+        $('.underBar')
+          .stop()
+          .animate({
+            width: $(this).outerWidth() - 44,
+            left: $(this).position().left + 22
+          }, 'fast');
+      });
+
+      $('.MasterHead__Link').mouseout(function() {
+        $('.underBar')
+          .stop()
+          .animate({
+            width: $('.current').outerWidth() - 44,
+            left: $('.current').position().left + 22
+          }, 'fast');
+      });
+    }
+  });
+
 });
 
 //works json
@@ -112,7 +184,7 @@ $(function() {
       var $title = $(".Works__Title");
       var $info = $(".Works__Infomation");
       for (var i = 0; i < dataLengh; i++) {
-        $('.Works__Block').prepend('<article class="Works__Item ' + data[i].Id + '"><a href="#" class="Works__Link"><p class="Works__Photo"><img src="/img/' + data[i].Img + '.jpg" alt=""><span class="Works__Tag">' + data[i].Id + '</span></p><div class="Works__Descriptions"><h2 class="Works__Title">' + data[i].Title + '</h2><p class="Works__Infomation">' + data[i].Description + '</p></div></a></article>');
+        $('.Works__Block').prepend('<article class="Works__Item ' + data[i].Id + '"><a href="works/' + data[i].Link + '.html" class="Works__Link"><p class="Works__Photo"><img src="/img/' + data[i].Img + '.jpg" alt=""><span class="Works__Tag">' + data[i].Id + '</span></p><div class="Works__Descriptions"><h2 class="Works__Title">' + data[i].Title + '</h2><p class="Works__Infomation">' + data[i].Description + '</p></div></a></article>');
         if (idName == "VIDEO") {
           $(".DESIGN, .PHOTO").remove();
         } else if (idName == "PHOTO") {
@@ -128,56 +200,14 @@ $(function() {
   });
 });
 
-$(window).on("load", function() {
-  if (document.URL.match("/")) {
-    console.log("おけ");
-    $('.underBar').css({
-      width: $('.current').outerWidth() - 44,
-      left: $('.current').position().left + 22,
-    });
+//php
 
-    $('.MasterHead__Link').mouseover(function() {
-      $('.underBar')
-        .stop()
-        .animate({
-          width: $(this).outerWidth() - 44,
-          left: $(this).position().left + 22,
-          opacity: 'show'
-        }, 'fast');
-    });
+$(document).ready(function(){
+$("#contact-form").validate({
+rules : {
+name:{required: true}
+},
+errorClass: "myError"
 
-    $('.MasterHead__Link').mouseout(function() {
-      $('.underBar')
-        .stop()
-        .animate({
-          width: $('.current').outerWidth() - 44,
-          left: $('.current').position().left + 22,
-          opacity: 'hide'
-        }, 'fast');
-    });
-  } else {
-    $('.underBar, .underBar--top').css({
-      width: $('.current').outerWidth() - 44,
-      left: $('.current').position().left + 22
-      display:"block"
-    });
-
-    $('.MasterHead__Link').mouseover(function() {
-      $('.underBar')
-        .stop()
-        .animate({
-          width: $(this).outerWidth() - 44,
-          left: $(this).position().left + 22
-        }, 'fast');
-    });
-
-    $('.MasterHead__Link').mouseout(function() {
-      $('.underBar')
-        .stop()
-        .animate({
-          width: $('.current').outerWidth() - 44,
-          left: $('.current').position().left + 22
-        }, 'fast');
-    });
-  }
+});
 });

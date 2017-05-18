@@ -5,49 +5,11 @@
 /* ====================================================
 // ページ全体の横幅
 ==================================================== */
-$base_width: 870px;
-$base_maxwidth: 1200px;
+// $base_width: 870px;
+$base_maxwidth: 870px;
 
 /* ====================================================
 // font設定
 ==================================================== */
 $base_font: "游ゴシック" , "Open Sans" , "Helvetica Neue" , Helvetica , Arial , Verdana , Roboto ,  "Yu Gothic" , "游ゴシック体" , "YuGothic" , "ヒラギノ角ゴ Pro W3" , "Hiragino Kaku Gothic Pro" , "Meiryo UI" , "メイリオ" , Meiryo , "ＭＳ Ｐゴシック" , "MS PGothic" , sans-serif;
 $eigo_font: 'Roboto', sans-serif;
-/* ====================================================
-// br設定
-==================================================== */
-.sp-br {
-  @include media ($sp) {
-    display: block;
-  }
-  @include media ($pc) {
-    display: none;
-  }
-}
-
-.pc-br {
-  @include media ($pc) {
-    display: block;
-  }
-  @include media ($sp) {
-    display: none;
-  }
-}
-
-.pc{
-  @include media ($pc) {
-    display: block;
-  }
-  @include media ($sp) {
-    display: none;
-  }
-}
-
-.sp{
-  @include media ($sp) {
-    display: block;
-  }
-  @include media ($pc) {
-    display: none;
-  }
-}

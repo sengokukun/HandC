@@ -12,6 +12,7 @@ var uglify = require("gulp-uglify"); //js
 var imagemin = require("gulp-imagemin"); //img
 var imageminPngquant = require('imagemin-pngquant');
 var htmlmin = require('gulp-htmlmin'); //html圧縮
+var connect = require('gulp-connect-php');
 
 ////////////////////////////////////////////////////
 
@@ -24,6 +25,7 @@ gulp.task("server", function() {
     }
   })
 });
+
 
 // scss
 gulp.task("sass", ['server'], function() {
@@ -80,11 +82,22 @@ gulp.task('htmlmin', function() {
   }));
 });
 
+//php
+gulp.task('connect', function() {
+  return gulp.src('src/**/*.php')
+  .pipe(plumber())
+  .pipe(gulp.dest('./dist/'))
+  .pipe(browser.reload({
+    stream: true
+  }));
+});
+
 // default
 gulp.task("default", ["server"], function() {
   gulp.watch(['./src/scss/**/*.scss'], ['sass']);
   gulp.watch(['./src/js/**/*.js', '!./src/js/min/**/*.js'], ['uglify']);
   gulp.watch('./dist/css/**/*css',['combineMq']);
-  gulp.watch('./src/*.html', ['htmlmin']);
+  gulp.watch('./src/**/*.html', ['htmlmin']);
   gulp.watch('./src/img/*',['imagemin']);
+  gulp.watch("./src/**/*.php",["connect"]);
 });

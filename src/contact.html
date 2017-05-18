@@ -12,6 +12,7 @@
   <link rel="stylesheet" href="/css/style.css">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
   <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+  <link rel="icon" href="/img/favicon.ico" type="image/vnd.microsoft.icon">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
   <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
   <!-- <script type="text/javascript" src="/js/min/jquery-3.1.1.min.js"></script> -->
@@ -35,7 +36,7 @@
     <div class="Gloval">
       <div class="Sub">
         <header class="MasterHead">
-          <h1 class="MasterHead__Logo"><a href="index.html"><img src="img/logo.svg" alt="hc"></a></h1>
+          <h1 class="MasterHead__Logo"><a href="/"><img src="img/logo.svg" alt="hc"></a></h1>
           <div class="PcHeader">
             <nav class="MasterHead__Navigation">
               <ul class="MasterHead__Block">
@@ -63,13 +64,12 @@
                 <li class="MasterHead__List MasterHead__List">
                   <a href="#" class="MasterHead__Link MasterHead__Link--fb"><i class="fa fa-facebook" aria-hidden="true"></i></a>
                 </li>
-                <span class="underBar"></span>
             </ul>
+            <span class="underBar"></span>
             </nav>
           </div>
           <div class="SpHeader">
             <div class="SpHeader__Icons">
-              <!-- <h2 class="MasterHead__Logo"><a href="#"><img src="img/logo.svg" alt="hc"></a></h2> -->
               <a class="Toggle">
                 <span class="Toggle__Lines">
                   <span class="Toggle__Line"></span>
@@ -118,7 +118,7 @@
             <main class="Contact">
               <h2 class="CapTitle">CONTACT</h2>
               <p class="Contact__Description">映像制作や撮影、デザインなどのご依頼、ご相談など<br class="sp-br">気軽にお問い合わせください。</p>
-              <form method="post" action="#" class="Forms">
+              <form action="confirm.php" method="post" name="form" onsubmit="return validate()" class="Forms">
                 <dl class="Forms__List">
                   <dt class="Forms__Name">お名前</dt>
                   <dd class="Forms__Data">
@@ -141,7 +141,8 @@
                   </dd>
                 </dl>
               </form>
-              <a href="#" class="Button Button--contact Button--spLong">確認画面へ</a>
+		           <button type="submit" class="Button mA Button--spLong lH40">確認画面へ</button>
+              <!-- <a href="#" class="Button Button--contact Button--spLong">確認画面へ</a> -->
             </main>
           </div>
         </div>
@@ -159,7 +160,7 @@
     </div>
 
   </div>
+  <script src="/js/style.js"></script>
 </body>
-<script src="/js/style.js"></script>
 
 </html>

@@ -3,13 +3,13 @@
   text-align: center;
   width: 170px;
   height: 40px;
-  line-height: 40px;
-  margin: 0 auto;
+  // line-height: 40px;
   display: block;
   font-size: 1.6rem;
-  &--contact{
-    border: 1px solid  #111;
-  }
+  cursor: pointer;
+  border: none;
+  background-color: inherit;
+  border: 1px solid  #111;
   &--spLong{
     @include media ($sp) {
       width: 100%;
