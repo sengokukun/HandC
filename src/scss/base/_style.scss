@@ -9,7 +9,7 @@
     height: 100vh;
     overflow: hidden;
     position: relative;
-    top: -100px;
+    top: -20px;
     overflow: hidden;
     // background-image: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.2)), url("../../img/bg_hero.jpg");
     background-size: cover;
@@ -33,6 +33,7 @@
     height: 100vh;
     overflow: hidden;
     position: relative;
+    z-index: -1;
     @include media ($pad){
       display: none;
     }
@@ -92,7 +93,8 @@
     }
   }
 
-  .HeroLogo {
+  &__Logo {
+    width: 130px;
     position: absolute;
     left: 50%;
     top: 50%;
@@ -104,6 +106,12 @@
     @include media ($pad) {
       top: 40%;
       z-index: 1;
+    }
+  }
+  &__Svg{
+      fill: #111;
+    @include media ($pad) {
+      fill: #fff;
     }
   }
 }
