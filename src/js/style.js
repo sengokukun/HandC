@@ -69,17 +69,25 @@ $(function() {
   var triggers = $('.Toggle__Lines'),
     toggleBtn = $('.Toggle'),
     menu = $('.MasterHead__Navigation'),
-    body = $(document.body)
+    body = $(document.body),
+    menuItem  = $('.MasterHead__List')
   toggleBtn.on('click', function() {
     body.toggleClass('open');
     if (body.hasClass('open')) {
       $(triggers).addClass('active');
       $('.SpHeader .MasterHead__Navigation').fadeIn(150);
       $('.Toggle__Line').addClass('bg_black');
+      TweenMax.to(menuItem, .5, {
+        opacity: 1,
+        delay: .2
+      });
     } else {
       $(triggers).removeClass('active');
       $('.SpHeader .MasterHead__Navigation').fadeOut(150);
       $('.Toggle__Line').removeClass('bg_black');
+      TweenMax.to(menuItem, 1, {
+        opacity: 0
+      });
     }
 
     if(state == false) {

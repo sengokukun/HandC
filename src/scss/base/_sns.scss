@@ -1,8 +1,9 @@
 .sp-sns-menu {
   display: none;
   @include media ($pad) {
+    box-sizing: border-box;
     @include flex();
-    justify-content: center;
+    justify-content: flex-start;
     &__list {
       display: block;
       margin-right: 46px;
