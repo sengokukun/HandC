@@ -70,7 +70,7 @@ $(function() {
     toggleBtn = $('.Toggle'),
     menu = $('.MasterHead__Navigation'),
     body = $(document.body),
-    menuItem  = $('.MasterHead__List')
+    menuItem  = $('.sp-MasterHead__Block > .MasterHead__List')
   toggleBtn.on('click', function() {
     body.toggleClass('open');
     if (body.hasClass('open')) {
@@ -104,44 +104,46 @@ $(function() {
 
   });
 
-  if (windowW > 840) {
-    var Modal__about = function(){
-      var tl = new TimelineMax(),
-        tl2 = new TimelineMax(),
-        tl3 = new TimelineMax(),
-        tl4 = new TimelineMax(),
-        tl5 = new TimelineMax(),
-        bdL = $(this).find('.bdL'),
-        bdB = $(this).find('.bdB'),
-        bdR = $(this).find('.bdR'),
-        bdT = $(this).find('.bdT'),
-        FadeIn = $(this).find('.FadeIn')
+  var Modal__about = function(){
+    var tl = new TimelineMax(),
+      tl2 = new TimelineMax(),
+      tl3 = new TimelineMax(),
+      tl4 = new TimelineMax(),
+      tl5 = new TimelineMax(),
+      bdL = $(this).find('.bdL'),
+      bdB = $(this).find('.bdB'),
+      bdR = $(this).find('.bdR'),
+      bdT = $(this).find('.bdT'),
+      FadeIn = $(this).find('.FadeIn')
 
-      tl.to(bdL, .3, {
-        height:"100%"
-      }),
-      tl2.to(bdB, .3, {
-        width: "100%",
-        delay: .2
-      }),
-      tl3.to(bdR, .3, {
-        height: "100%",
-        delay: .4
-      }),
-      tl4.to(bdT, .3, {
-        width: "100%",
-        delay: .6
-      })
-      tl5.to(FadeIn, .3, {
-        opacity: 1,
-        delay: 1
-      })
-    };
+    tl.to(bdL, .3, {
+      height:"100%"
+    }),
+    tl2.to(bdB, .3, {
+      width: "100%",
+      delay: .2
+    }),
+    tl3.to(bdR, .3, {
+      height: "100%",
+      delay: .4
+    }),
+    tl4.to(bdT, .3, {
+      width: "100%",
+      delay: .6
+    })
+    tl5.to(FadeIn, .3, {
+      opacity: 1,
+      delay: 1
+    })
+  };
 
-    $('.FadeIn__1').parent('.Modal').on('inview', Modal__about);
-    $('.FadeIn__2').parent('.Modal').on('inview', Modal__about);
-    $('.FadeIn__3').parent('.Modal').on('inview', Modal__about);
-  }
+  $('.FadeIn__1').parent('.Modal').on('inview', Modal__about);
+  $('.FadeIn__2').parent('.Modal').on('inview', Modal__about);
+  $('.FadeIn__3').parent('.Modal').on('inview', Modal__about);
+
+  //
+  // if (windowW > 840) {
+  // }
 
   $(window).on("load", function() {
     if ("http://localhost:3000/" == location.href) {

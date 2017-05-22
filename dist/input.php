@@ -42,7 +42,7 @@
             <nav class="MasterHead__Navigation">
               <ul class="MasterHead__Block">
                 <li class="MasterHead__List">
-                  <a href="all.html" class="MasterHead__Link current">ALL</a>
+                  <a href="all.html" class="MasterHead__Link">ALL</a>
                 </li>
                 <li class="MasterHead__List">
                   <a href="video.html" class="MasterHead__Link">VIDEO</a>
@@ -57,7 +57,7 @@
                   <a href="about.html" class="MasterHead__Link">ABOUT</a>
                 </li>
                 <li class="MasterHead__List">
-                  <a href="input.php" class="MasterHead__Link">CONTACT</a>
+                  <a href="input.php" class="MasterHead__Link current">CONTACT</a>
                 </li>
                 <li class="MasterHead__List MasterHead__List--right">
                   <a href="#" class="MasterHead__Link MasterHead__Link--tw"><i class="fa fa-twitter" aria-hidden="true"></i></a>
@@ -80,7 +80,7 @@
               </a>
             </div>
             <nav class="MasterHead__Navigation">
-              <ul class="MasterHead__Block">
+              <ul class="MasterHead__Block sp-MasterHead__Block">
                 <li class="MasterHead__List">
                   <a href="all.html" class="MasterHead__Link">ALL</a>
                 </li>
