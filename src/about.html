@@ -17,6 +17,7 @@
   <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
   <!-- <script type="text/javascript" src="/js/min/jquery-3.1.1.min.js"></script> -->
   <script src="/js/min/jquery.inview.min.js"></script>
+  <script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.0/TweenMax.min.js"></script>
   <!--[if lt IE 9]>
   <script type="text/javascript" src="js/ie8/html5shiv.min.js"></script>
   <script type="text/javascript" src="js/ie8/selectivizr-min.js"></script>
@@ -41,7 +42,7 @@
             <nav class="MasterHead__Navigation">
               <ul class="MasterHead__Block">
                 <li class="MasterHead__List">
-                  <a href="all.html" class="MasterHead__Link">ALL</a>
+                  <a href="all.html" class="MasterHead__Link current">ALL</a>
                 </li>
                 <li class="MasterHead__List">
                   <a href="video.html" class="MasterHead__Link">VIDEO</a>
@@ -52,7 +53,7 @@
                 <li class="MasterHead__List">
                   <a href="design.html" class="MasterHead__Link">DESIGN</a>
                 </li>
-                <li class="MasterHead__List MasterHead__List--description current">
+                <li class="MasterHead__List MasterHead__List--description">
                   <a href="about.html" class="MasterHead__Link">ABOUT</a>
                 </li>
                 <li class="MasterHead__List">
@@ -81,24 +82,29 @@
             <nav class="MasterHead__Navigation">
               <ul class="MasterHead__Block">
                 <li class="MasterHead__List">
+                  <a href="all.html" class="MasterHead__Link">ALL</a>
+                </li>
+                <li class="MasterHead__List">
+                  <a href="video.html" class="MasterHead__Link">VIDEO</a>
+                </li>
+                <li class="MasterHead__List">
+                  <a href="photo.html" class="MasterHead__Link">PHOTO</a>
+                </li>
+                <li class="MasterHead__List mB70">
+                  <a href="design.html" class="MasterHead__Link">DISIGN</a>
+                </li>
+                <li class="MasterHead__List">
                   <a href="about.html" class="MasterHead__Link">ABOUT</a>
                 </li>
-                <li class="MasterHead__List">
-                  <a href="all.html" class="MasterHead__Link">WORKS</a>
-                  <ul class="Workskinds">
-                    <li class="Workskinds__List"><a href="all.html" class="Workskinds__Link">ALL</a></li>
-                    <li class="Workskinds__List"><a href="video.html" class="Workskinds__Link">VIDEO</a></li>
-                    <li class="Workskinds__List"><a href="photo.html" class="Workskinds__Link">PHOTO</a></li>
-                    <li class="Workskinds__List"><a href="design.html" class="Workskinds__Link">DESIGN</a></li>
-                  </ul>
-                </li>
-                <li class="MasterHead__List">
+                <li class="MasterHead__List mB70">
                   <a href="input.php" class="MasterHead__Link">CONTACT<br></a>
                 </li>
-              </ul>
-              <ul class="sp-sns-menu">
-                <li class="sp-sns-menu__list"><a href="#" class="sp-sns-menu__link sp-sns-menu__link--black"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
-                <li class="sp-sns-menu__list"><a href="#" class="sp-sns-menu__link sp-sns-menu__link--black"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+                <li class="bdBn MasterHead__List">
+                  <ul class="sp-sns-menu">
+                    <li class="sp-sns-menu__list"><a href="#" class="sp-sns-menu__link sp-sns-menu__link--black"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+                    <li class="sp-sns-menu__list"><a href="#" class="sp-sns-menu__link sp-sns-menu__link--black"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+                  </ul>
+                </li>
               </ul>
 
             </nav>
@@ -115,14 +121,6 @@
                 <span itemprop="title" class="Bread__Link">ABOUT</span>
               </a>
             </spna>
-            <!-- <ul class="Bread">
-              <li class="Bread__List">
-                <a href="#" class="Bread__Link">HOME</a>
-              </li>
-              <li class="Bread__List">
-                <a href="#" class="Bread__Link">ABUOT</a>
-              </li>
-            </ul> -->
             <main class="About">
               <div class="Abouts">
                 <h1 class="CapTitle">ABOUT</h1>
@@ -135,40 +133,58 @@
                   <li class="Members__List">
                     <p class="Members__Image"><img src="/img/seiya.png" alt="いとうせいや"></p>
                     <div class="Modal">
-                      <h3 class="Modal__Name">伊藤 聖也</h3>
-                      <p class="Modal__Job">映像ディレクター<br>CGアーティスト</p>
-                      <p class="Modal__Description">大学にてCGを学んだ後、映像業界に入る。<br>実写のみならず、CG,モーショングラフィックスを用いた映像制作を得意とする。<br>アジアデジタルアート大賞2016 映像部門大賞</p>
-                      <ul class="Snses">
-                        <li class="Snses__List"><a href="#" class="Snses__Link"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
-                        <li class="Snses__List"><a href="#" class="Snses__Link"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
-                        <li class="Snses__List"><a href="#" class="Snses__Link"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
-                      </ul>
-                    </div>
+              		    <span class="bdL"></span>
+                  		<span class="bdB"></span>
+                  		<span class="bdR"></span>
+                      <span class="bdT"></span>
+                      <div class="FadeIn FadeIn__1">
+                        <h3 class="Modal__Name">伊藤 聖也</h3>
+                        <p class="Modal__Job">映像ディレクター<br>CGアーティスト</p>
+                        <p class="Modal__Description">大学にてCGを学んだ後、映像業界に入る。<br>実写のみならず、CG,モーショングラフィックスを用いた映像制作を得意とする。<br>アジアデジタルアート大賞2016 映像部門大賞</p>
+                        <ul class="Snses">
+                          <li class="Snses__List"><a href="#" class="Snses__Link"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+                          <li class="Snses__List"><a href="#" class="Snses__Link"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+                          <li class="Snses__List"><a href="#" class="Snses__Link"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+                        </ul>
+                      </div>
+                      </div>
                   </li>
                   <li class="Members__List">
                     <p class="Members__Image"><img src="/img/youhei.png" alt="いとうせいや"></p>
                     <div class="Modal">
-                      <h3 class="Modal__Name">オオノ ヨウヘイ</h3>
-                      <p class="Modal__Job">映像ディレクター<br>写真家</p>
-                      <p class="Modal__Description">東京を拠点に活動中</p>
-                      <ul class="Snses">
-                        <li class="Snses__List"><a href="#" class="Snses__Link"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
-                        <li class="Snses__List"><a href="#" class="Snses__Link"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
-                        <li class="Snses__List"><a href="#" class="Snses__Link"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
-                      </ul>
+                      <span class="bdL"></span>
+                  		<span class="bdB"></span>
+                  		<span class="bdR"></span>
+                      <span class="bdT"></span>
+                      <div class="FadeIn FadeIn__2">
+                        <h3 class="Modal__Name">オオノ ヨウヘイ</h3>
+                        <p class="Modal__Job">映像ディレクター<br>写真家</p>
+                        <p class="Modal__Description">東京を拠点に活動中</p>
+                        <ul class="Snses">
+                          <li class="Snses__List"><a href="#" class="Snses__Link"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+                          <li class="Snses__List"><a href="#" class="Snses__Link"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+                          <li class="Snses__List"><a href="#" class="Snses__Link"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+                        </ul>
+                      </div>
                     </div>
                   </li>
                   <li class="Members__List">
                     <p class="Members__Image"><img src="/img/yun.png" alt="いとうせいや"></p>
                     <div class="Modal">
-                      <h3 class="Modal__Name">髙橋 佑弥</h3>
-                      <p class="Modal__Job">映像ディレクター<br>プロデューサー</p>
-                      <p class="Modal__Description">大学での出会いにより映像業界に入る。<br>MVやLIVE映像だけでなく広告やPR動画の<br>制作にも携わってきた。</p>
-                      <ul class="Snses">
-                        <li class="Snses__List"><a href="#" class="Snses__Link"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
-                        <li class="Snses__List"><a href="#" class="Snses__Link"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
-                        <li class="Snses__List"><a href="#" class="Snses__Link"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
-                      </ul>
+                      <span class="bdL"></span>
+                      <span class="bdB"></span>
+                      <span class="bdR"></span>
+                      <span class="bdT"></span>
+                      <div class="FadeIn FadeIn__3">
+                        <h3 class="Modal__Name">髙橋 佑弥</h3>
+                        <p class="Modal__Job">映像ディレクター<br>プロデューサー</p>
+                        <p class="Modal__Description">大学での出会いにより映像業界に入る。<br>MVやLIVE映像だけでなく広告やPR動画の<br>制作にも携わってきた。</p>
+                        <ul class="Snses">
+                          <li class="Snses__List"><a href="#" class="Snses__Link"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+                          <li class="Snses__List"><a href="#" class="Snses__Link"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+                          <li class="Snses__List"><a href="#" class="Snses__Link"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+                        </ul>
+                      </div>
                     </div>
                   </li>
                 </ul>

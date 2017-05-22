@@ -58,23 +58,24 @@
   }
 
   &__Navigation{
-        position: relative;
+    position: relative;
     width: 100%;
     height: 60px;
     @include flex();
     justify-content: space-between;
      align-items: baseline;
     @include media ($pad) {
-      width: 100%;
+      width: 70%;
       height: 100vh;
       position: fixed;
       top: 0;
       bottom: 0;
-      left: 0;
+      left: auto;
       right: 0;
       background-color: #fff;
       display: none;
       z-index: 99;
+      overflow-y: scroll;
     }
   }
 
@@ -91,9 +92,12 @@
     }
     @include media ($pad) {
       width: 100%;
-      padding-top: 60px;
+      padding: 0 30px;
+      margin: 40px 0;
+      box-sizing: border-box;
       @include fd(column);
       text-align: center;
+      overflow-y: scroll;
     }
   }
 
@@ -112,10 +116,10 @@
     font-size: 1.6rem;
     @include media ($pad) {
       width: 100%;
-      border-bottom: 1px solid #eee;
-
-      &:first-child {
-        border-top: 1px solid #eee;
+      border-bottom: 2px solid #111;
+      opacity: 0;
+      &:last-child{
+        border: none;
       }
     }
     &--right {
@@ -146,10 +150,11 @@
       height: 100%;
       width: 100%;
       line-height: 1em;
-      padding: 24px 0;
+      padding: 24px 0 15px;
       font-size: 2rem;
       letter-spacing: 1px;
       font-weight: bold;
+      text-align: justify;
 
       span {
         font-size: 1.2rem;
@@ -180,50 +185,6 @@
     @include media ($pad) {
       display: none;
     }
-
-    // .MasterHead__Navigation {
-    //   width: 100%;
-    //   height: 60px;
-    //   @include flex();
-    //   justify-content: space-between;
-    //   align-items: center;
-    // }
-
-    // .PcWorkskinds {
-    //   display: none;
-    //   position: absolute;
-    //   width: 100vw;
-    //   background: #111;
-    //   left: 0;
-    // }
-    //
-    // .Workskinds {
-    //   width: 100%;
-    //   height: 40px;
-    //   background-color: #111;
-    //   @include flex();
-    //   padding-left: 20%;
-    //
-    //
-    //   &__Link {
-    //     display: block;
-    //     line-height: 40px;
-    //     color: #fff;
-    //     font-size: 1.4rem;
-    //     height: 40px;
-    //     padding: 0 25px;
-    //     box-shadow: 0px 1px 2px rgba(0,0,0,0.2);
-    //     transition: all 0.35s;
-    //     @include media ($pc) {
-    //       &:hover {
-    //         transition: all 0.35s;
-    //         box-sizing: border-box;
-    //         background-color: #fff;
-    //         color: #111;
-    //       }
-    //     }
-    //   }
-    // }
   }
 
   .SpHeader {
@@ -239,19 +200,6 @@
       @include flex();
       align-items: center;
     }
-
-    // .MasterHead__Navigation {
-    //   width: 100%;
-    //   height: 100vh;
-    //   position: fixed;
-    //   top: 0;
-    //   bottom: 0;
-    //   left: 0;
-    //   right: 0;
-    //   background-color: #fff;
-    //   display: none;
-    //   z-index: 99;
-    // }
 
     .Workskinds {
       padding-bottom: 20px;
@@ -275,22 +223,22 @@
       }
     }
 
-    .sp-sns-menu {
-      padding: 24px 0;
-      width: 100%;
-
-      &__list {
-        padding-right: 50px;
-
-        &:last-child {
-          padding-right: 0;
-        }
-      }
-
-      &__link {
-        font-size: 2.6rem;
-      }
-    }
+    // .sp-sns-menu {
+    //   padding: 24px 0;
+    //   width: 100%;
+    //
+    //   &__list {
+    //     padding-right: 50px;
+    //
+    //     &:last-child {
+    //       padding-right: 0;
+    //     }
+    //   }
+    //
+    //   &__link {
+    //     font-size: 2.6rem;
+    //   }
+    // }
 
     .Toggle {
       border: 0;
