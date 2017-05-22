@@ -13,10 +13,15 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
   <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
   <link rel="icon" href="/img/favicon.ico" type="image/vnd.microsoft.icon">
-
+  <link rel="icon" href="/img/favicon.ico" type="image/vnd.microsoft.icon">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+  <!-- <script type="text/javascript" src="/js/min/jquery-3.1.1.min.js"></script> -->
+  <script type="text/javascript" src="/js/min/TweenMax.min.js"></script>
+  <script type="text/javascript" src="/js/min/jquery.json.min.js"></script>
   <!--[if lt IE 9]>
   <script type="text/javascript" src="js/ie8/html5shiv.min.js"></script>
-  <script type="text/javascript" src="/js/ie8/selectivizr-min.js"></script>
+  <script type="text/javascript" src="js/ie8/selectivizr-min.js"></script>
   <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
   <![endif]-->
   <!--[if gte IE 9]><!-->
@@ -27,33 +32,33 @@
   <div class="Wrapper">
     <div class="Loading">
       <div class="Loading__Gif">
-        <img src="/img/hc_loading_short.gif" alt="Loading..." width="300" height="300">
+        <img src="../img/hc_loading_short.gif" alt="Loading..." width="300" height="300">
       </div>
     </div>
     <div class="Gloval">
       <div class="Sub">
         <header class="MasterHead">
-          <h1 class="MasterHead__Logo"><a href="/"><img src="img/logo.svg" alt="hc"></a></h1>
+          <h1 class="MasterHead__Logo"><a href="/"><img src="../img/logo.svg" alt="hc"></a></h1>
           <div class="PcHeader">
             <nav class="MasterHead__Navigation">
               <ul class="MasterHead__Block">
                 <li class="MasterHead__List">
-                  <a href="all.html" class="MasterHead__Link">ALL</a>
+                  <a href="../all.html" class="MasterHead__Link">ALL</a>
                 </li>
                 <li class="MasterHead__List">
-                  <a href="video.html" class="MasterHead__Link">VIDEO</a>
+                  <a href="../video.html" class="MasterHead__Link">VIDEO</a>
                 </li>
                 <li class="MasterHead__List">
-                  <a href="photo.html" class="MasterHead__Link">PHOTO</a>
+                  <a href="../photo.html" class="MasterHead__Link current">PHOTO</a>
                 </li>
                 <li class="MasterHead__List">
-                  <a href="design.html" class="MasterHead__Link current">DESIGN</a>
+                  <a href="../design.html" class="MasterHead__Link">DESIGN</a>
                 </li>
                 <li class="MasterHead__List MasterHead__List--description">
-                  <a href="about.html" class="MasterHead__Link">ABOUT</a>
+                  <a href="../about.html" class="MasterHead__Link">ABOUT</a>
                 </li>
                 <li class="MasterHead__List">
-                  <a href="input.php" class="MasterHead__Link">CONTACT</a>
+                  <a href="../input.php" class="MasterHead__Link">CONTACT</a>
                 </li>
                 <li class="MasterHead__List MasterHead__List--right">
                   <a href="#" class="MasterHead__Link MasterHead__Link--tw"><i class="fa fa-twitter" aria-hidden="true"></i></a>
@@ -61,13 +66,12 @@
                 <li class="MasterHead__List MasterHead__List">
                   <a href="#" class="MasterHead__Link MasterHead__Link--fb"><i class="fa fa-facebook" aria-hidden="true"></i></a>
                 </li>
-            </ul>
-            <span class="underBar"></span>
+              </ul>
+              <span class="underBar"></span>
             </nav>
           </div>
           <div class="SpHeader">
             <div class="SpHeader__Icons">
-              <!-- <h2 class="MasterHead__Logo"><a href="#"><img src="img/logo.svg" alt="hc"></a></h2> -->
               <a class="Toggle">
                 <span class="Toggle__Lines">
                   <span class="Toggle__Line"></span>
@@ -79,19 +83,19 @@
             <nav class="MasterHead__Navigation">
               <ul class="MasterHead__Block">
                 <li class="MasterHead__List">
-                  <a href="about.html" class="MasterHead__Link">ABOUT</a>
+                  <a href="../about.html" class="MasterHead__Link">ABOUT</a>
                 </li>
                 <li class="MasterHead__List">
-                  <a href="all.html" class="MasterHead__Link">WORKS</a>
+                  <a href="../all.html" class="MasterHead__Link">WORKS</a>
                   <ul class="Workskinds">
-                    <li class="Workskinds__List"><a href="all.html" class="Workskinds__Link">ALL</a></li>
-                    <li class="Workskinds__List"><a href="video.html" class="Workskinds__Link">VIDEO</a></li>
-                    <li class="Workskinds__List"><a href="photo.html" class="Workskinds__Link">PHOTO</a></li>
-                    <li class="Workskinds__List"><a href="design.html" class="Workskinds__Link">DESIGN</a></li>
+                    <li class="Workskinds__List"><a href="../all.html" class="Workskinds__Link">ALL</a></li>
+                    <li class="Workskinds__List"><a href="../video.html" class="Workskinds__Link">VIDEO</a></li>
+                    <li class="Workskinds__List"><a href="../photo.html" class="Workskinds__Link">PHOTO</a></li>
+                    <li class="Workskinds__List"><a href="../design.html" class="Workskinds__Link">DESIGN</a></li>
                   </ul>
                 </li>
                 <li class="MasterHead__List">
-                  <a href="input.php" class="MasterHead__Link">CONTACT<br></a>
+                  <a href="../input.php" class="MasterHead__Link">CONTACT<br></a>
                 </li>
               </ul>
               <ul class="sp-sns-menu">
@@ -102,34 +106,54 @@
             </nav>
           </div>
         </header>
-
-        <div class="WorksWrapper">
+        <div class="DetailWrapper">
           <div class="Containr">
             <spna itemscope itemtype="http://data-vocabulary.org/Breadcrumb" class="Bread">
-              <a href="#" itemprop="url" class="Bread__List">
+              <a href="/" itemprop="url" class="Bread__List">
                 <span itemprop="title" class="Bread__Link">HOME</span>
               </a>
-              <a href="#" itemprop="url" class="Bread__List">
-                <span itemprop="title" class="Bread__Link">WORKS</span>
-              </a>
-              <a href="#" itemprop="url" class="Bread__List">
+              <a href="../design.html" itemprop="url" class="Bread__List">
                 <span itemprop="title" class="Bread__Link">DESIGN</span>
               </a>
             </spna>
-            <main class="Works">
-              <h1 class="CapTitle"　id="DESIGN">DESIGN</h1>
-              <div class="Works__Block">
+            <main class="Detail mT20">
+              <p class="Detail__Media">
+                <!-- 写真の場合 -->
+                <img class="Detail__Media" src="../img/works_img/170311/top.jpg" alt="">
+                <!-- 写真の場合ここまで -->
+
+                <!-- 動画の場合 -->
+                <!-- <iframe class="Detail__Media Detail__Media--video" src="https://www.youtube.com/embed/rvkxtVkvawc?rel=0&amp;controls=0&amp;showinfo=0&amp;autohide=1" frameborder="0" allowfullscreen></iframe> -->
+                <!-- 動画の場合ここまで -->
+              </p>
+              <p class="Detail__Data mT50 pB10"><time datetime="2017-03-31">2017/3/11</time><span class="Detail__Tag">PHOTO</span></p>
+              <div class="Detail__Block mTB60 pB60">
+                <h2 class="Detail__Title">trangers  Artist Photograph</h2>
+                <p class="Detail__Description mB40">
+                  Strangers 「Air」MV <br>
+                　Photo : Yohei Ohno
+                </p>
+                <!-- <div class="Detail__Description Detail__Description--photo mB40">
+                  <p class="Detail__DescriptionPhoto lH0"><img src="../img/works_img/170311/sub1.jpg" alt=""></p>
+                  <p class="Detail__DescriptionPhoto pL30 lH0"><img src="../img/works_img/170311/sub2.jpg" alt=""></p>
+                </div> -->
+                <!-- <p class="Detail__Description"></p> -->
+              </div>
+              <div class="Detail__Block Detail__Block--credit pB60">
+                <p class="Detail__CreditDescription">CLIENT : Strangers様</p>
+                <p class="Detail__CreditDescription">CLIENT WEB SITE : <a href="https://twitter.com/strangers_1997" class="Detail__CreditLink">https://twitter.com/strangers_1997</a></p>
+                <p class="Detail__CreditDescription">CREATE :大野陽平</p>
               </div>
             </main>
             <div class="GoForm">
               <h2 class="CapTitle">CONTACT US</h2>
               <p class="Contact__Description">映像制作や撮影、デザインなどのご依頼、ご相談など気軽にお問い合わせください。</p>
-              <a href="input.php" class="Button mA lH40">CONTACT FORM</a>
+              <a href="../input.php" class="Button mA lH40">CONTACT FORM</a>
             </div>
           </div>
         </div>
       </div>
-      <footer class="MasterFoot">
+      <footer class="MasterFoot Bottom">
         <div class="Container">
           <ul class="sp-sns-menu">
             <li class="sp-sns-menu__list"><a href="#" class="sp-sns-menu__link sp-sns-menu__link--white"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
@@ -141,10 +165,7 @@
     </div>
 
   </div>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
-  <script type="text/javascript" src="/js/jquery-3.1.1.js"></script>
-  <script type="text/javascript" src="/js/min/TweenMax.min.js"></script>
-  <script src="/js/style.js"></script>
+  <script src="../js/style.js"></script>
 </body>
 
 </html>

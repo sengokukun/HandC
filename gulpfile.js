@@ -97,7 +97,7 @@ gulp.task("default", ["server"], function() {
   gulp.watch(['./src/scss/**/*.scss'], ['sass']);
   gulp.watch(['./src/js/**/*.js', '!./src/js/min/**/*.js'], ['uglify']);
   gulp.watch('./dist/css/**/*css',['combineMq']);
-  gulp.watch('./src/*.html', ['htmlmin']);
+  gulp.watch('./src/**/*.html', ['htmlmin']);
   gulp.watch('./src/img/*',['imagemin']);
   gulp.watch("./src/**/*.php",["connect"]);
 });
