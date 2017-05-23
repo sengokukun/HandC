@@ -3,7 +3,6 @@
   @include media ($pad) {
     box-sizing: border-box;
     @include flex();
-    justify-content: flex-start;
     &__list {
       display: block;
       margin-right: 46px;

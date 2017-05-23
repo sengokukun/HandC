@@ -115,9 +115,9 @@
   &__List {
     font-size: 1.6rem;
     @include media ($pad) {
+      opacity: 0;
       width: 100%;
       border-bottom: 2px solid #111;
-      opacity: 0;
       &:last-child{
         border: none;
       }
