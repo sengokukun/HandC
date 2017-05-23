@@ -81,7 +81,6 @@ $_SESSION = $_POST;
 				</form>
 			</div>
 		</div>
-			<!-- <a href="#" class="Button Button--contact Button--spLong">確認画面へ</a> -->
   </div>
 </body>
 <script src="js/style.js"></script>
