@@ -12,6 +12,7 @@
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
   <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+  <link rel="icon" href="/img/favicon.ico" type="image/vnd.microsoft.icon">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
   <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
   <!-- <script type="text/javascript" src="/js/min/jquery-3.1.1.min.js"></script> -->
@@ -140,7 +141,6 @@
                   <dt class="Forms__Name">お問い合わせ内容</dt>
                   <dd class="Forms__Data">
                     <textarea cols="50" rows="7" class="required Forms__Textarea" name="content" placeholder="ご自由にご記入ください"></textarea>
-                    <!-- <label class="error" for="content" generated="true"></label> -->
                   </dd>
                 </dl>
 		           <button type="submit" class="mA Button Button--spLong">確認画面へ</button>

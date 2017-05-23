@@ -1,17 +1,12 @@
 <?php
-//以下ユーザー確認メール
-//info@example.comを、あなたのメールアドレスにすることでこのメールフォームをそのまま使えます。
-session_start();//ページ移動したら再びsession_start
+
+session_start();
 
 $add_header="From:handcfilm@gmail.com\r\n";
 $add_header	.= "Reply-to: handcfilm@gmail.com\r\n";
 $add_header	.= "X-Mailer: PHP/". phpversion();
-$opt = '-f'.'handcfilm@gmail.com'; //-fって何か意味あったんだけど忘れました　-fすると迷惑メールになりにくいとか、そんなことだったと思う。
+$opt = '-f'.'handcfilm@gmail.com';
 
-//以下ヒアドキュメント<<<●●　HTMLでも、文字列でも、何いれてもOK●●;
-//ヒアドキュメントは、メール送信とかの定型文を書いたりするとき、あとはSQLを書くときも使うかな。
-//ヒアドキュメント内ではPHPのプログラムは一切かけない。変数だけ。変数は{}で囲ってあげること
-//メールの本文をここでひとまとめに。
 $message =<<<HTML
 お問い合わせ内容の確認です。
 
@@ -29,23 +24,15 @@ $message =<<<HTML
 
 HTML;
 
-// カレントの言語を日本語に設定する
 mb_language("ja");
-// 内部文字エンコードを設定する　このエンコード指定は大昔の携帯だとShift-jisにしないとだめだったとか。
-// 今はUTF-8にしておけばだいたいOKだから、楽な時代になったもんだよ。
+
 mb_internal_encoding("UTF-8");
 
 mb_send_mail($_SESSION['e_mail'],"【お問い合わせ】確認メール",$message,$add_header,$opt);
-//mb_send_mailは5つの設定項目がある
-//mb_send_mail(送信先メールアドレス,"メールのタイトル","メール本文","メールのヘッダーFromとかリプライとか","送信エラーを送るメールアドレス");
-//5番目の情報は第5引数と呼ばれるものでして、これがないと迷惑メール扱いになることも。
 
-
-
-//マスター管理者にも同じメールを送りつける！！
 mb_send_mail('handcfilm@gmail.com',"お問い合わせがありました",$message,$add_header,$opt);
 
-session_destroy();  // セッションを破棄
+session_destroy();
 ?>
 
 <!DOCTYPE html>
@@ -61,6 +48,7 @@ session_destroy();  // セッションを破棄
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
   <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+  <link rel="icon" href="/img/favicon.ico" type="image/vnd.microsoft.icon">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
   <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
   <!-- <script type="text/javascript" src="/js/min/jquery-3.1.1.min.js"></script> -->

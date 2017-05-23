@@ -1,26 +1,11 @@
 <?php
-//mail.phpのPostをSessionに代入する。
-//Postは次のページまでしか引き継ぐことが出来ません
-//確認ページ、送信ページとページをまたぐ際はこのSessionを使うのが普通です。
-//そのため、フォームの確認ページなどで一度Sessionに代入する必要があります。
 
-//いきなり確認画面にアクセスがあれば不正アクセス。
-//!$_POSTで　$_POSTがSetされているかをチェックし、セットされていなければリダイレクト
 if(!$_POST){
-header('Location: ./thanks.php');//	headerlocationはPHPのリダイレクト処理でよく使う。
+header('Location: ./thanks.php');
 	}
 
-//Sessionを開始するときの決まり文句、これがないとSessionが開始できない
 session_start();
 $_SESSION = $_POST;
-
-//無事Sessionに保存できているかチェックする
-
-// echo '<pre>';//HTMLのpreタグを使うと、配列が見やすくなる
-// print_r($_SESSION);//print_rとは、配列を出力する関数
-// echo '</pre>';
-
-
 
 ?>
 
@@ -38,6 +23,7 @@ $_SESSION = $_POST;
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.css">
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="icon" href="/img/favicon.ico" type="image/vnd.microsoft.icon">
   <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
   <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
@@ -58,19 +44,19 @@ $_SESSION = $_POST;
 				<form action="thanks.php" method="post" class="Forms">
 					<dl class="Forms__List">
 						<dt class="Forms__Name">お名前</dt>
-						<dd class="Forms__Data pA10">
+						<dd class="Forms__Data Forms__Data--confirm pA10">
 							<?php echo htmlspecialchars($_POST['name']);?>
 						</dd>
 					</dl>
 					<dl class="Forms__List">
 						<dt class="Forms__Name">メールアドレス</dt>
-						<dd class="Forms__Data pA10">
+						<dd class="Forms__Data Forms__Data--confirm pA10">
 							<?php echo htmlspecialchars($_POST['e_mail']);?>
 						</dd>
 					</dl>
 					<dl class="Forms__List">
 						<dt class="Forms__Name aLs mT10">お問い合わせ内容</dt>
-						<dd class="Forms__Data pA10">
+						<dd class="Forms__Data Forms__Data--confirm pA10">
 							<?php echo htmlspecialchars($_POST['content']);?>
 						</dd>
 					</dl>
