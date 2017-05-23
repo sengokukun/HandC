@@ -57,8 +57,10 @@
     outline: none;
     box-sizing: border-box;
     border: none;
-    background-color: #eee;
     word-break: break-all;
+    &--confirm{
+      background-color: #eee;
+    }
     @include media ($sp) {
       width: 100%;
     }
@@ -95,6 +97,8 @@ background-color:#FFE2F3;
 
 label.myError {
   color: #111;
+  display: block;
+  margin-top: 5px;
 }
 
 textarea.myError {
