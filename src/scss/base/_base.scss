@@ -106,8 +106,12 @@ li {
   }
 }
 
-.Sub{
+.Sub {
   padding-bottom: 40px;
+  @include media ($pad) {
+    padding-bottom: 0px;
+  }
+
 }
 
 .Loading {
@@ -144,7 +148,7 @@ li {
   text-align: center;
   font-family: $eigo_font;
   font-weight: 600;
-  margin-top: 30px;
+  margin-top: 50px;
   @include media ($sp) {
     font-size: 2rem;
   }
@@ -159,6 +163,15 @@ li {
     @include media ($sp) {
       height: 150px;
       width: 150px;
+    }
+  }
+
+  &--About {
+    img {
+      @include media ($sp) {
+        height: 100px;
+        width: 100px;
+      }
     }
   }
 }
