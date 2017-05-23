@@ -128,14 +128,12 @@
                   <dt class="Forms__Name">お名前</dt>
                   <dd class="Forms__Data">
                     <input type="text" class="required Forms__Input" name="name" value="" placeholder="例）伊藤 聖也">
-                    <!-- <label class="error" for="name" generated="true">名前を入力してください</label> -->
                   </dd>
                 </dl>
                 <dl class="Forms__List">
                   <dt class="Forms__Name">メールアドレス</dt>
                   <dd class="Forms__Data">
                     <p><input type="text" class="required email Forms__Input" name="e_mail" value="" placeholder="例）info@HandC.com"></p>
-                    <!-- <label class="error" for="email" generated="true"></label> -->
                   </dd>
                 </dl>
                 <dl class="Forms__List">
@@ -147,7 +145,6 @@
                 </dl>
 		           <button type="submit" class="mA Button Button--spLong">確認画面へ</button>
               </form>
-              <!-- <a href="#" class="Button Button--contact Button--spLong">確認画面へ</a> -->
             </main>
           </div>
         </div>
