@@ -8,7 +8,8 @@
     padding-top: 30px;
     .HeroLogo {
       margin: 90px 0 50px;
-      @include media ($pad) {
+
+      @include media ($sp) {
         margin-top: 50px;
         margin-bottom: 35px;
       }
@@ -18,8 +19,9 @@
       text-align: center;
       font-size: 1.6rem;
       padding-bottom: 90px;
+
       @include media ($sp) {
-        font-size: 1.2rem;
+        font-size: 1.4rem;
         text-align: justify;
         line-height: 1.8em;
         padding-bottom: 0;
@@ -40,6 +42,7 @@
       @include media ($sp) {
         justify-content: space-around;
         padding: 0;
+        margin-top: 50px;
       }
       @include media ($pad){
         padding: 0 25px;
@@ -92,18 +95,18 @@
       left: 0;
     }
     .FadeIn{
-      width: 324px;
+      max-width: 324px;
       height: 100%;
       margin: 0 auto;
       min-height: 266px;
       opacity: 0;
-      transition: all 0.4s;
+      transition: all 0.2s;
       transition-timing-function: ease-out;
       z-index: 0;
       // border: 3px solid  #000;
       box-sizing: border-box;
       padding: 0 20px;
-      background-color: rgba(255,255,255,0.8);
+      background-color: rgba(255,255,255,0.9);
       // animation-name: modalSlide;
       @include media ($pad) {
         // top: 200px;
@@ -141,11 +144,12 @@
     }
   }
   .Contact__Description{
-    margin: 15px 0 45px;
+    margin: 20px 0 45px;
   }
   .Button{
     margin-bottom: 60px;
-    @include media ($pad) {
+    @include media ($sp) {
+      width: 100%;
       margin-bottom: 45px;
     }
   }

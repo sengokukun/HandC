@@ -76,7 +76,7 @@ $(function() {
     if (body.hasClass('open')) {
       $(triggers).addClass('active');
       $('.SpHeader .MasterHead__Navigation').fadeIn(150);
-      $('.Toggle__Line').addClass('bg_black');
+      $('.Toggle__Line').addClass('bg_white');
       TweenMax.to(menuItem, .5, {
         opacity: 1,
         delay: .2
@@ -84,7 +84,7 @@ $(function() {
     } else {
       $(triggers).removeClass('active');
       $('.SpHeader .MasterHead__Navigation').fadeOut(150);
-      $('.Toggle__Line').removeClass('bg_black');
+      $('.Toggle__Line').removeClass('bg_white');
       TweenMax.to(menuItem, 1, {
         opacity: 0
       });
@@ -116,24 +116,24 @@ $(function() {
       bdT = $(this).find('.bdT'),
       FadeIn = $(this).find('.FadeIn')
 
-    tl.to(bdL, .3, {
+    tl.to(bdL, .2, {
       height:"100%"
     }),
-    tl2.to(bdB, .3, {
+    tl2.to(bdB, .2, {
       width: "100%",
       delay: .2
     }),
-    tl3.to(bdR, .3, {
+    tl3.to(bdR, .2, {
       height: "100%",
       delay: .4
     }),
-    tl4.to(bdT, .3, {
+    tl4.to(bdT, .2, {
       width: "100%",
       delay: .6
     })
-    tl5.to(FadeIn, .3, {
+    tl5.to(FadeIn, .2, {
       opacity: 1,
-      delay: 1
+      delay: .82
     })
   };
 
@@ -146,7 +146,7 @@ $(function() {
   // }
 
   $(window).on("load", function() {
-    if ("http://localhost:3000/" == location.href) {
+    if ("http://handcfilms.com/" == location.href) {
       console.log("おけ");
       $('.underBar').css({
         width: $('.current').outerWidth() - 44,
