@@ -64,6 +64,11 @@ var windowW = $(window).width(); //画面の横幅を取得
 //jquery
 
 $(function() {
+
+  $(window).on('load', function(){
+      $('html,body').animate({ scrollTop: 0 }, '1');
+  });
+
   var state = false;
   var scrollpos;
   var triggers = $('.Toggle__Lines'),
@@ -234,16 +239,4 @@ $(function() {
       console.log("だめ");
     }
   });
-});
-
-//php
-
-$(document).ready(function(){
-$("#contact-form").validate({
-rules : {
-name:{required: true}
-},
-errorClass: "myError"
-
-});
 });
