@@ -13,9 +13,11 @@
 
     &__link {
       font-size: 2.8rem;
-      color: #fff;
       &--black {
         color: #000;
+      }
+      &--white{
+        color: #fff;
       }
     }
   }
