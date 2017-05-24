@@ -69,6 +69,6 @@ $_SESSION = $_POST;
 		</div>
   </div>
 </body>
-<script src="js/style.js"></script>
+<script src="/js/style.js"></script>
 
 </html>
