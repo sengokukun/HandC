@@ -14,7 +14,7 @@
   <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
   <link rel="icon" href="/img/favicon.ico" type="image/vnd.microsoft.icon">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
-  <script type="text/javascript" src="/js/jquery-3.1.1.js"></script>
+  <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
   <!-- <script type="text/javascript" src="/js/min/jquery-3.1.1.min.js"></script> -->
   <script src="js/min/validation.js"></script>
   <script src="js/min/reserve.js"></script>
@@ -24,6 +24,16 @@
   <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
   <![endif]-->
   <!--[if gte IE 9]><!-->
+  <script type="text/javascript">
+  $(document).ready(function(){
+  $("#contact-form").validate({
+  rules : {
+  name:{required: true}
+  },
+  errorClass: "myError"
+  });
+  });
+  </script>
   <title>H&amp;C / contact</title>
 
 </head>
@@ -160,18 +170,7 @@
       </footer>
     </div>
   </div>
-  <script>
-  //php
-  $(document).ready(function(){
-    $("#contact-form").validate({
-      rules : {
-        name:{required: true}
-      },
-      errorClass: "myError"
-    });
-  });
-  </script>
 </body>
-<script src="/js/style.js"></script>
+<script src="js/style.js"></script>
 
 </html>

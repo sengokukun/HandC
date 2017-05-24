@@ -50,7 +50,7 @@ session_destroy();
   <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
   <link rel="icon" href="/img/favicon.ico" type="image/vnd.microsoft.icon">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
-  <script type="text/javascript" src="/js/jquery-3.1.1.js"></script>
+  <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
   <!-- <script type="text/javascript" src="/js/min/jquery-3.1.1.min.js"></script> -->
   <!--[if lt IE 9]>
   <script type="text/javascript" src="js/ie8/html5shiv.min.js"></script>
