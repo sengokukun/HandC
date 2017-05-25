@@ -6,8 +6,8 @@
   <meta name="viewport" content="width=device-width,user-scalable=1,initial-scale=1,maximum-scale=1">
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <meta name="description" content="H&amp;C Filmsは都内にて活動するディレクターチームです。MV,Live,イベントなど、映像と写真を中心にクリエイティブコンテンツの制作をします。">
-  <meta name="keywords" content="HC">
+  <meta name="description" content="H&amp;C Films公式サイト。CONTACTお問い合わせページです。H&amp;C Filmsは映像、写真、デザインなどの制作をしています。">
+  <meta name="keywords" content="H&amp;C Films,映像,写真,デザイン,H&amp;C">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.css">
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -34,7 +34,7 @@
   });
   });
   </script>
-  <title>H&amp;C / contact</title>
+  <title>H&amp;C Films / contact</title>
   <meta property="og:title" content="H&amp;C Films">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://handcfilms.com/">
