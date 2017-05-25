@@ -71,10 +71,10 @@
                   <a href="input.php" class="MasterHead__Link current">CONTACT</a>
                 </li>
                 <li class="MasterHead__List MasterHead__List--right">
-                  <a href="#" class="MasterHead__Link MasterHead__Link--tw"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+                  <a href="https://twitter.com/HandCFilms" class="MasterHead__Link MasterHead__Link--tw" target="_blank"><i class="fa fa-twitter" aria-hidden="true"></i></a>
                 </li>
                 <li class="MasterHead__List MasterHead__List">
-                  <a href="#" class="MasterHead__Link MasterHead__Link--fb"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+                  <a href="https://www.facebook.com/hcfilms.official/" class="MasterHead__Link MasterHead__Link--fb" target="_blank"><i class="fa fa-facebook" aria-hidden="true"></i></a>
                 </li>
               </ul>
               <span class="underBar"></span>
@@ -112,8 +112,8 @@
                 </li>
                 <li class="bdBn MasterHead__List">
                   <ul class="sp-sns-menu">
-                    <li class="sp-sns-menu__list"><a href="#" class="sp-sns-menu__link sp-sns-menu__link--white"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
-                    <li class="sp-sns-menu__list"><a href="#" class="sp-sns-menu__link sp-sns-menu__link--white"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+                    <li class="sp-sns-menu__list"><a href="https://twitter.com/HandCFilms" class="sp-sns-menu__link sp-sns-menu__link--white" target="_blank"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+                    <li class="sp-sns-menu__list"><a href="https://www.facebook.com/hcfilms.official/" class="sp-sns-menu__link sp-sns-menu__link--white" target="_blank"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
                   </ul>
                 </li>
               </ul>
@@ -162,8 +162,8 @@
       <footer class="MasterFoot">
         <div class="Container">
           <ul class="sp-sns-menu jcC">
-            <li class="sp-sns-menu__list"><a href="#" class="sp-sns-menu__link sp-sns-menu__link--black"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
-            <li class="sp-sns-menu__list"><a href="#" class="sp-sns-menu__link sp-sns-menu__link--black"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+            <li class="sp-sns-menu__list"><a href="https://twitter.com/HandCFilms" class="sp-sns-menu__link sp-sns-menu__link--black" target="_blank"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+            <li class="sp-sns-menu__list"><a href="https://www.facebook.com/hcfilms.official/" class="sp-sns-menu__link sp-sns-menu__link--black" target="_blank"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
           </ul>
           <p class="MasterFoot__Copyright"><small>Copyright&copy;2017 H&amp;C FILMS All Rights Reserved</small></p>
         </div>
