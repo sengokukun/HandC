@@ -34,7 +34,7 @@ $_SESSION = $_POST;
   <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
   <![endif]-->
   <!--[if gte IE 9]><!-->
-  <title>H&amp;C / contact</title>
+  <title>H&amp;C Films / contact</title>
 	<meta property="og:title" content="H&amp;C Films">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://handcfilms.com/">
