@@ -20,10 +20,10 @@ $_SESSION = $_POST;
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <meta name="description" content="テスト">
   <meta name="keywords" content="HC">
+  <link rel="shortcut icon" href="/img/favicon.ico">  	
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.css">
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-	<link rel="icon" href="/img/favicon.ico" type="image/vnd.microsoft.icon">
   <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
   <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
