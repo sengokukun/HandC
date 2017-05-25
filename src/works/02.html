@@ -121,14 +121,23 @@
         </header>
         <div class="DetailWrapper">
           <div class="Containr">
-            <spna itemscope itemtype="http://data-vocabulary.org/Breadcrumb" class="Bread">
-              <a href="/" itemprop="url" class="Bread__List">
-                <span itemprop="title" class="Bread__Link">HOME</span>
-              </a>
-              <a href="../design.html" itemprop="url" class="Bread__List">
-                <span itemprop="title" class="Bread__Link">DESIGN</span>
-              </a>
-            </spna>
+            <ul itemscope itemtype="http://data-vocabulary.org/Breadcrumb" class="Bread">
+              <li class="Bread__List">
+                <a href="/" itemprop="url" class="Bread__Link">
+                  <span itemprop="title" class="Bread__LinkChild">HOME</span>
+                </a>
+              </li>
+              <li class="Bread__List">
+                <a href="/all.html" itemprop="url" class="Bread__Link">
+                  <span itemprop="title" class="Bread__LinkChild">WORKS</span>
+                </a>
+              </li>
+              <li class="Bread__List">
+                <a href="/design.html" itemprop="url" class="Bread__Link">
+                  <span itemprop="title" class="Bread__LinkChild">DESIGN</span>
+                </a>
+              </li>
+            </ul>
             <main class="Detail mT20">
               <p class="Detail__Media">
                 <!-- 写真の場合 -->
@@ -178,7 +187,7 @@
     </div>
 
   </div>
-  <script src="../js/style.js"></script>
+  <script src="/js/style.js"></script>
 </body>
 
 </html>
