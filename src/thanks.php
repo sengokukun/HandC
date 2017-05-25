@@ -2,10 +2,10 @@
 
 session_start();
 
-$add_header="From:handcfilm@gmail.com\r\n";
-$add_header	.= "Reply-to: handcfilm@gmail.com\r\n";
+$add_header="From:info@handcfilms.com\r\n";
+$add_header	.= "Reply-to: info@handcfilms.com\r\n";
 $add_header	.= "X-Mailer: PHP/". phpversion();
-$opt = '-f'.'handcfilm@gmail.com';
+$opt = '-f'.'info@handcfilms.com';
 
 $message =<<<HTML
 お問い合わせ内容の確認です。

@@ -2,10 +2,10 @@
 
 session_start();
 
-$add_header="From:handcfilm@gmail.com\r\n";
-$add_header	.= "Reply-to: handcfilm@gmail.com\r\n";
+$add_header="From:info@handcfilms.com\r\n";
+$add_header	.= "Reply-to: info@handcfilms.com\r\n";
 $add_header	.= "X-Mailer: PHP/". phpversion();
-$opt = '-f'.'handcfilm@gmail.com';
+$opt = '-f'.'info@handcfilms.com';
 
 $message =<<<HTML
 お問い合わせ内容の確認です。
@@ -43,7 +43,7 @@ session_destroy();
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <meta name="description" content="H&amp;C Filmsは都内にて活動するディレクターチームです。MV,Live,イベントなど、映像と写真を中心にクリエイティブコンテンツの制作をします。">
-  <meta name="keywords" content="HC">
+  <meta name="keywords" content="H&amp;C Films,映像,写真,デザイン,H&amp;C,Contact">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.css">
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -58,7 +58,7 @@ session_destroy();
   <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
   <![endif]-->
   <!--[if gte IE 9]><!-->
-  <title>H&amp;C / contact</title>
+  <title>H&amp;C Films / contact</title>
   <meta property="og:title" content="H&amp;C Films">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://handcfilms.com/">
