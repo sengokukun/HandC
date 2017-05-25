@@ -18,12 +18,12 @@ $_SESSION = $_POST;
   <meta name="viewport" content="width=device-width,user-scalable=1,initial-scale=1,maximum-scale=1">
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <meta name="description" content="テスト">
+  <meta name="description" content="H&amp;C Filmsは都内にて活動するディレクターチームです。MV,Live,イベントなど、映像と写真を中心にクリエイティブコンテンツの制作をします。">
   <meta name="keywords" content="HC">
+  <link rel="shortcut icon" href="/img/favicon.ico">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.css">
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-	<link rel="icon" href="/img/favicon.ico" type="image/vnd.microsoft.icon">
   <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
   <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
@@ -35,6 +35,16 @@ $_SESSION = $_POST;
   <![endif]-->
   <!--[if gte IE 9]><!-->
   <title>H&amp;C / contact</title>
+	<meta property="og:title" content="H&amp;C Films">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://handcfilms.com/">
+  <meta property="og:image" content="https://handcfilms.com/img/card.png">
+  <meta property="og:site_name" content="H&amp;C Films">
+  <meta property="og:description" content="H&amp;C Filmsは都内にて活動するディレクターチームです。MV,Live,イベントなど、映像と写真を中心にクリエイティブコンテンツの制作をします。">
+  <meta property="og:locale" content="ja_JP">
+  <meta property="fb:app_id" content="307205603034088">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:site" content="@HandCFilms">
 </head>
 
 <body>
