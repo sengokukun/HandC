@@ -34,6 +34,8 @@ function onPlayerReady(event) {
 
 function onPlayerStateChange(event) {}
 
+//top動画部分ここまで
+
 //loading
 
 $(function() {
@@ -59,6 +61,8 @@ function stopload() {
   $('.Loading__Gif').delay(1300).fadeOut(300);
 }
 
+//loadingここまで
+
 var windowW = $(window).width(); //画面の横幅を取得
 
 //jquery
@@ -68,6 +72,8 @@ $(function() {
   $(window).on('load', function(){
       $('html,body').animate({ scrollTop: 0 }, '1');
   });
+
+  //spメニュー設定
 
   var state = false;
   var scrollpos;
@@ -109,6 +115,10 @@ $(function() {
 
   });
 
+  //spメニュー設定ここまで
+
+  //アバウトモーダル設定
+
   var Modal__about = function(){
     var tl = new TimelineMax(),
       tl2 = new TimelineMax(),
@@ -146,9 +156,9 @@ $(function() {
   $('.FadeIn__2').parent('.Modal').on('inview', Modal__about);
   $('.FadeIn__3').parent('.Modal').on('inview', Modal__about);
 
-  //
-  // if (windowW > 840) {
-  // }
+  //アバウトモーダル設定ここまで
+
+  //メニューunderbar設定
 
   $(window).on("load", function() {
     if ("http://handcfilms.com/" == location.href) {
@@ -204,7 +214,11 @@ $(function() {
     }
   });
 
+  //メニューunderbar設定ここまで
+
 });
+
+//jQueryここまで
 
 //works json
 $(function() {
