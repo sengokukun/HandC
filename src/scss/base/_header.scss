@@ -64,7 +64,9 @@
     @include flex();
     justify-content: space-between;
      align-items: baseline;
+     margin-left: 20px;
      @include media ($pad) {
+       margin-left: 0;
        width: 80%;
        height: 100vh;
        position: fixed;
