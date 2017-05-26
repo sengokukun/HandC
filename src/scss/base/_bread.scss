@@ -1,32 +1,3 @@
-// .Bread{
-//   @include flex();
-//   &__List{
-//     @include flex();
-//     align-items: center;
-//     margin-right: 6px;
-//     color: #111;
-//     &:last-child{
-//       &::after{
-//         display: none;
-//       }
-//     }
-//     &::after{
-//       display: block;
-//       content: ">";
-//       margin-top: -2px;
-//       margin-left: 6px;
-//     }
-//   }
-//   &__Link{
-//     font-size: 1.4rem;
-//     color: #111;
-//   }
-//   @include media ($sp) {
-//     display: none;
-//   }
-// }
-
-
 .Bread{
   @include flex();
   &__List{

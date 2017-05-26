@@ -24,6 +24,8 @@
   <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
   <![endif]-->
   <!--[if gte IE 9]><!-->
+
+  <!-- 入力ミスのアラート -->
   <script type="text/javascript">
   $(document).ready(function(){
   $("#contact-form").validate({
@@ -34,6 +36,7 @@
   });
   });
   </script>
+
   <title>H&amp;C Films / contact</title>
   <meta property="og:title" content="H&amp;C Films">
   <meta property="og:type" content="website">
@@ -48,16 +51,20 @@
 </head>
 
 <body>
+  <!-- 全体wrapper -->
   <div class="Wrapper">
+    <!-- ローディング画面 -->
     <div class="Loading">
       <div class="Loading__Gif">
         <img src="/img/hc_loading_short.gif" alt="Loading..." width="300" height="300">
       </div>
-    </div>
+    </div><!-- ローディング画面ここまで -->
     <div class="Gloval">
       <div class="Sub">
+        <!-- ヘッダー -->
         <header class="MasterHead">
           <h1 class="MasterHead__Logo"><a href="/"><img src="img/logo.svg" alt="hc"></a></h1>
+          <!-- pcヘッダー -->
           <div class="PcHeader">
             <nav class="MasterHead__Navigation">
               <ul class="MasterHead__Block">
@@ -88,7 +95,8 @@
               </ul>
               <span class="underBar"></span>
             </nav>
-          </div>
+          </div><!-- pcヘッダーここまで -->
+          <!-- spヘッダー -->
           <div class="SpHeader">
             <div class="SpHeader__Icons">
               <a class="Toggle">
@@ -127,9 +135,10 @@
                 </li>
               </ul>
             </nav>
-          </div>
-        </header>
+          </div><!-- spヘッダーここまで -->
+        </header><!-- ヘッダーここまで -->
 
+        <!-- コンタクト -->
         <div class="ContactWrapper">
           <div class="Containr">
             <ul itemscope itemtype="http://data-vocabulary.org/Breadcrumb" class="Bread">
@@ -170,8 +179,9 @@
               </form>
             </main>
           </div>
-        </div>
+        </div><!-- コンタクトここまで -->
       </div>
+      <!-- フッター -->
       <footer class="MasterFoot">
         <div class="Container">
           <ul class="sp-sns-menu jcC">
@@ -180,9 +190,9 @@
           </ul>
           <p class="MasterFoot__Copyright"><small>Copyright&copy;2017 H&amp;C FILMS All Rights Reserved</small></p>
         </div>
-      </footer>
+      </footer><!-- フッターここまで -->
     </div>
-  </div>
+  </div><!-- 全体wrapperここまで -->
 </body>
 <script src="js/style.js"></script>
 
