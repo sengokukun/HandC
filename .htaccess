@@ -1,25 +1,10 @@
-RewriteEngine On
-RewriteCond %{HTTP_HOST} !^your-site.com$ [NC]
-RewriteRule ^(.*)$ http://your-site.com/$1 [L,R=301]
-
-RewriteEngine On
-#Replace ?mysite\.com/ with your blog url
-RewriteCond %{HTTP_REFERER} !^http://(.+\.)?mysite\.com/ [NC]
-RewriteCond %{HTTP_REFERER} !^$
-#Replace /images/nohotlink.jpg with your "don't hotlink" image url
-RewriteRule .*\.(jpe?g|gif|bmp|png)$ /images/nohotlink.jpg [L]
-
+Options +FollowSymLinks
 RewriteEngine on
+RewriteCond %{HTTP_HOST} ^www.cappee\.net
+RewriteRule ^(.*)$ http://cappee.net/$1 [R=301,L]
+RewriteCond %{THE_REQUEST} ^.*/index.php
+RewriteRule ^(.*)index.php$ http://cappee.net/$1 [R=301,L]
 RewriteCond %{REQUEST_FILENAME} !-d
 RewriteCond %{REQUEST_FILENAME}\.html -f
 RewriteRule ^(.*)$ $1.html
 # Replace html with your file extension, eg: php, htm, asp
-
-AddOutputFilterByType DEFLATE text/html text/plain text/xml application/xml application/xhtml+xml text/javascript text/css application/x-javascript
-BrowserMatch ^Mozilla/4 gzip-only-text/html
-BrowserMatch ^Mozilla/4.0[678] no-gzip
-BrowserMatch bMSIE !no-gzip !gzip-only-text/html
-
-<FilesMatch "\.(htm|html|css|js)$">
-AddDefaultCharset UTF-8
-</FilesMatch>

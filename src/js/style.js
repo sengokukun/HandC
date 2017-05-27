@@ -161,7 +161,7 @@ $(function() {
   //メニューunderbar設定
 
   $(window).on("load", function() {
-    if ("http://handcfilms.com/" == location.href) {
+    if ("https://handcfilms.com/" == location.href) {
       console.log("おけ");
       $('.underBar').css({
         width: $('.current').outerWidth() - 44,
