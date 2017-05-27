@@ -193,7 +193,7 @@
       </footer><!-- フッターここまで -->
     </div>
   </div><!-- 全体wrapperここまで -->
-  <script src="/js/style.js"></script>
+  <script src="js/style.js"></script>
 </body>
 
 </html>
