@@ -63,28 +63,28 @@
       <div class="Sub">
         <!-- ヘッダー -->
         <header class="MasterHead">
-          <h1 class="MasterHead__Logo"><a href="/"><img src="img/logo.svg" alt="hc"></a></h1>
+          <h1 class="MasterHead__Logo"><a href="/"><img src="/img/logo.svg" alt="hc"></a></h1>
           <!-- pcヘッダー -->
           <div class="PcHeader">
             <nav class="MasterHead__Navigation">
               <ul class="MasterHead__Block">
                 <li class="MasterHead__List">
-                  <a href="all.html" class="MasterHead__Link">ALL</a>
+                  <a href="./all" class="MasterHead__Link">ALL</a>
                 </li>
                 <li class="MasterHead__List">
-                  <a href="video.html" class="MasterHead__Link">VIDEO</a>
+                  <a href="./video" class="MasterHead__Link">VIDEO</a>
                 </li>
                 <li class="MasterHead__List">
-                  <a href="photo.html" class="MasterHead__Link">PHOTO</a>
+                  <a href="./photo" class="MasterHead__Link">PHOTO</a>
                 </li>
                 <li class="MasterHead__List">
-                  <a href="design.html" class="MasterHead__Link">DESIGN</a>
+                  <a href="./design" class="MasterHead__Link">DESIGN</a>
                 </li>
                 <li class="MasterHead__List MasterHead__List--description">
-                  <a href="about.html" class="MasterHead__Link">ABOUT</a>
+                  <a href="./about" class="MasterHead__Link">ABOUT</a>
                 </li>
                 <li class="MasterHead__List">
-                  <a href="input.php" class="MasterHead__Link current">CONTACT</a>
+                  <a href="./contact" class="MasterHead__Link current">CONTACT</a>
                 </li>
                 <li class="MasterHead__List MasterHead__List--right">
                   <a href="https://twitter.com/HandCFilms" class="MasterHead__Link MasterHead__Link--tw" target="_blank"><i class="fa fa-twitter" aria-hidden="true"></i></a>
@@ -110,22 +110,22 @@
             <nav class="MasterHead__Navigation">
               <ul class="MasterHead__Block sp-MasterHead__Block">
                 <li class="MasterHead__List">
-                  <a href="all.html" class="MasterHead__Link">ALL</a>
+                  <a href="./all" class="MasterHead__Link">ALL</a>
                 </li>
                 <li class="MasterHead__List">
-                  <a href="video.html" class="MasterHead__Link">VIDEO</a>
+                  <a href="./video" class="MasterHead__Link">VIDEO</a>
                 </li>
                 <li class="MasterHead__List">
-                  <a href="photo.html" class="MasterHead__Link">PHOTO</a>
+                  <a href="./photo" class="MasterHead__Link">PHOTO</a>
                 </li>
                 <li class="MasterHead__List mB70">
-                  <a href="design.html" class="MasterHead__Link">DISIGN</a>
+                  <a href="./design" class="MasterHead__Link">DISIGN</a>
                 </li>
                 <li class="MasterHead__List">
-                  <a href="about.html" class="MasterHead__Link">ABOUT</a>
+                  <a href="./about" class="MasterHead__Link">ABOUT</a>
                 </li>
                 <li class="MasterHead__List mB70">
-                  <a href="input.php" class="MasterHead__Link">CONTACT<br></a>
+                  <a href="./contact" class="MasterHead__Link">CONTACT<br></a>
                 </li>
                 <li class="bdBn MasterHead__List">
                   <ul class="sp-sns-menu">
@@ -148,7 +148,7 @@
                 </a>
               </li>
               <li class="Bread__List">
-                <a href="./contact.php" itemprop="url" class="Bread__Link">
+                <a href="./contact" itemprop="url" class="Bread__Link">
                   <span itemprop="title" class="Bread__LinkChild">CONTACT</span>
                 </a>
               </li>
