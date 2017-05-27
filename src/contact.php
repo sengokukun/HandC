@@ -14,7 +14,7 @@
   <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
   <link rel="shortcut icon" href="/img/favicon.ico">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
-  <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
   <!-- <script type="text/javascript" src="/js/min/jquery-3.1.1.min.js"></script> -->
   <script src="/js/min/validation.js"></script>
   <script src="/js/min/reserve.js"></script>
