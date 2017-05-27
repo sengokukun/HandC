@@ -1,7 +1,7 @@
 <?php
 
 if(!$_POST){
-header('Location: ./thanks.php');
+header('Location: ./thanks');
 	}
 
 session_start();
