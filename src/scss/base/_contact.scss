@@ -124,6 +124,9 @@ background-color:#FFE2F3;
     font-size: 2.4rem;
     font-weight: bold;
     margin-bottom: 85px;
+    @include media ($pad) {
+      margin-bottom: 30px;
+    }
   }
   &__Description{
     font-size: 1.4rem;
@@ -131,6 +134,9 @@ background-color:#FFE2F3;
   &__Mail{
     font-weight: bold;
     font-size: 1.4rem;
+    @include media ($pad) {
+      margin: 20px 0;
+    }
   }
   &__Info{
     font-size: 1.2rem;
@@ -138,6 +144,7 @@ background-color:#FFE2F3;
     margin-bottom: 95px;
     @include media ($pad) {
       line-height: 1.6em;
+      margin-bottom: 30px;
     }
   }
 }
