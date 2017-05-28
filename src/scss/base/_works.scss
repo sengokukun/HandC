@@ -1,4 +1,4 @@
-.WorksWrapper{
+.WorksWrapper {
   width: 100%;
   margin-top: 100px;
   @include media ($sp) {
@@ -6,22 +6,26 @@
   }
 }
 
-.Works{
+.Works {
   padding-top: 30px;
-  border-bottom: 1px solid  #eee;
-  &__Block{
+  border-bottom: 1px solid #eee;
+
+  &__Block {
     @include flex();
     justify-content: space-between;
     flex-wrap: wrap;
+    margin: 0 10px;
     @include media ($pad) {
-    justify-content: space-around;
+      justify-content: space-between;
     }
   }
-  &__Item{
-    width: 420px;
+
+  &__Item {
+    width: 390px;
     margin-top: 60px;
     box-sizing: border-box;
-    &:last-child{
+
+    &:last-child {
       margin-bottom: 60px;
     }
     @include media ($pad) {
@@ -31,7 +35,8 @@
       width: 100%;
     }
   }
-  &__Photo{
+
+  &__Photo {
     position: relative;
     width: 420px;
     height: 236px;
@@ -47,7 +52,8 @@
       line-height: 0;
     }
   }
-  &__Tag{
+
+  &__Tag {
     position: absolute;
     bottom: 0;
     right: 0;
@@ -61,19 +67,22 @@
     text-align: center;
     background-color: rgba(255,255,255,0.8);
   }
-  &__Descriptions{
+
+  &__Descriptions {
     @include flex();
     @include fd(column);
     box-sizing: border-box;
     padding-top: 10px;
   }
-  &__Title{
+
+  &__Title {
     font-size: 1.4rem;
     color: #111;
     font-weight: normal;
     margin-bottom: 3px;
   }
-  &__Infomation{
+
+  &__Infomation {
     font-size: 1.2rem;
     color: #888;
   }
@@ -82,25 +91,43 @@
   }
 }
 
-.DetailWrapper{
+.DetailWrapper {
   margin-top: 100px;
   @include media ($sp) {
     margin-top: 90px;
   }
 }
 
-.Detail{
-  &__Media{
+.Detail {
+  &__Media {
+    display: block;
     width: 100%;
     height: 489px;
     // margin:  20px auto 0;
-    @include media ($sp) {
+    @include media ($pad) {
       width: 100%;
       height: auto;
       margin: 0;
     }
+
+    &--video {
+      @include media ($pad) {
+        position: relative;
+        width: 100%;
+        padding-top: 56.25%;
+
+        iframe {
+          position: absolute;
+          top: 0;
+          right: 0;
+          width: 100% !important;
+          height: 100% !important;
+        }
+      }
+    }
   }
-  &__Data{
+
+  &__Data {
     font-size: 1.4rem;
     @include flex();
     justify-content: space-between;
@@ -110,9 +137,11 @@
       margin-top: 35px;
     }
   }
-  &__Block{
+
+  &__Block {
     border-bottom: 1px solid #eee;
-    &--credit{
+
+    &--credit {
       font-size: 1.6rem;
       @include media ($sp) {
         font-size: 1.2rem;
@@ -123,7 +152,8 @@
       padding-bottom: 35px;
     }
   }
-  &__Title{
+
+  &__Title {
     font-size: 2.4rem;
     font-weight: normal;
     margin-bottom: 50px;
@@ -132,47 +162,58 @@
       font-size: 1.4rem;
     }
   }
-  &__Description{
+
+  &__Description {
     font-size: 1.6rem;
     @include media ($sp) {
       font-size: 1.2rem;
     }
-    &--photo{
+
+    &--photo {
       width: 100%;
       @include flex();
-      @include media ($pad) {
-        @include fd(column);
+      @include media ($sp) {
+         @include fd(column);
       }
     }
   }
 
-  &__DescriptionPhoto{
+  &__DescriptionPhoto {
     overflow: hidden;
     box-sizing: border-box;
-    &:last-child{
+
+    &:last-child {
       @include media ($pad) {
+        padding-left: 10px;
+      }
+      @include media ($sp) {
         padding-left: 0;
         margin-top: 20px;
       }
     }
+
     img {
       width: 420px;
-      height: 236px;
-      @include media ($sp) {
+      height: auto;
+      @include media ($pad) {
         width: 100%;
+        height: auto;
       }
     }
   }
-  &__CreditDescription{
+
+  &__CreditDescription {
     margin-bottom: 25px;
-    &:last-child{
+
+    &:last-child {
       margin-bottom: 0;
     }
     @include media ($sp) {
       margin-bottom: 20px;
     }
   }
-  &__CreditLink{
+
+  &__CreditLink {
     color: #111;
   }
 }
