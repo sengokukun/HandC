@@ -81,6 +81,7 @@ $(function() {
     toggleBtn = $('.Toggle'),
     menu = $('.MasterHead__Navigation'),
     body = $(document.body),
+    menuBlock  = $('.sp-MasterHead__Block'),
     menuItem  = $('.sp-MasterHead__Block > .MasterHead__List')
   toggleBtn.on('click', function() {
     body.toggleClass('open');
@@ -90,14 +91,20 @@ $(function() {
       $('.Toggle__Line').addClass('bg_white');
       TweenMax.to(menuItem, .5, {
         opacity: 1,
-        delay: .2
+        delay: .2,
+      });
+      TweenMax.to(menuBlock, .5, {
+        left: "0"
       });
     } else {
       $(triggers).removeClass('active');
       $('.SpHeader .MasterHead__Navigation').fadeOut(150);
       $('.Toggle__Line').removeClass('bg_white');
       TweenMax.to(menuItem, 1, {
-        opacity: 0
+        opacity: 0,
+      });
+      TweenMax.to(menuBlock, .5, {
+        left: "-20px"
       });
     }
 
