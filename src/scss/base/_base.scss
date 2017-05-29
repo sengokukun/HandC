@@ -8,8 +8,7 @@ html {
   font-size: 62.5%;
   position: relative;
   left: 0;
-  overflow-x: hidden;
-  overflow-y: scroll;
+
   -webkit-overflow-scrolling: touch;
 }
 
@@ -24,12 +23,10 @@ body {
   font-size: 62.5%;
   -webkit-font-smoothing: antialiased;
   min-height: 100vh;
-  overflow-x: hidden;
   text-rendering: optimizeLegibility;
   margin: 0;
   padding: 0;
   position: relative;
-  overflow: scroll;
   -webkit-overflow-scrolling: touch;
   font-family: $base_font;
   -moz-user-select: none;
