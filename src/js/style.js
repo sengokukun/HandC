@@ -125,11 +125,13 @@ $(function() {
       tl3 = new TimelineMax(),
       tl4 = new TimelineMax(),
       tl5 = new TimelineMax(),
+      tl6 = new TimelineMax(),
       bdL = $(this).find('.bdL'),
       bdB = $(this).find('.bdB'),
       bdR = $(this).find('.bdR'),
       bdT = $(this).find('.bdT'),
-      FadeIn = $(this).find('.FadeIn')
+      FadeIn = $(this).find('.FadeIn'),
+      Trans = FadeIn.find('.Trans')
 
     tl.to(bdL, .2, {
       height:"100%"
@@ -145,17 +147,20 @@ $(function() {
     tl4.to(bdT, .2, {
       width: "100%",
       delay: .6
-    })
+    }),
     tl5.to(FadeIn, .2, {
       opacity: 1,
       delay: .82
+    }),
+    tl6.to(Trans, .2, {
+      delay: .85,
+      left: "0px"
     })
   };
 
   $('.FadeIn__1').parent('.Modal').on('inview', Modal__about);
   $('.FadeIn__2').parent('.Modal').on('inview', Modal__about);
   $('.FadeIn__3').parent('.Modal').on('inview', Modal__about);
-
   //アバウトモーダル設定ここまで
 
   //メニューunderbar設定

@@ -21,7 +21,8 @@
   }
 
   &__Item {
-    width: 390px;
+    position: relative;
+    width: 400px;
     margin-top: 60px;
     box-sizing: border-box;
 
@@ -34,13 +35,75 @@
     @include media ($sp) {
       width: 100%;
     }
+
+    &:hover {
+      transition: 0.3s;
+
+      .Works__Photo {
+        img {
+          transition: 0.3s;
+          opacity: 0.1;
+        }
+        .Works__Tag {
+          transition: 0.3s;
+          opacity: 0.1;
+        }
+        &:after {
+          transition: 0.3s;
+          opacity: 1;
+          left: 0;
+          transition-delay:0.1s;
+        }
+        &:before {
+          height: 3px;
+          width: 100%;
+          transition: 0.3s;
+        }
+      }
+    }
+    .Works__Photo:after {
+      content: "MORE";
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: absolute;
+      font-size: 22px;
+      color: #111;
+      top: 0;
+      left: -10px;
+      width: 100%;
+      height: 100%;
+      letter-spacing: 2px;
+      transition: 0.3s;
+      opacity: 0;
+      cursor: pointer;
+      z-index: 3;
+      transition-delay:0.1s;
+    }
+    .Works__Photo:before {
+      content: "";
+      position: absolute;
+      height: 3px;
+      width: 0;
+      bottom: 0;
+      left: 0;
+      transition: 0.3s;
+      background-color: #111;
+      z-index: 3;
+    }
   }
 
   &__Photo {
     position: relative;
-    width: 420px;
-    height: 236px;
+    width: 400px;
+    height: auto;
     overflow: hidden;
+    line-height: 0;
+    transition: 0.3s;
+
+    img {
+      transition: 0.3s;
+    }
     @include media ($pad) {
       line-height: 0;
       width: 100%;

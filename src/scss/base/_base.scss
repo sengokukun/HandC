@@ -9,6 +9,8 @@ html {
   position: relative;
   left: 0;
   overflow-x: hidden;
+  overflow-y: scroll;
+  -webkit-overflow-scrolling: touch;
 }
 
 * {
