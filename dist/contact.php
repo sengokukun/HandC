@@ -176,7 +176,7 @@
                     <textarea cols="50" rows="7" class="required Forms__Textarea" name="content" placeholder="ご自由にご記入ください"></textarea>
                   </dd>
                 </dl>
-		           <button type="submit" class="mA Button Button--spLong">確認画面へ</button>
+		           <button type="submit" class="mA Button Button--button Button--spLong Button--contact">確認画面へ</button>
               </form>
             </main>
           </div>
