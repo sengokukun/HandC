@@ -79,6 +79,9 @@
       cursor: pointer;
       z-index: 3;
       transition-delay:0.1s;
+      @include media ($pad) {
+        display: none;
+      }
     }
     .Works__Photo:before {
       content: "";
@@ -90,6 +93,9 @@
       transition: 0.3s;
       background-color: #111;
       z-index: 3;
+      @include media ($pad) {
+        display: none;
+      }
     }
   }
 

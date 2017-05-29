@@ -23,6 +23,9 @@
       background-color: #111;
       transition: 0.3s;
       opacity: 0;
+      @include media ($pad) {
+        display: none;
+      }
     }
     &:after {
       content: "MORE";
@@ -34,6 +37,9 @@
       color: #fff;
       transition: 0.3s;
       opacity: 0;
+      @include media ($pad) {
+        display: none;
+      }
     }
     &:hover {
       &:after {
