@@ -41,10 +41,12 @@
 
   #player {
     position: absolute;
-    top: 0;
-    left: -15%;
-    bottom: 0;
+    top: 50%;
+    left: 50%;
+    right: auto;
+    bottom: auto;
     margin: auto;
+    transform: translateX(-50%) translateY(-50%);
     overflow: hidden;
     height: 130%;
     width: 130%;
