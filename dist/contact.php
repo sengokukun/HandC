@@ -64,7 +64,7 @@
       <div class="Sub">
         <!-- ヘッダー -->
         <header class="MasterHead">
-          <h1 class="MasterHead__Logo"><a href="/"><img src="/img/logo.svg" alt="hc"></a></h1>
+          <h1 class="MasterHead__Logo"><a href="/"><img src="/img/logo.svg" alt="H&amp;C Films"></a></h1>
           <!-- pcヘッダー -->
           <div class="PcHeader">
             <nav class="MasterHead__Navigation">
