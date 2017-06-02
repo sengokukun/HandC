@@ -8,6 +8,10 @@ $add_header	.= "X-Mailer: PHP/". phpversion();
 $opt = '-f'.'info@handcfilms.com';
 
 $message =<<<HTML
+
+{$_SESSION['name']}様
+
+H&C Filmsにお問い合わせいただきありがとうございます。
 お問い合わせ内容の確認です。
 
 お名前
@@ -19,8 +23,13 @@ $message =<<<HTML
 お問い合わせ内容
 {$_SESSION['content']}
 
+
 内容確認後、担当者より折り返しご連絡をさせて頂きます。
 今しばらくお待ちください。
+
+H&C Films
+e-mail:handcfilm@gmail.com
+web site: handcfilms.com
 
 HTML;
 

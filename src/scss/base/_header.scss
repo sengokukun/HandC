@@ -96,7 +96,7 @@
       box-sizing: border-box;
       @include fd(column);
       text-align: center;
-      overflow-y: scroll;
+      // overflow-y: scroll;
     }
     @include media ($sp) {
       width: 100%;
