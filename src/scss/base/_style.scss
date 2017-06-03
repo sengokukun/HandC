@@ -22,7 +22,7 @@
     }
     @include media ($pad){
       display: block;
-      background-image: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.2)), url("../../img/bg_hero.jpg");
+      background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url("../../img/bg_hero.jpg");
       background-size: cover;
       background-position: center center;
       top: 0;
